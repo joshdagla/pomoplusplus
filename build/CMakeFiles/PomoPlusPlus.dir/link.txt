@@ -1,0 +1,3 @@
+C:\mingw64\ucrt64\bin\cmake.exe -E rm -f CMakeFiles\PomoPlusPlus.dir/objects.a
+C:\mingw64\ucrt64\bin\ar.exe qc CMakeFiles\PomoPlusPlus.dir/objects.a @CMakeFiles\PomoPlusPlus.dir\objects1.rsp
+C:\mingw64\ucrt64\bin\c++.exe -m64 -O3 -DNDEBUG -m64 -Wl,--whole-archive CMakeFiles\PomoPlusPlus.dir/objects.a -Wl,--no-whole-archive -o PomoPlusPlus.exe -Wl,--out-implib,libPomoPlusPlus.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\PomoPlusPlus.dir\linkLibs.rsp

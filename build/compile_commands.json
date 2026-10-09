@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Users/admin/Documents/PomoPlusPlus/build",
+  "command": "C:\\mingw64\\ucrt64\\bin\\c++.exe -DASIO_STANDALONE -DNTDDI_VERSION=0x0A000000 -D_WIN32_WINNT=0x0A00 @CMakeFiles\\PomoPlusPlus.dir\\includes_CXX.rsp -m64 -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles\\PomoPlusPlus.dir\\src\\main.cpp.obj -c C:\\Users\\admin\\Documents\\PomoPlusPlus\\src\\main.cpp",
+  "file": "C:/Users/admin/Documents/PomoPlusPlus/src/main.cpp",
+  "output": "CMakeFiles/PomoPlusPlus.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/admin/Documents/PomoPlusPlus/build",
+  "command": "C:\\mingw64\\ucrt64\\bin\\c++.exe -DASIO_STANDALONE -DNTDDI_VERSION=0x0A000000 -D_WIN32_WINNT=0x0A00 @CMakeFiles\\PomoPlusPlus.dir\\includes_CXX.rsp -m64 -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles\\PomoPlusPlus.dir\\src\\services\\authService.cpp.obj -c C:\\Users\\admin\\Documents\\PomoPlusPlus\\src\\services\\authService.cpp",
+  "file": "C:/Users/admin/Documents/PomoPlusPlus/src/services/authService.cpp",
+  "output": "CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.obj"
+}
+]
