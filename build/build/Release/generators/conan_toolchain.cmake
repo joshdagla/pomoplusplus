@@ -154,9 +154,9 @@ list(PREPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR})
 # Definition of CMAKE_PREFIX_PATH, CMAKE_XXXXX_PATH
 # The Conan local "generators" folder, where this toolchain is saved.
 list(PREPEND CMAKE_PREFIX_PATH ${CMAKE_CURRENT_LIST_DIR} )
-list(PREPEND CMAKE_LIBRARY_PATH "C:/Users/admin/.conan2/p/b/sqlita76fee3f45b57/p/lib" "C:/Users/admin/.conan2/p/b/sqlitabff18acc5071/p/lib")
-list(PREPEND CMAKE_INCLUDE_PATH "C:/Users/admin/.conan2/p/crowc6f7defedbe6f2/p/include" "C:/Users/admin/.conan2/p/asio8b50208abaabe/p/include" "C:/Users/admin/.conan2/p/b/sqlita76fee3f45b57/p/include" "C:/Users/admin/.conan2/p/b/sqlitabff18acc5071/p/include")
-set(CONAN_RUNTIME_LIB_DIRS "C:/Users/admin/.conan2/p/b/sqlita76fee3f45b57/p/bin" "C:/Users/admin/.conan2/p/b/sqlitabff18acc5071/p/bin" )
+list(PREPEND CMAKE_LIBRARY_PATH "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib" "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib")
+list(PREPEND CMAKE_INCLUDE_PATH "/home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include" "/home/joshd/.conan2/p/asio8b50208abaabe/p/include" "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include" "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/include")
+set(CONAN_RUNTIME_LIB_DIRS "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib" "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib" )
 
 endif()
 
@@ -165,9 +165,9 @@ endif()
 # Define pkg-config from 'tools.gnu:pkg_config' executable and paths
 
 if (DEFINED ENV{PKG_CONFIG_PATH})
-set(ENV{PKG_CONFIG_PATH} "${CMAKE_CURRENT_LIST_DIR};$ENV{PKG_CONFIG_PATH}")
+set(ENV{PKG_CONFIG_PATH} "${CMAKE_CURRENT_LIST_DIR}:$ENV{PKG_CONFIG_PATH}")
 else()
-set(ENV{PKG_CONFIG_PATH} "${CMAKE_CURRENT_LIST_DIR};")
+set(ENV{PKG_CONFIG_PATH} "${CMAKE_CURRENT_LIST_DIR}:")
 endif()
 
 

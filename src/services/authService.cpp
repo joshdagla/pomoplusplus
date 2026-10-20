@@ -8,7 +8,6 @@
 #include <SQLiteCpp/Transaction.h>
 #include <crow/app.h>
 #include <exception>
-#include <processthreadsapi.h>
 #include <regex>
 #include <string>
 
@@ -99,11 +98,11 @@ ResultDto userSignup(const RegisterDto &dto) {
   }
 
   catch (const SQLite::Exception &ex) {
-      ResultDto resultException;
-      resultException.Success = false;
-      resultException.ErrorMessage = ex.what();
+    ResultDto resultException;
+    resultException.Success = false;
+    resultException.ErrorMessage = ex.what();
 
-      return resultException;
+    return resultException;
   }
 
   catch (const std::exception &e) {
@@ -168,15 +167,14 @@ ResultDto validateLogin(const LoginDto &dto) {
 
     return response;
 
-
   }
 
   catch (const SQLite::Exception &ex) {
-      ResultDto resultException;
-      resultException.Success = false;
-      resultException.ErrorMessage = ex.what();
+    ResultDto resultException;
+    resultException.Success = false;
+    resultException.ErrorMessage = ex.what();
 
-      return resultException;
+    return resultException;
   }
 
   catch (const std::exception &e) {

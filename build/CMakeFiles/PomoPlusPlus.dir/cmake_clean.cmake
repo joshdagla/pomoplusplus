@@ -1,12 +1,11 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/PomoPlusPlus.dir/src/main.cpp.obj"
-  "CMakeFiles/PomoPlusPlus.dir/src/main.cpp.obj.d"
-  "CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.obj"
-  "CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.obj.d"
-  "PomoPlusPlus.exe"
-  "PomoPlusPlus.exe.manifest"
+  "CMakeFiles/PomoPlusPlus.dir/link.d"
+  "CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o"
+  "CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o.d"
+  "CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o"
+  "CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o.d"
+  "PomoPlusPlus"
   "PomoPlusPlus.pdb"
-  "libPomoPlusPlus.dll.a"
 )
 
 # Per-language clean rules from dependency scanning.

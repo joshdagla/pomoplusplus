@@ -1,0 +1,177 @@
+{
+	"configurations" : 
+	[
+		{
+			"abstractTargets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "CONAN_LIB::sqlite3_SQLite_SQLite3_sqlite3_RELEASE::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CONAN_LIB__sqlite3_SQLite_SQLite3_sqlite3_RELEASE-Release-026657cfbedf16886d41.json",
+					"name" : "CONAN_LIB::sqlite3_SQLite_SQLite3_sqlite3_RELEASE",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CONAN_LIB::sqlite3_sqlite3_RELEASE::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CONAN_LIB__sqlite3_sqlite3_RELEASE-Release-08eb06f294ed26aa27a0.json",
+					"name" : "CONAN_LIB::sqlite3_sqlite3_RELEASE",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "CONAN_LIB::sqlitecpp_SQLiteCpp_RELEASE::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-CONAN_LIB__sqlitecpp_SQLiteCpp_RELEASE-Release-10103c695d4ebcf06abe.json",
+					"name" : "CONAN_LIB::sqlitecpp_SQLiteCpp_RELEASE",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Crow::Crow::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Crow__Crow-Release-4ed1c6913a2b3be29754.json",
+					"name" : "Crow::Crow",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "SQLite::SQLite3::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SQLite__SQLite3-Release-54ebee22c6692f266aa2.json",
+					"name" : "SQLite::SQLite3",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "SQLiteCpp::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-SQLiteCpp-Release-f2f2014374d0a8784cb0.json",
+					"name" : "SQLiteCpp",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "asio::asio::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-asio__asio-Release-969631cb0aa150bc2b3d.json",
+					"name" : "asio::asio",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "asio_DEPS_TARGET::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-asio_DEPS_TARGET-Release-c9df1c967af0ad3b7a98.json",
+					"name" : "asio_DEPS_TARGET",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "crowcpp-crow_DEPS_TARGET::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-crowcpp-crow_DEPS_TARGET-Release-dc0ab2bf5b779805a715.json",
+					"name" : "crowcpp-crow_DEPS_TARGET",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sqlite3_DEPS_TARGET::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sqlite3_DEPS_TARGET-Release-4b6090eef7528579611b.json",
+					"name" : "sqlite3_DEPS_TARGET",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sqlite3_SQLite_SQLite3_DEPS_TARGET::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sqlite3_SQLite_SQLite3_DEPS_TARGET-Release-c42b209b5ed6c7b598e6.json",
+					"name" : "sqlite3_SQLite_SQLite3_DEPS_TARGET",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "sqlitecpp_DEPS_TARGET::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-sqlitecpp_DEPS_TARGET-Release-94af094351a9a3fab690.json",
+					"name" : "sqlitecpp_DEPS_TARGET",
+					"projectIndex" : 0
+				}
+			],
+			"directories" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					],
+					"build" : ".",
+					"jsonFile" : "directory-.-Release-b23a0b23c080df4d29ba.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.15"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Release",
+			"projects" : 
+			[
+				{
+					"abstractTargetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6,
+						7,
+						8,
+						9,
+						10,
+						11
+					],
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "PomoPlusPlus",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "PomoPlusPlus::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-PomoPlusPlus-Release-d5922d2fd249838c9e07.json",
+					"name" : "PomoPlusPlus",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/joshd/Projects/PomoPlusPlus/build",
+		"source" : "/home/joshd/Projects/PomoPlusPlus"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 11
+	}
+}

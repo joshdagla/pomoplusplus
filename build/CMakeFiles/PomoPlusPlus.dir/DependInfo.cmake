@@ -8,8 +8,9 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "C:/Users/admin/Documents/PomoPlusPlus/src/main.cpp" "CMakeFiles/PomoPlusPlus.dir/src/main.cpp.obj" "gcc" "CMakeFiles/PomoPlusPlus.dir/src/main.cpp.obj.d"
-  "C:/Users/admin/Documents/PomoPlusPlus/src/services/authService.cpp" "CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.obj" "gcc" "CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.obj.d"
+  "/home/joshd/Projects/PomoPlusPlus/src/main.cpp" "CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o" "gcc" "CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o.d"
+  "/home/joshd/Projects/PomoPlusPlus/src/services/authService.cpp" "CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o" "gcc" "CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o.d"
+  "" "PomoPlusPlus" "gcc" "CMakeFiles/PomoPlusPlus.dir/link.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

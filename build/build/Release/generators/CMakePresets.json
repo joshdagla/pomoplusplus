@@ -12,15 +12,14 @@
         {
             "name": "conan-release",
             "displayName": "'conan-release' config",
-            "description": "'conan-release' configure using 'MinGW Makefiles' generator",
-            "generator": "MinGW Makefiles",
+            "description": "'conan-release' configure using 'Unix Makefiles' generator",
+            "generator": "Unix Makefiles",
             "cacheVariables": {
-                "CMAKE_SH": "CMAKE_SH-NOTFOUND",
                 "CMAKE_POLICY_DEFAULT_CMP0091": "NEW",
                 "CMAKE_BUILD_TYPE": "Release"
             },
-            "toolchainFile": "generators\\conan_toolchain.cmake",
-            "binaryDir": "C:\\Users\\admin\\Documents\\PomoPlusPlus\\build\\build\\Release"
+            "toolchainFile": "generators/conan_toolchain.cmake",
+            "binaryDir": "/home/joshd/Projects/PomoPlusPlus/build/build/Release"
         }
     ],
     "buildPresets": [

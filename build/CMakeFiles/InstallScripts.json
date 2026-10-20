@@ -1,7 +1,7 @@
 {
 	"InstallScripts" : 
 	[
-		"C:/Users/admin/Documents/PomoPlusPlus/build/cmake_install.cmake"
+		"/home/joshd/Projects/PomoPlusPlus/build/cmake_install.cmake"
 	],
 	"Parallel" : false
 }

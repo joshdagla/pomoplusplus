@@ -8,27 +8,11 @@
 #include <crow/mustache.h>
 #include <crow/returnable.h>
 #include <crow/routing.h>
-#include <crow/mustache.h>
 #include <pwbcrypt/bcrypt.h>
 #include <string>
 
 int main() {
   crow::SimpleApp app;
-
-  crow::mustache::set_global_base("templates");
-
-  // Login page rendering endpoint
-  CROW_ROUTE(app, "/")([]() {
-    auto page = crow::mustache::load("login.html");
-    return page.render();
-  });
-
-  // Endpoint to server static files such as images and fonts
-  CROW_ROUTE(app, "/public/<path>")
-  ([](const crow::request &req, crow::response &res, std::string path) {
-    res.set_static_file_info("public/" + path);
-    res.end();
-  });
 
   // User sign up endpoint
   CROW_ROUTE(app, "/signup")
@@ -106,11 +90,6 @@ int main() {
 
         return crow::response(200, "Login successful");
       });
-
-  CROW_CATCHALL_ROUTE(app)([]() {
-    auto errorPage = crow::mustache::load("error.html");
-    return errorPage.render();
-  });
 
   app.port(1808).multithreaded().run();
 }

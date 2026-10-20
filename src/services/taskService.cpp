@@ -1,5 +1,6 @@
 #include "taskService.hpp"
 #include "SQLiteCpp/Database.h"
+#include <vector>
 
 // service to create a task
 ResultDto createTask(CreateTaskDto &dto) {
@@ -7,5 +8,5 @@ ResultDto createTask(CreateTaskDto &dto) {
 
     ResultDto serviceResponse;
 
-
+    std::vector<int> woe {1,2};
 }

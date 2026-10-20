@@ -25,7 +25,7 @@ foreach(_DEPENDENCY ${sqlite3_FIND_DEPENDENCY_NAMES} )
     endif()
 endforeach()
 
-set(SQLite3_VERSION_STRING "3.53.4")
+set(SQLite3_VERSION_STRING "3.54.0")
 set(SQLite3_INCLUDE_DIRS ${sqlite3_INCLUDE_DIRS_RELEASE} )
 set(SQLite3_INCLUDE_DIR ${sqlite3_INCLUDE_DIRS_RELEASE} )
 set(SQLite3_LIBRARIES ${sqlite3_LIBRARIES_RELEASE} )

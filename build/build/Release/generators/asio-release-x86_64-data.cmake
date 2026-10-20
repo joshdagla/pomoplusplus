@@ -11,7 +11,7 @@ endif()
 
 ########### VARIABLES #######################################################################
 #############################################################################################
-set(asio_PACKAGE_FOLDER_RELEASE "C:/Users/admin/.conan2/p/asio8b50208abaabe/p")
+set(asio_PACKAGE_FOLDER_RELEASE "/home/joshd/.conan2/p/asio8b50208abaabe/p")
 set(asio_BUILD_MODULES_PATHS_RELEASE )
 
 
@@ -27,9 +27,9 @@ set(asio_COMPILE_OPTIONS_CXX_RELEASE )
 set(asio_LIB_DIRS_RELEASE )
 set(asio_BIN_DIRS_RELEASE )
 set(asio_LIBRARY_TYPE_RELEASE UNKNOWN)
-set(asio_IS_HOST_WINDOWS_RELEASE 1)
+set(asio_IS_HOST_WINDOWS_RELEASE 0)
 set(asio_LIBS_RELEASE )
-set(asio_SYSTEM_LIBS_RELEASE )
+set(asio_SYSTEM_LIBS_RELEASE pthread)
 set(asio_FRAMEWORK_DIRS_RELEASE )
 set(asio_FRAMEWORKS_RELEASE )
 set(asio_BUILD_DIRS_RELEASE )
