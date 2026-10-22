@@ -1,47 +1,61 @@
 #include "dtos/authDto.hpp"
 #include "services/authService.hpp"
+#include <SQLiteCpp/Database.h>
+#include <SQLiteCpp/Statement.h>
 #include <crow/app.h>
 #include <crow/common.h>
 #include <crow/exceptions.h>
 #include <crow/http_response.h>
 #include <crow/json.h>
+#include <crow/logging.h>
 #include <crow/mustache.h>
 #include <crow/returnable.h>
 #include <crow/routing.h>
+#include <iostream>
+#include <optional>
 #include <pwbcrypt/bcrypt.h>
 #include <string>
 
 int main() {
   crow::SimpleApp app;
 
+  app.loglevel(crow::LogLevel::Debug);
+
+  CROW_ROUTE(app, "/")([]() {
+    auto page = crow::mustache::load("login.html");
+
+    return page.render();
+  });
+
   // User sign up endpoint
-  CROW_ROUTE(app, "/signup")
+  CROW_ROUTE(app, "/auth/signup")
       .methods(crow::HTTPMethod::POST)([](const crow::request &req) {
-        auto userParams = req.get_body_params();
+        auto body = crow::json::load(req.body);
 
-        const char *username = userParams.get("username");
-        const char *email = userParams.get("email");
-        const char *password = userParams.get("password");
-
-        if (!username) {
+        if (!body) {
+          std::cout << '\n' << "Missing username";
           return crow::response(400, "Missing parameters");
         }
 
-        if (!email || !password) {
-          return crow::response(400, "Missing parameters");
+        if (!body.has("email") || !body.has("password") ||
+            !body.has("username")) {
+          std::cout << '\n' << "Missing params";
+          return crow::response(400, "Missing input field");
         }
 
         RegisterDto dto;
-        dto.username = username;
-        dto.email = email;
-        dto.password = password;
+        dto.username = body["username"].s();
+        dto.email = body["email"].s();
+        dto.password = body["password"].s();
 
         if (dto.username.empty()) {
-          return crow::response(400, "Missing parameters");
+          std::cout << '\n' << "Missing params";
+          return crow::response(400, "Missing username");
         }
 
         if (dto.email.empty() || dto.password.empty()) {
-          return crow::response(400, "Missing parameters");
+          std::cout << '\n' << "Missing params";
+          return crow::response(400, "Missing email or password");
         }
 
         ResultDto signUpResult = userSignup(dto);
@@ -55,27 +69,30 @@ int main() {
               401, signUpResult.ErrorMessage.value_or("default value"));
         }
 
-        return crow::response(200, "User created successfully");
+        crow::json::wvalue jsonResult;
+        jsonResult["message"] = "Signup Successful";
+        jsonResult["userId"] = signUpResult.Data.value_or(0);
+
+        CROW_LOG_DEBUG << signUpResult.Data.value_or(0);
+
+        return crow::response(200, jsonResult);
       });
 
-  CROW_ROUTE(app, "/login")
+  CROW_ROUTE(app, "/auth/login")
       .methods(crow::HTTPMethod::POST)([](const crow::request &req) {
-        auto userParams = req.get_body_params();
+        auto userParams = crow::json::load(req.body);
 
-        const char *email = userParams.get("email");
-        const char *password = userParams.get("password");
+        if (!userParams) {
+          return crow::response(400, "Missing parameters");
+        }
 
-        if (!email || !password) {
+        if (!userParams.has("email") || !userParams.has("password")) {
           return crow::response(400, "Missing parameters");
         }
 
         LoginDto dto;
-        dto.email = email;
-        dto.password = password;
-
-        if (dto.email.empty() || dto.password.empty()) {
-          return crow::response(400, "Missing parameters");
-        }
+        dto.email = userParams["email"].s();
+        dto.password = userParams["password"].s();
 
         ResultDto loginResult = validateLogin(dto);
 
@@ -88,8 +105,50 @@ int main() {
               401, loginResult.ErrorMessage.value_or("default value"));
         }
 
-        return crow::response(200, "Login successful");
+        crow::json::wvalue jsonResult;
+        jsonResult["message"] = "Login Successful";
+        jsonResult["userId"] = loginResult.Data.value_or(0);
+
+        CROW_LOG_DEBUG << loginResult.Data.value_or(0);
+
+        return crow::response(200, jsonResult);
       });
+
+  CROW_ROUTE(app, "/home/<int>")([](int userId) {
+    if (userId == 0) {
+      crow::response res;
+      res.redirect("/error");
+      return res;
+    }
+
+    SQLite::Database db("pomo.db", SQLite::OPEN_READONLY);
+
+    SQLite::Statement usernameFetch(db,
+                                    "SELECT username from users WHERE id = ?");
+
+    usernameFetch.bind(1, userId);
+
+    std::string userString;
+
+    if (usernameFetch.executeStep()) {
+      userString = usernameFetch.getColumn(0).getText();
+    } else {
+      userString = "No user found";
+    }
+
+    crow::mustache::context ctx;
+    ctx["name"] = userString;
+
+    auto page = crow::mustache::load("index.html");
+
+    return crow::response(page.render_string());
+  });
+
+  CROW_CATCHALL_ROUTE(app)([]() {
+    auto page = crow::mustache::load("error.html");
+
+    return page.render();
+  });
 
   app.port(1808).multithreaded().run();
 }

@@ -420,6 +420,12 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/writable_pipe.hpp
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/write.hpp
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/write_at.hpp
+ /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Column.h
+ /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Database.h
+ /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Exception.h
+ /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/SQLiteCppExport.h
+ /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Statement.h
+ /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Utils.h
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/TinySHA1.hpp
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/app.h
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/ci_map.h

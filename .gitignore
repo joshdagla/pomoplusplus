@@ -1,0 +1,50 @@
+# Build output
+build/
+cmake-build-*/
+out/
+
+# CMake generated files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+Makefile
+install_manifest.txt
+CMakeUserPresets.json
+
+# Compile database
+compile_commands.json
+.cache/
+
+# Conan
+conan.lock
+conanbuildinfo.*
+conaninfo.txt
+graph_info.json
+CMakePresets.json
+
+# SQLite database
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+
+# Compiled objects and binaries
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dylib
+*.dll
+*.exe
+PomoPlusPlus
+
+# Editor and OS files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db
