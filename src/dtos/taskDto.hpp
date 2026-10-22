@@ -3,19 +3,14 @@
 #include <string>
 
 struct CreateTaskDto {
-    int UserId;
-    std::string Description = "New Task";
-    int Pomodoros = 0;
+  short UserId;
+  std::optional<std::string> Description = "New Task";
+  short Pomodoros = 0;
 };
 
 struct UpdateTaskDto {
-    int UserId;
-    std::optional<std::string> Description;
-    std::optional<std::string> Pomodoros;
-    std::optional<std::string> Status;
-};
-
-struct DeleteTaskDto {
-    int UserId;
-    int TaskId;
+  short UserId;
+  std::optional<std::string> Description;
+  std::optional<int> Pomodoros;
+  std::string Status = "Pending";
 };

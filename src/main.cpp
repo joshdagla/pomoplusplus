@@ -1,10 +1,13 @@
 #include "dtos/authDto.hpp"
+#include "dtos/taskDto.hpp"
 #include "services/authService.hpp"
+#include "services/taskService.hpp"
 #include <SQLiteCpp/Database.h>
 #include <SQLiteCpp/Statement.h>
 #include <crow/app.h>
 #include <crow/common.h>
 #include <crow/exceptions.h>
+#include <crow/http_request.h>
 #include <crow/http_response.h>
 #include <crow/json.h>
 #include <crow/logging.h>
@@ -61,17 +64,20 @@ int main() {
 
         ResultDto signUpResult = userSignup(dto);
 
-        if (!signUpResult.Success) {
-          if (!signUpResult.ErrorMessage->empty()) {
-            return crow::response(401, *signUpResult.ErrorMessage);
-          }
+        crow::json::wvalue res;
 
-          return crow::response(
-              401, signUpResult.ErrorMessage.value_or("default value"));
+        if (!signUpResult.Success) {
+          res["success"] = signUpResult.Success;
+          res["message"] = signUpResult.ErrorMessage.value_or(
+              "An unexpected error has occured while trying to update the "
+              "task");
+
+          return crow::response(401, res);
         }
 
         crow::json::wvalue jsonResult;
-        jsonResult["message"] = "Signup Successful";
+        jsonResult["message"] = "Login Successful";
+        jsonResult["success"] = signUpResult.Success;
         jsonResult["userId"] = signUpResult.Data.value_or(0);
 
         return crow::response(200, jsonResult);
@@ -95,17 +101,20 @@ int main() {
 
         ResultDto loginResult = validateLogin(dto);
 
-        if (!loginResult.Success) {
-          if (!loginResult.ErrorMessage->empty()) {
-            return crow::response(401, *loginResult.ErrorMessage);
-          }
+        crow::json::wvalue res;
 
-          return crow::response(
-              401, loginResult.ErrorMessage.value_or("default value"));
+        if (!loginResult.Success) {
+          res["success"] = loginResult.Success;
+          res["message"] = loginResult.ErrorMessage.value_or(
+              "An unexpected error has occured while trying to update the "
+              "task");
+
+          return crow::response(401, res);
         }
 
         crow::json::wvalue jsonResult;
         jsonResult["message"] = "Login Successful";
+        jsonResult["success"] = loginResult.Success;
         jsonResult["userId"] = loginResult.Data.value_or(0);
 
         return crow::response(200, jsonResult);
@@ -141,6 +150,92 @@ int main() {
     auto page = crow::mustache::load("index.html");
 
     return crow::response(page.render(ctx));
+  });
+
+  CROW_ROUTE(app, "/api/create/<int>")
+      .methods(
+          crow::HTTPMethod::POST)([](const crow::request &req, int userId) {
+        ResultDto<std::string> result{};
+
+        auto body = crow::json::load(req.body);
+
+        CreateTaskDto newTask{};
+
+        // Checks if request body and its values have been receieved or not
+        if (!body || !body.has("description") || !body.has("pomodoros")) {
+
+          result = createTaskService(newTask, userId);
+
+          if (!result.Success) {
+            if (result.ErrorMessage->empty()) {
+              return crow::response(
+                  401, "Bad Request. An unexpected error occured.");
+            }
+
+            return crow::response(
+                401, result.ErrorMessage.value_or("Bad request error"));
+          }
+
+          crow::json::wvalue res;
+          res["message"] = result.Data.value_or("Task created!");
+          res["Success"] = result.Success;
+
+          return crow::response(200, res);
+        }
+
+        newTask.Pomodoros = body["pomodoros"].i();
+        newTask.Description = body["description"].s();
+
+        result = createTaskService(newTask, userId);
+
+        crow::json::wvalue res;
+
+        if (!result.Success) {
+          res["success"] = result.Success;
+          res["message"] =
+              result.ErrorMessage.value_or("An unexpected error has occured "
+                                           "while trying to update the task");
+
+          return crow::response(401, res);
+        }
+
+        res["message"] = result.Data.value_or("Task created!");
+        res["Success"] = result.Success;
+
+        return crow::response(200, res);
+      });
+
+  CROW_ROUTE(app,
+             "/api/update/<int>")([](const crow::request &req, int taskId) {
+    ResultDto<std::string> result{};
+
+    auto body = crow::json::load(req.body);
+
+    if (!body) {
+      return crow::response(400, "Missing Parameters");
+    }
+
+    UpdateTaskDto dto;
+    dto.Description = body["description"].s();
+    dto.Pomodoros = body["pomodoros"].i();
+    dto.Status = body["status"].s();
+
+    result = updateTaskService(dto, taskId);
+
+    crow::json::wvalue res;
+
+    if (!result.Success) {
+      res["success"] = result.Success;
+      res["message"] = result.ErrorMessage.value_or(
+          "An unexpected error has occured while trying to update the task");
+
+      return crow::response(401, res);
+    }
+
+    res["success"] = result.Success;
+    res["message"] = result.Data.value_or("Task updated Successfully");
+
+    return crow::response(200, res);
   });
 
   CROW_CATCHALL_ROUTE(app)([]() {

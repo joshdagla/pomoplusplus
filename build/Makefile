@@ -177,6 +177,54 @@ src/services/authService.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/PomoPlusPlus.dir/build.make CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.s
 .PHONY : src/services/authService.cpp.s
 
+src/services/taskService.o: src/services/taskService.cpp.o
+.PHONY : src/services/taskService.o
+
+# target to build an object file
+src/services/taskService.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PomoPlusPlus.dir/build.make CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.o
+.PHONY : src/services/taskService.cpp.o
+
+src/services/taskService.i: src/services/taskService.cpp.i
+.PHONY : src/services/taskService.i
+
+# target to preprocess a source file
+src/services/taskService.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PomoPlusPlus.dir/build.make CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.i
+.PHONY : src/services/taskService.cpp.i
+
+src/services/taskService.s: src/services/taskService.cpp.s
+.PHONY : src/services/taskService.s
+
+# target to generate assembly for a file
+src/services/taskService.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PomoPlusPlus.dir/build.make CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.s
+.PHONY : src/services/taskService.cpp.s
+
+src/utils/userSearch.o: src/utils/userSearch.cpp.o
+.PHONY : src/utils/userSearch.o
+
+# target to build an object file
+src/utils/userSearch.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PomoPlusPlus.dir/build.make CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.o
+.PHONY : src/utils/userSearch.cpp.o
+
+src/utils/userSearch.i: src/utils/userSearch.cpp.i
+.PHONY : src/utils/userSearch.i
+
+# target to preprocess a source file
+src/utils/userSearch.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PomoPlusPlus.dir/build.make CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.i
+.PHONY : src/utils/userSearch.cpp.i
+
+src/utils/userSearch.s: src/utils/userSearch.cpp.s
+.PHONY : src/utils/userSearch.s
+
+# target to generate assembly for a file
+src/utils/userSearch.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/PomoPlusPlus.dir/build.make CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.s
+.PHONY : src/utils/userSearch.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -192,6 +240,12 @@ help:
 	@echo "... src/services/authService.o"
 	@echo "... src/services/authService.i"
 	@echo "... src/services/authService.s"
+	@echo "... src/services/taskService.o"
+	@echo "... src/services/taskService.i"
+	@echo "... src/services/taskService.s"
+	@echo "... src/utils/userSearch.o"
+	@echo "... src/utils/userSearch.i"
+	@echo "... src/utils/userSearch.s"
 .PHONY : help
 
 

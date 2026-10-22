@@ -1,9 +1,20 @@
 #pragma once
-#include "../dtos/taskDto.hpp"
 #include "../dtos/authDto.hpp"
+#include "../dtos/taskDto.hpp"
+#include "../utils/userSearch.hpp"
 
-ResultDto createTask(CreateTaskDto &dto);
+SearchResultDto findUser(const int &id);
 
-ResultDto updateTask(UpdateTaskDto &dto);
+ResultDto<std::string> createTaskService(const CreateTaskDto &dto, int &userId);
 
-ResultDto deleteTask(DeleteTaskDto &dto);
+ResultDto<std::string> updateTaskService(UpdateTaskDto &dto, int &taskId);
+
+ResultDto<std::string> removeTaskService(int &taskId);
+
+ResultDto<std::string> deleteTaskService(int &taskId);
+
+// Gets all tasks that arent removed
+ResultDto<std::string> getTasks(int &userId);
+
+// Gets every task, even removed ones
+ResultDto<std::string> getAllTasks(int &userId);

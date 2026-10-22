@@ -15,7 +15,10 @@ find_package(SQLiteCpp REQUIRED)
 add_executable(${PROJECT_NAME}
   src/main.cpp
   src/dtos/authDto.hpp
+  src/dtos/taskDto.hpp
   src/services/authService.cpp
+  src/services/taskService.cpp
+  src/utils/userSearch.cpp
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE
@@ -26,11 +29,12 @@ target_link_directories(${PROJECT_NAME} PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/lib
 )
 # Keep Conan-managed dependencies
-target_link_libraries(${PROJECT_NAME} PRIVATE Crow::Crow asio::asio SQLiteCpp bcrypt)
+target_link_libraries(${PROJECT_NAME} PRIVATE Crow::Crow asio::asio SQLiteCpp
+                      bcrypt)
 
-add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
-    COMMAND ${CMAKE_COMMAND} -E create_symlink
-        ${CMAKE_SOURCE_DIR}/templates $<TARGET_FILE_DIR:${PROJECT_NAME}>/templates
-    COMMAND ${CMAKE_COMMAND} -E create_symlink
-        ${CMAKE_SOURCE_DIR}/public $<TARGET_FILE_DIR:${PROJECT_NAME}>/static
-)
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD COMMAND ${CMAKE_COMMAND}
+                   -E create_symlink ${CMAKE_SOURCE_DIR}/templates
+                   $<TARGET_FILE_DIR:${PROJECT_NAME}>/templates COMMAND
+                   ${CMAKE_COMMAND} -E create_symlink
+                   ${CMAKE_SOURCE_DIR}/public
+                   $<TARGET_FILE_DIR:${PROJECT_NAME}>/static)

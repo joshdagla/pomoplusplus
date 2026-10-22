@@ -110,7 +110,10 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o: \
  /usr/include/c++/16/bits/uses_allocator.h \
  /usr/include/c++/16/bits/uses_allocator_args.h /usr/include/c++/16/tuple \
  /usr/include/c++/16/bits/ranges_util.h \
+ /home/joshd/Projects/PomoPlusPlus/src/dtos/taskDto.hpp \
  /home/joshd/Projects/PomoPlusPlus/src/services/authService.hpp \
+ /home/joshd/Projects/PomoPlusPlus/src/services/taskService.hpp \
+ /home/joshd/Projects/PomoPlusPlus/src/services/../utils/userSearch.hpp \
  /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Database.h \
  /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/SQLiteCppExport.h \
  /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Column.h \
