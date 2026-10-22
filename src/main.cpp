@@ -19,7 +19,8 @@
 int main() {
   crow::SimpleApp app;
 
-  app.loglevel(crow::LogLevel::Debug);
+  // Adjust app debugging level
+  // app.loglevel(crow::LogLevel::WARNING);
 
   CROW_ROUTE(app, "/")([]() {
     auto page = crow::mustache::load("login.html");
@@ -73,8 +74,6 @@ int main() {
         jsonResult["message"] = "Signup Successful";
         jsonResult["userId"] = signUpResult.Data.value_or(0);
 
-        CROW_LOG_DEBUG << signUpResult.Data.value_or(0);
-
         return crow::response(200, jsonResult);
       });
 
@@ -109,8 +108,6 @@ int main() {
         jsonResult["message"] = "Login Successful";
         jsonResult["userId"] = loginResult.Data.value_or(0);
 
-        CROW_LOG_DEBUG << loginResult.Data.value_or(0);
-
         return crow::response(200, jsonResult);
       });
 
@@ -133,7 +130,9 @@ int main() {
     if (usernameFetch.executeStep()) {
       userString = usernameFetch.getColumn(0).getText();
     } else {
-      userString = "No user found";
+      crow::response res;
+      res.redirect("/error");
+      return res;
     }
 
     crow::mustache::context ctx;
@@ -141,7 +140,7 @@ int main() {
 
     auto page = crow::mustache::load("index.html");
 
-    return crow::response(page.render_string());
+    return crow::response(page.render(ctx));
   });
 
   CROW_CATCHALL_ROUTE(app)([]() {

@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pomo++</title>
+    <link rel="icon" type="image/x-icon" href="/static/assets/favicon.ico" />
 
     <!-- Bootstrap CSS -->
     <link
@@ -78,6 +79,22 @@
 
     <main class="container py-4">
       <h1>Welcome to Pomo++ {{name}}</h1>
+      <div class="timer-container">
+        <button id="pomodorobtn" class="active">Pomodoro</button>
+        <button id="shortbrkbtn">Shortbreak</button>
+        <button id="longbrkbtn">Long break</button>
+      </div>
+      <div class="pomdoro-count"></div>
+      <div class="progressbar">
+        <div class="progrsbar-inner">
+          <h2 class="progressbar-number">25:00</h2>
+        </div>
+      </div>
+      <div class="function-buttons">
+        <button id="startbtn">Start</button>
+        <button id="pausebtn">Pause</button>
+        <button id="resetbtn">Reset</button>
+      </div>
     </main>
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
