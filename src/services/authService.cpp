@@ -7,7 +7,9 @@
 #include <SQLiteCpp/Statement.h>
 #include <SQLiteCpp/Transaction.h>
 #include <crow/app.h>
+#include <crow/logging.h>
 #include <exception>
+#include <optional>
 #include <regex>
 #include <string>
 
@@ -20,14 +22,14 @@ bool validateEmail(const std::string &email) {
 }
 
 // Handler to do user signup
-ResultDto userSignup(const RegisterDto &dto) {
+ResultDto<int> userSignup(const RegisterDto &dto) {
 
   try {
 
     SQLite::Database db("pomo.db",
                         SQLite::OPEN_READWRITE | SQLite::OPEN_CREATE);
 
-    ResultDto response;
+    ResultDto<int> response;
 
     if (dto.username.empty()) {
       response.Success = false;
@@ -92,35 +94,50 @@ ResultDto userSignup(const RegisterDto &dto) {
 
     transaction.commit();
 
+    SQLite::Statement userIdQuery(db, "SELECT id from users where email = ?");
+
+    userIdQuery.bind(1, dto.email);
+
+    int userId;
+
+    if (userIdQuery.executeStep()) {
+      userId = userIdQuery.getColumn(0).getInt();
+    }
+
     response.Success = true;
+    response.Data = userId;
+
+    CROW_LOG_DEBUG << "Debugging... UserId = " << response.Data.value_or(0);
 
     return response;
   }
 
   catch (const SQLite::Exception &ex) {
-    ResultDto resultException;
+    ResultDto<int> resultException;
     resultException.Success = false;
     resultException.ErrorMessage = ex.what();
+    resultException.Data = std::nullopt;
 
     return resultException;
   }
 
   catch (const std::exception &e) {
 
-    ResultDto resultException{};
+    ResultDto<int> resultException{};
     resultException.Success = false;
     resultException.ErrorMessage = e.what();
+    resultException.Data = std::nullopt;
 
     return resultException;
   }
 }
 
 // Handler for user login
-ResultDto validateLogin(const LoginDto &dto) {
+ResultDto<int> validateLogin(const LoginDto &dto) {
   try {
     SQLite::Database db("pomo.db", SQLite::OPEN_READONLY);
 
-    ResultDto response;
+    ResultDto<int> response;
 
     if (dto.email.empty() || dto.password.empty()) {
       response.Success = false;
@@ -136,51 +153,56 @@ ResultDto validateLogin(const LoginDto &dto) {
       return response;
     }
 
-    SQLite::Statement emailQuery(db, "SELECT * FROM users WHERE email = ?");
-
+    SQLite::Statement emailQuery(db,
+                                 "SELECT password FROM users WHERE email = ?");
     emailQuery.bind(1, dto.email);
 
-    bool queryResult = emailQuery.executeStep();
-
-    if (queryResult == false) {
-      response.Success = false, response.ErrorMessage = "Email does not exist";
-
-      return response;
-    }
-
-    bool verifyPassword = false;
-
-    while (emailQuery.executeStep()) {
-      auto passwordHash = emailQuery.getColumn("password");
-
-      verifyPassword = bcrypt::validatePassword(dto.password, passwordHash);
-    }
-
-    if (verifyPassword == false) {
+    if (!emailQuery.executeStep()) {
       response.Success = false;
-      response.ErrorMessage = "Incorrect Password";
-
+      response.ErrorMessage = "Invalid email or password";
       return response;
+    }
+
+    std::string passwordHash = emailQuery.getColumn("password").getString();
+
+    if (!bcrypt::validatePassword(dto.password, passwordHash)) {
+      response.Success = false;
+      response.ErrorMessage = "Invalid email or password";
+      return response;
+    }
+
+    SQLite::Statement userIdQuery(db, "SELECT id from users where email = ?");
+
+    userIdQuery.bind(1, dto.email);
+
+    int userId;
+
+    if (userIdQuery.executeStep()) {
+      userId = userIdQuery.getColumn(0).getInt();
     }
 
     response.Success = true;
+    response.Data = userId;
+
+    CROW_LOG_DEBUG << "Debugging... UserId = " << response.Data.value_or(0);
 
     return response;
-
   }
 
   catch (const SQLite::Exception &ex) {
-    ResultDto resultException;
+    ResultDto<int> resultException;
     resultException.Success = false;
     resultException.ErrorMessage = ex.what();
 
+    resultException.Data = std::nullopt;
     return resultException;
   }
 
   catch (const std::exception &e) {
-    ResultDto resultException{};
+    ResultDto<int> resultException{};
     resultException.Success = false;
     resultException.ErrorMessage = e.what();
+    resultException.Data = std::nullopt;
 
     return resultException;
   }

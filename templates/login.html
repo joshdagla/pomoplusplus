@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pomo++</title>
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <style>
+      body {
+        font-family: "Cairo", sans-serif;
+        font-weight: bold;
+        background-color: #fff4e6;
+        color: #3b2a20;
+      }
+
+      @font-face {
+        font-family: "Cairo";
+        src: url("/static/fonts/cario/Cario-Semibold.otf") format("opentype");
+        font-weight: 400;
+        font-style: normal;
+        font-display: swap;
+      }
+
+      .form-control {
+        background-color: #fffbf6;
+        color: #3b2a20;
+        border-color: #6b5446;
+      }
+
+      .form-control::placeholder {
+        color: gray;
+      }
+
+      .form-control:focus {
+        background-color: #fffbf6;
+        color: #3b2a20;
+        border-color: #e04b33;
+        box-shadow: 0 0 0 0.2rem rgba(224, 75, 51, 0.25);
+      }
+
+      button.submit-btn,
+      button.submit-btn:focus {
+        background-color: #d94530;
+        border-color: #d94530;
+        color: #fffbf6;
+      }
+
+      button.submit-btn:hover,
+      button.submit-btn:active {
+        background-color: #b8351f;
+        border-color: #b8351f;
+      }
+
+      .border-secondary {
+        border-color: #d9b99b !important;
+      }
+
+      #register-form-toggle u,
+      #login-form-toggle u {
+        color: #c23a24 !important;
+      }
+    </style>
+
+    <main class="container py-4">
+      <div class="row justify-content-center align-items-center vh-100">
+        <div class="col-md-auto text-center">
+          <h1 class="border-secondary">Pomo++</h1>
+          <div
+            class="border border-secondary rounded-2 p-4"
+            style="background-color: #fcebda"
+          >
+            <div id="login-form" class="mb-3 text-start">
+              <label for="login-email" class="form-label text-start"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                class="form-control shadow-sm rounded"
+                id="login-email"
+                placeholder="name@example.com"
+              />
+              <label for="login-password" class="form-label text-start pt-2"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control shadow-sm rounded"
+                id="login-password"
+                placeholder="password"
+              />
+              <small class="d-block mt-1" style="color: #3b2a20"
+                >Don't have an account yet?
+                <a id="register-form-toggle">
+                  <u style="color: #e04b33"> Register here</u>
+                </a></small
+              >
+              <p
+                id="login-error"
+                class="text-center"
+                style="color: darkorange"
+              ></p>
+            </div>
+
+            <div id="register-form" class="d-none mb-3 text-start">
+              <label for="register-username" class="form-label text-start"
+                >Username</label
+              >
+              <input
+                type="text"
+                class="form-control shadow-sm rounded"
+                id="register-username"
+                placeholder="username"
+              />
+
+              <label for="register-email" class="form-label text-start"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                class="form-control shadow-sm rounded"
+                id="register-email"
+                placeholder="name@example.com"
+              />
+              <label for="register-password" class="form-label text-start pt-2"
+                >Password</label
+              >
+              <input
+                type="password"
+                class="form-control shadow-sm rounded"
+                id="register-password"
+                placeholder="password"
+              />
+              <small class="d-block mt-1" style="color: #3b2a20"
+                >Already have an account?
+                <a id="login-form-toggle">
+                  <u style="color: #e04b33"> Login here</u>
+                </a>
+              </small>
+              <p
+                id="register-error"
+                class="text-center"
+                style="color: darkorange"
+              ></p>
+            </div>
+            <button class="btn submit-btn">Submit</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $("#register-form-toggle").on("click", function () {
+          $("#login-form").addClass("d-none");
+          $("#register-form").removeClass("d-none");
+        });
+
+        $("#login-form-toggle").on("click", function () {
+          $("#register-form").addClass("d-none");
+          $("#login-form").removeClass("d-none");
+        });
+
+        $(".submit-btn").on("click", function () {
+          const isLogin = !$("#login-form").hasClass("d-none");
+
+          const url = isLogin ? "auth/login" : "auth/signup";
+          const data = isLogin
+            ? {
+                email: $("#login-email").val(),
+                password: $("#login-password").val(),
+              }
+            : {
+                username: $("#register-username").val(),
+                email: $("#register-email").val(),
+                password: $("#register-password").val(),
+              };
+
+          $.ajax({
+            url: url,
+            method: "POST",
+            contentType: "application/json",
+            data: JSON.stringify(data),
+            success: function (res) {
+              window.location.replace(`/home/${res.userId}`);
+            },
+            error: function (xhr) {
+              const msg = xhr.responseText || "Something went wrong";
+              if (isLogin) {
+                $("#login-error").text(msg);
+              } else {
+                $("#register-error").text(msg);
+              }
+            },
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

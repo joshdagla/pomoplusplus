@@ -3,5 +3,5 @@
 #include <string>
 
 bool validateEmail(const std::string &email);
-ResultDto userSignup(const RegisterDto &dto);
-ResultDto validateLogin(const LoginDto &dto);
+ResultDto<int> userSignup(const RegisterDto &dto);
+ResultDto<int> validateLogin(const LoginDto &dto);

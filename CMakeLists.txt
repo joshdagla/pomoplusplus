@@ -27,3 +27,10 @@ target_link_directories(${PROJECT_NAME} PRIVATE
 )
 # Keep Conan-managed dependencies
 target_link_libraries(${PROJECT_NAME} PRIVATE Crow::Crow asio::asio SQLiteCpp bcrypt)
+
+add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD
+    COMMAND ${CMAKE_COMMAND} -E create_symlink
+        ${CMAKE_SOURCE_DIR}/templates $<TARGET_FILE_DIR:${PROJECT_NAME}>/templates
+    COMMAND ${CMAKE_COMMAND} -E create_symlink
+        ${CMAKE_SOURCE_DIR}/public $<TARGET_FILE_DIR:${PROJECT_NAME}>/static
+)
