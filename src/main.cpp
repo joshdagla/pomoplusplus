@@ -4,6 +4,7 @@
 #include "services/taskService.hpp"
 #include <SQLiteCpp/Database.h>
 #include <SQLiteCpp/Statement.h>
+#include <bits/types/error_t.h>
 #include <crow/app.h>
 #include <crow/common.h>
 #include <crow/exceptions.h>
@@ -18,9 +19,12 @@
 #include <optional>
 #include <pwbcrypt/bcrypt.h>
 #include <string>
+#include <vector>
 
 int main() {
   crow::SimpleApp app;
+
+  // TODO: Create blueprints for task CRUD routes.
 
   // Adjust app debugging level
   // app.loglevel(crow::LogLevel::WARNING);
@@ -234,6 +238,141 @@ int main() {
 
     res["success"] = result.Success;
     res["message"] = result.Data.value_or("Task updated Successfully");
+
+    return crow::response(200, res);
+  });
+
+  // Route to remove a task (not delete)
+  CROW_ROUTE(app,
+             "/api/remove/<int>")([](const crow::request &req, int taskId) {
+    ResultDto<std::string> result{};
+
+    auto body = crow::json::load(req.body);
+
+    if (!body) {
+      return crow::response(400, "Task not found.");
+    }
+
+    result = removeTaskService(taskId);
+
+    crow::json::wvalue res;
+
+    if (!result.Success) {
+      res["success"] = result.Success;
+      res["message"] = result.ErrorMessage.value_or(
+          "An unexpected error has occured while trying to remove the task");
+
+      return crow::response(401, res);
+    }
+
+    res["success"] = result.Success;
+    res["message"] = result.Data.value_or("Task removed Successfully");
+
+    return crow::response(200, res);
+  });
+
+  // Route to delete the task permanently
+  CROW_ROUTE(app,
+             "/api/delete/<int>")([](const crow::request &req, int taskId) {
+    ResultDto<std::string> result{};
+
+    auto body = crow::json::load(req.body);
+
+    if (!body) {
+      return crow::response(400, "Task not found.");
+    }
+
+    result = deleteTaskService(taskId);
+
+    crow::json::wvalue res;
+
+    if (!result.Success) {
+      res["success"] = result.Success;
+      res["message"] = result.ErrorMessage.value_or(
+          "An unexpected error has occured while trying to remove the task");
+
+      return crow::response(401, res);
+    }
+
+    res["success"] = result.Success;
+    res["message"] = result.Data.value_or("Task removed Successfully");
+
+    return crow::response(200, res);
+  });
+
+  // Route to fetch all available tasks
+  CROW_ROUTE(app, "/api/get/<int>")([](const crow::request &req, int userId) {
+    ResultDto<std::vector<AllTasks>> result{};
+
+    auto body = crow::json::load(req.body);
+
+    if (!body) {
+      return crow::response(400, "Task not found.");
+    }
+
+    result = getTasks(userId);
+
+    crow::json::wvalue res;
+
+    if (!result.Success) {
+      res["success"] = result.Success;
+      res["message"] = result.ErrorMessage.value_or(
+          "An unexpected error has occured while trying to remove the task");
+
+      return crow::response(401, res);
+    }
+
+    std::vector<AllTasks> tasks;
+
+    // Try catch block to check for empty task list
+    try {
+      std::vector<AllTasks> tasks = result.Data.value();
+    } catch (const std::bad_optional_access) {
+      res["success"] = false;
+      res["message"] = "No users found";
+    }
+
+    res["success"] = result.Success;
+    res["message"] = tasks;
+
+    return crow::response(200, res);
+  });
+
+  // Route to fetch all tasks
+  CROW_ROUTE(app,
+             "/api/getAll/<int>")([](const crow::request &req, int userId) {
+    ResultDto<std::vector<AllTasks>> result{};
+
+    auto body = crow::json::load(req.body);
+
+    if (!body) {
+      return crow::response(400, "Task not found.");
+    }
+
+    result = getAllTasks(userId);
+
+    crow::json::wvalue res;
+
+    if (!result.Success) {
+      res["success"] = result.Success;
+      res["message"] = result.ErrorMessage.value_or(
+          "An unexpected error has occured while trying to remove the task");
+
+      return crow::response(401, res);
+    }
+
+    std::vector<AllTasks> tasks;
+
+    // Try catch block to check for empty task list
+    try {
+      std::vector<AllTasks> tasks = result.Data.value();
+    } catch (const std::bad_optional_access) {
+      res["success"] = false;
+      res["message"] = "No users found";
+    }
+
+    res["success"] = result.Success;
+    res["message"] = tasks;
 
     return crow::response(200, res);
   });

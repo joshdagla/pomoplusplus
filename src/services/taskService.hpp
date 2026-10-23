@@ -2,6 +2,16 @@
 #include "../dtos/authDto.hpp"
 #include "../dtos/taskDto.hpp"
 #include "../utils/userSearch.hpp"
+#include <string>
+#include <vector>
+
+// Vector to hold values of user tasks
+struct AllTasks {
+  short Id;
+  std::string Description;
+  short Pomodoros;
+  std::string Status;
+};
 
 SearchResultDto findUser(const int &id);
 
@@ -14,7 +24,7 @@ ResultDto<std::string> removeTaskService(int &taskId);
 ResultDto<std::string> deleteTaskService(int &taskId);
 
 // Gets all tasks that arent removed
-ResultDto<std::string> getTasks(int &userId);
+ResultDto<std::vector<AllTasks>> getTasks(int &userId);
 
 // Gets every task, even removed ones
-ResultDto<std::string> getAllTasks(int &userId);
+ResultDto<std::vector<AllTasks>> getAllTasks(int &userId);

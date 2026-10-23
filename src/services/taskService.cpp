@@ -9,6 +9,7 @@
 #include <memory>
 #include <optional>
 #include <string>
+#include <vector>
 
 // Function to find user and return result of query
 SearchResultDto findUser(const int &id) {
@@ -196,6 +197,10 @@ ResultDto<std::string> removeTaskService(int &taskId) {
     removeQuery.bind(1, "Removed");
     removeQuery.bind(2, taskId);
 
+    removeQuery.exec();
+
+    transaction.commit();
+
     serviceResult.Success = true;
     serviceResult.Data = "Task removed. Still available in Tasks section";
 
@@ -233,6 +238,10 @@ ResultDto<std::string> deleteTaskService(int &taskId) {
 
     removeQuery.bind(1, taskId);
 
+    removeQuery.exec();
+
+    transaction.commit();
+
     serviceResult.Success = true;
     serviceResult.Data = "Task removed. Still available in Tasks section";
 
@@ -258,10 +267,10 @@ ResultDto<std::string> deleteTaskService(int &taskId) {
 }
 
 // Get tasks not yet removed
-ResultDto<std::string> getTasks(int &userId) {
+ResultDto<std::vector<AllTasks>> getTasks(int &userId) {
 
   try {
-    ResultDto<std::string> serviceResult;
+    ResultDto<std::vector<AllTasks>> serviceResult;
 
     SearchResultDto searchResult = findUser(userId);
 
@@ -275,25 +284,32 @@ ResultDto<std::string> getTasks(int &userId) {
 
     SQLite::Database db("pomo.db");
 
-    SQLite::Transaction transaction(db);
-
     SQLite::Statement getQuery(
         db, "SELECT * FROM tasks WHERE user_id = ? AND status != removed");
 
     getQuery.bind(1, userId);
 
-    // TODO: Put received values thru get column into a list
+    std::vector<AllTasks> taskList;
+
     while (getQuery.executeStep()) {
+      AllTasks a;
+
+      a.Id = getQuery.getColumn(0);
+      a.Description = getQuery.getColumn(1).getString();
+      a.Pomodoros = getQuery.getColumn(2).getInt();
+      a.Status = getQuery.getColumn(3).getString();
+
+      taskList.push_back(a);
     }
 
     serviceResult.Success = true;
-    serviceResult.Data = "Tasks fetched successfully";
+    serviceResult.Data = taskList;
 
     return serviceResult;
   }
 
   catch (const SQLite::Exception &ex) {
-    ResultDto<std::string> resultException;
+    ResultDto<std::vector<AllTasks>> resultException;
     resultException.Success = false;
     std::string sqlErr = std::format("Database error. {}", ex.getErrorStr());
     resultException.ErrorMessage = sqlErr;
@@ -302,7 +318,7 @@ ResultDto<std::string> getTasks(int &userId) {
   }
 
   catch (const std::exception &e) {
-    ResultDto<std::string> resultException{};
+    ResultDto<std::vector<AllTasks>> resultException;
     resultException.Success = false;
     resultException.ErrorMessage = e.what();
 
@@ -311,10 +327,10 @@ ResultDto<std::string> getTasks(int &userId) {
 }
 
 // Get every single task
-ResultDto<std::string> getAllTasks(int &userId) {
+ResultDto<std::vector<AllTasks>> getAllTasks(int &userId) {
 
   try {
-    ResultDto<std::string> serviceResult;
+    ResultDto<std::vector<AllTasks>> serviceResult;
 
     SearchResultDto searchResult = findUser(userId);
 
@@ -328,24 +344,31 @@ ResultDto<std::string> getAllTasks(int &userId) {
 
     SQLite::Database db("pomo.db");
 
-    SQLite::Transaction transaction(db);
-
     SQLite::Statement getQuery(db, "SELECT * FROM tasks WHERE user_id = ?");
 
     getQuery.bind(1, userId);
 
-    // TODO: Put received values thru get column into a list
+    std::vector<AllTasks> taskList;
+
     while (getQuery.executeStep()) {
+      AllTasks a;
+
+      a.Id = getQuery.getColumn(0);
+      a.Description = getQuery.getColumn(1).getString();
+      a.Pomodoros = getQuery.getColumn(2).getInt();
+      a.Status = getQuery.getColumn(3).getString();
+
+      taskList.push_back(a);
     }
 
     serviceResult.Success = true;
-    serviceResult.Data = "Tasks fetched successfully";
+    serviceResult.Data = taskList;
 
     return serviceResult;
   }
 
   catch (const SQLite::Exception &ex) {
-    ResultDto<std::string> resultException;
+    ResultDto<std::vector<AllTasks>> resultException;
     resultException.Success = false;
     std::string sqlErr = std::format("Database error. {}", ex.getErrorStr());
     resultException.ErrorMessage = sqlErr;
@@ -354,7 +377,7 @@ ResultDto<std::string> getAllTasks(int &userId) {
   }
 
   catch (const std::exception &e) {
-    ResultDto<std::string> resultException{};
+    ResultDto<std::vector<AllTasks>> resultException{};
     resultException.Success = false;
     resultException.ErrorMessage = e.what();
 
