@@ -3,7 +3,9 @@ PomoPlusPlus: \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/crti.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o \
   CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o \
+  CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.o \
   CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o \
+  CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.o \
   /home/joshd/Projects/PomoPlusPlus/lib/libbcrypt.a \
   /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib/libSQLiteCpp.a \
   /home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib/libsqlite3.a \
@@ -49,7 +51,11 @@ PomoPlusPlus: \
 
 CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
+CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.o:
+
 CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
+
+CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.o:
 
 /home/joshd/Projects/PomoPlusPlus/lib/libbcrypt.a:
 

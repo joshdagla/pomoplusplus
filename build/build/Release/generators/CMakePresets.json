@@ -35,6 +35,9 @@
             "configurePreset": "conan-release",
             "execution": {
                 "jobs": 16
+            },
+            "environment": {
+                "OPENSSL_MODULES": "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/ossl-modules"
             }
         }
     ]

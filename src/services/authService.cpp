@@ -115,7 +115,8 @@ ResultDto<int> userSignup(const RegisterDto &dto) {
   catch (const SQLite::Exception &ex) {
     ResultDto<int> resultException;
     resultException.Success = false;
-    resultException.ErrorMessage = ex.what();
+    std::string sqlErr = std::format("Database error. {}", ex.getErrorStr());
+    resultException.ErrorMessage = sqlErr;
     resultException.Data = std::nullopt;
 
     return resultException;
@@ -192,9 +193,10 @@ ResultDto<int> validateLogin(const LoginDto &dto) {
   catch (const SQLite::Exception &ex) {
     ResultDto<int> resultException;
     resultException.Success = false;
-    resultException.ErrorMessage = ex.what();
-
+    std::string sqlErr = std::format("Database error. {}", ex.getErrorStr());
+    resultException.ErrorMessage = sqlErr;
     resultException.Data = std::nullopt;
+
     return resultException;
   }
 

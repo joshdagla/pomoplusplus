@@ -148,15 +148,18 @@ else()
 set(CMAKE_FIND_PACKAGE_PREFER_CONFIG ON)
 
 # Definition of CMAKE_MODULE_PATH
+list(PREPEND CMAKE_MODULE_PATH "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake")
 # the generators folder (where conan generates files, like this toolchain)
 list(PREPEND CMAKE_MODULE_PATH ${CMAKE_CURRENT_LIST_DIR})
 
 # Definition of CMAKE_PREFIX_PATH, CMAKE_XXXXX_PATH
+# The explicitly defined "builddirs" of "host" context dependencies must be in PREFIX_PATH
+list(PREPEND CMAKE_PREFIX_PATH "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake")
 # The Conan local "generators" folder, where this toolchain is saved.
 list(PREPEND CMAKE_PREFIX_PATH ${CMAKE_CURRENT_LIST_DIR} )
-list(PREPEND CMAKE_LIBRARY_PATH "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib" "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib")
-list(PREPEND CMAKE_INCLUDE_PATH "/home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include" "/home/joshd/.conan2/p/asio8b50208abaabe/p/include" "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include" "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/include")
-set(CONAN_RUNTIME_LIB_DIRS "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib" "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib" )
+list(PREPEND CMAKE_LIBRARY_PATH "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib" "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib" "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib" "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib")
+list(PREPEND CMAKE_INCLUDE_PATH "/home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include" "/home/joshd/.conan2/p/asio8b50208abaabe/p/include" "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include" "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/include" "/home/joshd/.conan2/p/jwt-c6ad968c27631b/p/include" "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include" "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/include")
+set(CONAN_RUNTIME_LIB_DIRS "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib" "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib" "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib" "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib" )
 
 endif()
 

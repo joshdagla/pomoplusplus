@@ -4,6 +4,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o.d"
   "CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o"
   "CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o.d"
+  "CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.o"
+  "CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.o.d"
+  "CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.o"
+  "CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.o.d"
   "PomoPlusPlus"
   "PomoPlusPlus.pdb"
 )

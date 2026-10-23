@@ -86,10 +86,24 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PomoPlusPlus.dir/src/main.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joshd/Projects/PomoPlusPlus/src/main.cpp -o CMakeFiles/PomoPlusPlus.dir/src/main.cpp.s
 
+CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.o: CMakeFiles/PomoPlusPlus.dir/flags.make
+CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.o: /home/joshd/Projects/PomoPlusPlus/src/services/taskService.cpp
+CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.o: CMakeFiles/PomoPlusPlus.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.o -MF CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.o.d -o CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.o -c /home/joshd/Projects/PomoPlusPlus/src/services/taskService.cpp
+
+CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joshd/Projects/PomoPlusPlus/src/services/taskService.cpp > CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.i
+
+CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joshd/Projects/PomoPlusPlus/src/services/taskService.cpp -o CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.s
+
 CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o: CMakeFiles/PomoPlusPlus.dir/flags.make
 CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o: /home/joshd/Projects/PomoPlusPlus/src/services/authService.cpp
 CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o: CMakeFiles/PomoPlusPlus.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o -MF CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o.d -o CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o -c /home/joshd/Projects/PomoPlusPlus/src/services/authService.cpp
 
 CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.i: cmake_force
@@ -100,22 +114,40 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joshd/Projects/PomoPlusPlus/src/services/authService.cpp -o CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.s
 
+CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.o: CMakeFiles/PomoPlusPlus.dir/flags.make
+CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.o: /home/joshd/Projects/PomoPlusPlus/src/utils/userSearch.cpp
+CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.o: CMakeFiles/PomoPlusPlus.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.o -MF CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.o.d -o CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.o -c /home/joshd/Projects/PomoPlusPlus/src/utils/userSearch.cpp
+
+CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/joshd/Projects/PomoPlusPlus/src/utils/userSearch.cpp > CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.i
+
+CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/joshd/Projects/PomoPlusPlus/src/utils/userSearch.cpp -o CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.s
+
 # Object files for target PomoPlusPlus
 PomoPlusPlus_OBJECTS = \
 "CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o" \
-"CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o"
+"CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.o" \
+"CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o" \
+"CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.o"
 
 # External object files for target PomoPlusPlus
 PomoPlusPlus_EXTERNAL_OBJECTS =
 
 PomoPlusPlus: CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o
+PomoPlusPlus: CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.o
 PomoPlusPlus: CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o
+PomoPlusPlus: CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.o
 PomoPlusPlus: CMakeFiles/PomoPlusPlus.dir/build.make
 PomoPlusPlus: CMakeFiles/PomoPlusPlus.dir/compiler_depend.ts
 PomoPlusPlus: /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib/libSQLiteCpp.a
 PomoPlusPlus: /home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib/libsqlite3.a
 PomoPlusPlus: CMakeFiles/PomoPlusPlus.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable PomoPlusPlus"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable PomoPlusPlus"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PomoPlusPlus.dir/link.txt --verbose=$(VERBOSE)
 	/usr/bin/cmake -E create_symlink /home/joshd/Projects/PomoPlusPlus/templates /home/joshd/Projects/PomoPlusPlus/build/templates
 	/usr/bin/cmake -E create_symlink /home/joshd/Projects/PomoPlusPlus/public /home/joshd/Projects/PomoPlusPlus/build/static

@@ -7,8 +7,20 @@
 },
 {
   "directory": "/home/joshd/Projects/PomoPlusPlus/build",
+  "command": "/usr/bin/c++ -DASIO_STANDALONE -I/home/joshd/Projects/PomoPlusPlus/include -isystem /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include -isystem /home/joshd/.conan2/p/asio8b50208abaabe/p/include -isystem /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include -m64 -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.o -c /home/joshd/Projects/PomoPlusPlus/src/services/taskService.cpp",
+  "file": "/home/joshd/Projects/PomoPlusPlus/src/services/taskService.cpp",
+  "output": "CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.o"
+},
+{
+  "directory": "/home/joshd/Projects/PomoPlusPlus/build",
   "command": "/usr/bin/c++ -DASIO_STANDALONE -I/home/joshd/Projects/PomoPlusPlus/include -isystem /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include -isystem /home/joshd/.conan2/p/asio8b50208abaabe/p/include -isystem /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include -m64 -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o -c /home/joshd/Projects/PomoPlusPlus/src/services/authService.cpp",
   "file": "/home/joshd/Projects/PomoPlusPlus/src/services/authService.cpp",
   "output": "CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o"
+},
+{
+  "directory": "/home/joshd/Projects/PomoPlusPlus/build",
+  "command": "/usr/bin/c++ -DASIO_STANDALONE -I/home/joshd/Projects/PomoPlusPlus/include -isystem /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include -isystem /home/joshd/.conan2/p/asio8b50208abaabe/p/include -isystem /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include -m64 -O3 -DNDEBUG -std=gnu++20 -o CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.o -c /home/joshd/Projects/PomoPlusPlus/src/utils/userSearch.cpp",
+  "file": "/home/joshd/Projects/PomoPlusPlus/src/utils/userSearch.cpp",
+  "output": "CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.o"
 }
 ]

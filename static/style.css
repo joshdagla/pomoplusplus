@@ -1,0 +1,519 @@
+body {
+  font-family: "Cairo", sans-serif;
+  font-weight: 600;
+  background-color: #fff4e6;
+  color: #3b2a20;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-top: 64px;
+  box-sizing: border-box;
+}
+
+.app-navbar {
+  background-color: #fcebda;
+  border-bottom: 1px solid #d9b99b;
+  box-shadow: 0 2px 8px rgba(59, 42, 32, 0.08);
+  padding: 6px 0;
+}
+
+.brand-text {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #3b2a20;
+}
+
+.app-navbar .nav-link {
+  color: #3b2a20;
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition:
+    background-color 0.15s,
+    color 0.15s;
+}
+
+.app-navbar .nav-link:hover,
+.app-navbar .nav-link:focus {
+  color: #d94530;
+  background-color: #f3d9bf;
+}
+
+.nav-btn {
+  --bs-btn-bg: #d94530;
+  --bs-btn-border-color: #d94530;
+  --bs-btn-color: #fffbf6;
+  --bs-btn-hover-bg: #b8351f;
+  --bs-btn-hover-border-color: #b8351f;
+  --bs-btn-hover-color: #fffbf6;
+  --bs-btn-active-bg: #b8351f;
+  --bs-btn-active-border-color: #b8351f;
+  --bs-btn-active-color: #fffbf6;
+  border-radius: 8px;
+  font-weight: 600;
+}
+
+.navbar-toggler {
+  border-color: #d9b99b;
+}
+
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.2rem rgba(224, 75, 51, 0.25);
+}
+
+@font-face {
+  font-family: "Cairo";
+  src: url("/static/fonts/cario/Cario-Semibold.otf") format("opentype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* Card */
+.container {
+  margin: 24px auto;
+  margin-top: 100px;
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 32px 24px;
+  background-color: #fcebda;
+  border: 1px solid #d9b99b;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(59, 42, 32, 0.12);
+}
+
+h1 {
+  font-size: 1.5rem;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+/* Mode buttons */
+.timer-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.timer-container button {
+  padding: 8px 14px;
+  border: 1px solid #d9b99b;
+  border-radius: 999px;
+  background-color: transparent;
+  color: #3b2a20;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.15s,
+    color 0.15s,
+    border-color 0.15s;
+}
+
+.timer-container button:hover {
+  background-color: #f3d9bf;
+}
+
+.timer-container .active {
+  background-color: #d94530;
+  border-color: #d94530;
+  color: #fffbf6;
+}
+
+#longbrkbtn {
+  display: none;
+}
+
+.pomdoro-count {
+  margin-bottom: 20px;
+  display: none;
+  font-weight: 700;
+}
+
+/* Timer ring */
+.progressbar {
+  height: 200px;
+  width: 200px;
+  background: conic-gradient(#d94530 0deg, #e8cdb4 0deg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pulse 3s infinite;
+  margin-bottom: 32px;
+}
+
+.progrsbar-inner {
+  height: 90%;
+  width: 90%;
+  background: #fff4e6;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.progressbar-number {
+  color: #3b2a20;
+  font-weight: 700;
+  font-size: 2.2rem;
+  margin: 0;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(0.98);
+  }
+  50% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.98);
+  }
+}
+
+/* Control buttons */
+.function-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+}
+
+#startbtn,
+#pausebtn,
+#resetbtn {
+  padding: 10px 22px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition:
+    background-color 0.15s,
+    transform 0.15s;
+}
+
+.function-buttons button:hover {
+  transform: translateY(-1px);
+}
+
+#startbtn {
+  background-color: #d94530;
+  color: #fffbf6;
+}
+#startbtn:hover {
+  background-color: #b8351f;
+}
+
+#pausebtn {
+  background-color: #6b5446;
+  color: #fff4e6;
+}
+#pausebtn:hover {
+  background-color: #54402f;
+}
+
+#resetbtn {
+  background-color: transparent;
+  border-color: #d9b99b;
+  color: #3b2a20;
+}
+#resetbtn:hover {
+  background-color: #f3d9bf;
+}
+
+.site-footer {
+  width: 100%;
+  margin-top: auto;
+  padding: 16px 24px;
+  border-top: 1px solid #d9b99b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.footer-art {
+  display: none;
+  height: 100px;
+  width: auto;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 4px;
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.footer-links a {
+  color: #3b2a20;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: #6b5446;
+}
+
+@media (min-width: 768px) {
+  .site-footer {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .footer-art {
+    display: block;
+  }
+}
+
+/* Task card (not using .container, which is your timer card rule) */
+.task-card {
+  width: calc(100% - 32px);
+  max-width: 560px;
+  margin: 0 auto 24px;
+  padding: 24px;
+  background-color: #fcebda;
+  border: 1px solid #d9b99b;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(59, 42, 32, 0.12);
+}
+
+.task-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.task-header h2 {
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.add-task-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border: none;
+  border-radius: 50%;
+  background-color: #d94530;
+  color: #fffbf6;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background-color 0.15s;
+}
+
+.add-task-btn:hover {
+  background-color: #b8351f;
+  transform: rotate(90deg) scale(1.08);
+}
+
+.task-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.task-empty {
+  text-align: center;
+  color: #6b5446;
+  margin: 16px 0 0;
+}
+
+/* Task row */
+.task-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px 12px;
+  padding: 12px 14px;
+  background-color: #fff4e6;
+  border: 1px solid #d9b99b;
+  border-radius: 10px;
+  transition:
+    transform 0.15s,
+    box-shadow 0.15s;
+}
+
+.task-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 8px rgba(59, 42, 32, 0.1);
+}
+
+.task-main {
+  flex: 1 1 160px;
+  min-width: 0;
+}
+
+.task-desc {
+  display: block;
+  font-weight: 700;
+  word-break: break-word;
+  transition:
+    opacity 0.2s,
+    color 0.2s;
+}
+
+.task-item.done .task-desc {
+  text-decoration: line-through;
+  opacity: 0.55;
+}
+
+.task-meta {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-top: 2px;
+  font-size: 0.85rem;
+  color: #6b5446;
+}
+
+.task-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.task-status {
+  width: auto;
+  background-color: #fff4e6;
+  color: #3b2a20;
+  border-color: #d9b99b;
+  font-weight: 600;
+}
+
+.task-status:focus {
+  border-color: #e04b33;
+  box-shadow: 0 0 0 0.2rem rgba(224, 75, 51, 0.25);
+}
+
+.task-icon-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 8px;
+  background: transparent;
+  color: #6b5446;
+  cursor: pointer;
+  transition:
+    background-color 0.15s,
+    color 0.15s;
+}
+
+.task-icon-btn:hover {
+  background-color: #f3d9bf;
+  color: #d94530;
+}
+
+.task-icon-btn.task-delete:hover {
+  color: #b8351f;
+}
+
+/* Animations */
+.task-enter {
+  animation: task-in 0.25s ease-out;
+}
+
+.task-leave {
+  animation: task-out 0.2s ease-in forwards;
+  pointer-events: none;
+}
+
+@keyframes task-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes task-out {
+  to {
+    opacity: 0;
+    transform: translateX(16px);
+  }
+}
+
+/* Modal */
+.task-modal .modal-content {
+  background-color: #fcebda;
+  border: 1px solid #d9b99b;
+  border-radius: 12px;
+  color: #3b2a20;
+}
+
+.task-modal .modal-header,
+.task-modal .modal-footer {
+  border-color: #d9b99b;
+}
+
+.task-modal .form-control {
+  background-color: #6b5446;
+  color: #fff4e6;
+  border-color: #6b5446;
+}
+
+.task-modal .form-control::placeholder {
+  color: #d9c3b0;
+}
+
+.task-modal .form-control:focus {
+  background-color: #6b5446;
+  color: #fff4e6;
+  border-color: #e04b33;
+  box-shadow: 0 0 0 0.2rem rgba(224, 75, 51, 0.25);
+}
+
+.task-error {
+  color: #b8351f;
+  margin: 8px 0 0;
+  min-height: 1.2em;
+}
+
+.task-save {
+  --bs-btn-bg: #d94530;
+  --bs-btn-border-color: #d94530;
+  --bs-btn-color: #fffbf6;
+  --bs-btn-hover-bg: #b8351f;
+  --bs-btn-hover-border-color: #b8351f;
+  --bs-btn-hover-color: #fffbf6;
+  --bs-btn-active-bg: #b8351f;
+  --bs-btn-active-border-color: #b8351f;
+  --bs-btn-active-color: #fffbf6;
+  font-weight: 600;
+}
+
+.task-cancel {
+  --bs-btn-color: #3b2a20;
+  --bs-btn-border-color: #d9b99b;
+  --bs-btn-hover-bg: #f3d9bf;
+  --bs-btn-hover-border-color: #d9b99b;
+  --bs-btn-hover-color: #3b2a20;
+  --bs-btn-active-bg: #f3d9bf;
+  --bs-btn-active-border-color: #d9b99b;
+  --bs-btn-active-color: #3b2a20;
+  font-weight: 600;
+}

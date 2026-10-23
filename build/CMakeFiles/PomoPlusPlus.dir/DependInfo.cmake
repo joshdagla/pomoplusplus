@@ -10,6 +10,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/joshd/Projects/PomoPlusPlus/src/main.cpp" "CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o" "gcc" "CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o.d"
   "/home/joshd/Projects/PomoPlusPlus/src/services/authService.cpp" "CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o" "gcc" "CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o.d"
+  "/home/joshd/Projects/PomoPlusPlus/src/services/taskService.cpp" "CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.o" "gcc" "CMakeFiles/PomoPlusPlus.dir/src/services/taskService.cpp.o.d"
+  "/home/joshd/Projects/PomoPlusPlus/src/utils/userSearch.cpp" "CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.o" "gcc" "CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.o.d"
   "" "PomoPlusPlus" "gcc" "CMakeFiles/PomoPlusPlus.dir/link.d"
   )
 
