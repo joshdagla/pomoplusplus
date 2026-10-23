@@ -12,5 +12,5 @@ struct UpdateTaskDto {
   short UserId;
   std::optional<std::string> Description;
   std::optional<int> Pomodoros;
-  std::string Status = "Pending";
+  std::optional<std::string> Status = "Pending";
 };

@@ -73,8 +73,7 @@ int main() {
         if (!signUpResult.Success) {
           res["success"] = signUpResult.Success;
           res["message"] = signUpResult.ErrorMessage.value_or(
-              "An unexpected error has occured while trying to update the "
-              "task");
+              "An unexpected error has occured while trying to register");
 
           return crow::response(401, res);
         }
@@ -110,8 +109,7 @@ int main() {
         if (!loginResult.Success) {
           res["success"] = loginResult.Success;
           res["message"] = loginResult.ErrorMessage.value_or(
-              "An unexpected error has occured while trying to update the "
-              "task");
+              "An unexpected error has occured while trying to login");
 
           return crow::response(401, res);
         }
@@ -209,173 +207,164 @@ int main() {
         return crow::response(200, res);
       });
 
-  CROW_ROUTE(app,
-             "/api/update/<int>")([](const crow::request &req, int taskId) {
-    ResultDto<std::string> result{};
+  CROW_ROUTE(app, "/api/update/<int>")
+      .methods(crow::HTTPMethod::PUT)([](const crow::request &req, int taskId) {
+        auto body = crow::json::load(req.body);
 
-    auto body = crow::json::load(req.body);
+        if (!body) {
+          return crow::response(400, "Missing Parameters");
+        }
 
-    if (!body) {
-      return crow::response(400, "Missing Parameters");
-    }
+        UpdateTaskDto updatedTask;
 
-    UpdateTaskDto dto;
-    dto.Description = body["description"].s();
-    dto.Pomodoros = body["pomodoros"].i();
-    dto.Status = body["status"].s();
+        if (body.has("description") &&
+            body["description"].t() == crow::json::type::String) {
+          updatedTask.Description = body["description"].s();
+        }
 
-    result = updateTaskService(dto, taskId);
+        if (body.has("pomodoros") &&
+            body["pomodoros"].t() == crow::json::type::Number) {
+          updatedTask.Pomodoros = static_cast<int>(body["pomodoros"].i());
+        }
 
-    crow::json::wvalue res;
+        if (body.has("status") &&
+            body["status"].t() == crow::json::type::String) {
+          updatedTask.Status = body["status"].s();
+        }
 
-    if (!result.Success) {
-      res["success"] = result.Success;
-      res["message"] = result.ErrorMessage.value_or(
-          "An unexpected error has occured while trying to update the task");
+        if (!updatedTask.Description && !updatedTask.Pomodoros &&
+            !updatedTask.Status) {
+          return crow::response(400, "Nothing to update");
+        }
 
-      return crow::response(401, res);
-    }
+        ResultDto<std::string> result = updateTaskService(updatedTask, taskId);
 
-    res["success"] = result.Success;
-    res["message"] = result.Data.value_or("Task updated Successfully");
+        crow::json::wvalue res;
 
-    return crow::response(200, res);
-  });
+        if (!result.Success) {
+          res["success"] = false;
+          res["message"] =
+              result.ErrorMessage.value_or("An unexpected error has occurred "
+                                           "while trying to update the task");
+
+          return crow::response(401, res);
+        }
+
+        res["success"] = true;
+        res["message"] = result.Data.value_or("Task updated successfully");
+
+        return crow::response(200, res);
+      });
 
   // Route to remove a task (not delete)
-  CROW_ROUTE(app,
-             "/api/remove/<int>")([](const crow::request &req, int taskId) {
-    ResultDto<std::string> result{};
+  CROW_ROUTE(app, "/api/remove/<int>")
+      .methods(crow::HTTPMethod::PUT)([](int taskId) {
+        ResultDto<std::string> result = removeTaskService(taskId);
 
-    auto body = crow::json::load(req.body);
+        crow::json::wvalue res;
 
-    if (!body) {
-      return crow::response(400, "Task not found.");
-    }
+        if (!result.Success) {
+          res["success"] = result.Success;
+          res["message"] =
+              result.ErrorMessage.value_or("An unexpected error has occured "
+                                           "while trying to remove the task");
 
-    result = removeTaskService(taskId);
+          return crow::response(401, res);
+        }
 
-    crow::json::wvalue res;
+        res["success"] = result.Success;
+        res["message"] = result.Data.value_or("Task removed Successfully");
 
-    if (!result.Success) {
-      res["success"] = result.Success;
-      res["message"] = result.ErrorMessage.value_or(
-          "An unexpected error has occured while trying to remove the task");
-
-      return crow::response(401, res);
-    }
-
-    res["success"] = result.Success;
-    res["message"] = result.Data.value_or("Task removed Successfully");
-
-    return crow::response(200, res);
-  });
+        return crow::response(200, res);
+      });
 
   // Route to delete the task permanently
-  CROW_ROUTE(app,
-             "/api/delete/<int>")([](const crow::request &req, int taskId) {
-    ResultDto<std::string> result{};
+  CROW_ROUTE(app, "/api/delete/<int>")
+      .methods(crow::HTTPMethod::DELETE)([](int taskId) {
+        ResultDto<std::string> result = deleteTaskService(taskId);
 
-    auto body = crow::json::load(req.body);
+        crow::json::wvalue res;
 
-    if (!body) {
-      return crow::response(400, "Task not found.");
-    }
+        if (!result.Success) {
+          res["success"] = result.Success;
+          res["message"] =
+              result.ErrorMessage.value_or("An unexpected error has occured "
+                                           "while trying to remove the task");
 
-    result = deleteTaskService(taskId);
+          return crow::response(401, res);
+        }
 
-    crow::json::wvalue res;
+        res["success"] = result.Success;
+        res["message"] = result.Data.value_or("Task removed Successfully");
 
-    if (!result.Success) {
-      res["success"] = result.Success;
-      res["message"] = result.ErrorMessage.value_or(
-          "An unexpected error has occured while trying to remove the task");
-
-      return crow::response(401, res);
-    }
-
-    res["success"] = result.Success;
-    res["message"] = result.Data.value_or("Task removed Successfully");
-
-    return crow::response(200, res);
-  });
+        return crow::response(200, res);
+      });
 
   // Route to fetch all available tasks
-  CROW_ROUTE(app, "/api/get/<int>")([](const crow::request &req, int userId) {
-    ResultDto<std::vector<AllTasks>> result{};
+  CROW_ROUTE(app, "/api/get/<int>")
+      .methods(crow::HTTPMethod::GET)([](int userId) {
+        FetchResultDto result = getTasks(userId);
 
-    auto body = crow::json::load(req.body);
+        crow::json::wvalue res;
 
-    if (!body) {
-      return crow::response(400, "Task not found.");
-    }
+        if (!result.Success) {
+          res["success"] = result.Success;
+          res["message"] = result.ErrorMessage.value_or(
+              "An unexpected error has occured while "
+              "trying to fetch available tasks");
 
-    result = getTasks(userId);
+          return crow::response(401, res);
+        }
 
-    crow::json::wvalue res;
+        std::vector<crow::json::wvalue> tasksJson;
+        for (const auto &task : result.Tasks) {
+          crow::json::wvalue json;
+          json["id"] = task.Id;
+          json["description"] = task.Description;
+          json["pomodoros"] = task.Pomodoros;
+          json["status"] = task.Status;
 
-    if (!result.Success) {
-      res["success"] = result.Success;
-      res["message"] = result.ErrorMessage.value_or(
-          "An unexpected error has occured while trying to remove the task");
+          tasksJson.push_back(std::move(json));
+        }
 
-      return crow::response(401, res);
-    }
+        res["success"] = result.Success;
+        res["tasks"] = std::move(tasksJson);
 
-    std::vector<AllTasks> tasks;
-
-    // Try catch block to check for empty task list
-    try {
-      std::vector<AllTasks> tasks = result.Data.value();
-    } catch (const std::bad_optional_access) {
-      res["success"] = false;
-      res["message"] = "No users found";
-    }
-
-    res["success"] = result.Success;
-    res["message"] = tasks;
-
-    return crow::response(200, res);
-  });
+        return crow::response(200, res);
+      });
 
   // Route to fetch all tasks
-  CROW_ROUTE(app,
-             "/api/getAll/<int>")([](const crow::request &req, int userId) {
-    ResultDto<std::vector<AllTasks>> result{};
+  CROW_ROUTE(app, "/api/getAll/<int>")
+      .methods(crow::HTTPMethod::GET)([](int userId) {
+        FetchResultDto result = getAllTasks(userId);
 
-    auto body = crow::json::load(req.body);
+        crow::json::wvalue res;
 
-    if (!body) {
-      return crow::response(400, "Task not found.");
-    }
+        if (!result.Success) {
+          res["success"] = result.Success;
+          res["message"] =
+              result.ErrorMessage.value_or("An unexpected error has occured "
+                                           "while trying to fetch all tasks");
 
-    result = getAllTasks(userId);
+          return crow::response(401, res);
+        }
 
-    crow::json::wvalue res;
+        std::vector<crow::json::wvalue> tasksJson;
+        for (const auto &task : result.Tasks) {
+          crow::json::wvalue json;
+          json["id"] = task.Id;
+          json["description"] = task.Description;
+          json["pomodoros"] = task.Pomodoros;
+          json["status"] = task.Status;
 
-    if (!result.Success) {
-      res["success"] = result.Success;
-      res["message"] = result.ErrorMessage.value_or(
-          "An unexpected error has occured while trying to remove the task");
+          tasksJson.push_back(std::move(json));
+        }
 
-      return crow::response(401, res);
-    }
+        res["success"] = result.Success;
+        res["message"] = std::move(tasksJson);
 
-    std::vector<AllTasks> tasks;
-
-    // Try catch block to check for empty task list
-    try {
-      std::vector<AllTasks> tasks = result.Data.value();
-    } catch (const std::bad_optional_access) {
-      res["success"] = false;
-      res["message"] = "No users found";
-    }
-
-    res["success"] = result.Success;
-    res["message"] = tasks;
-
-    return crow::response(200, res);
-  });
+        return crow::response(200, res);
+      });
 
   CROW_CATCHALL_ROUTE(app)([]() {
     auto page = crow::mustache::load("error.html");

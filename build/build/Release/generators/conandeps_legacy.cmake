@@ -4,5 +4,6 @@ message(STATUS "Conan: It is recommended to use explicit find_package() per depe
 find_package(Crow)
 find_package(asio)
 find_package(SQLiteCpp)
+find_package(jwt-cpp)
 
-set(CONANDEPS_LEGACY  Crow::Crow  asio::asio  SQLiteCpp )
+set(CONANDEPS_LEGACY  Crow::Crow  asio::asio  SQLiteCpp  jwt-cpp::jwt-cpp )

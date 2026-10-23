@@ -11,13 +11,14 @@ message(STATUS "Building with CMake version: ${CMAKE_VERSION}")
 find_package(Crow REQUIRED)
 find_package(asio REQUIRED)
 find_package(SQLiteCpp REQUIRED)
+find_package(jwt-cpp REQUIRED)
 
 add_executable(${PROJECT_NAME}
   src/main.cpp
   src/dtos/authDto.hpp
   src/dtos/taskDto.hpp
-  src/services/authService.cpp
   src/services/taskService.cpp
+  src/services/authService.cpp
   src/utils/userSearch.cpp
 )
 
@@ -30,7 +31,7 @@ target_link_directories(${PROJECT_NAME} PRIVATE
 )
 # Keep Conan-managed dependencies
 target_link_libraries(${PROJECT_NAME} PRIVATE Crow::Crow asio::asio SQLiteCpp
-                      bcrypt)
+                      bcrypt jwt-cpp::jwt-cpp)
 
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD COMMAND ${CMAKE_COMMAND}
                    -E create_symlink ${CMAKE_SOURCE_DIR}/templates

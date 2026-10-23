@@ -79,97 +79,56 @@ ResultDto<std::string> createTaskService(const CreateTaskDto &dto,
   }
 }
 
-ResultDto<std::string> UpdateTaskDto(UpdateTaskDto &dto, int &taskId) {
+ResultDto<std::string> updateTaskService(const UpdateTaskDto &dto, int taskId) {
   try {
     ResultDto<std::string> serviceResponse;
 
-    SQLite::Database db("pomo.db");
+    SQLite::Database db("pomo.db", SQLite::OPEN_READWRITE);
 
-    SQLite::Transaction transaction(db);
+    SQLite::Statement query(db, "UPDATE tasks SET "
+                                "description = COALESCE(?, description), "
+                                "pomodoros = COALESCE(?, pomodoros), "
+                                "status = COALESCE(?, status) "
+                                "WHERE id = ?");
 
-    // If description and pomodoros are not provided, only status will be
-    // updated
-    if (!dto.Description.has_value() || !dto.Pomodoros.has_value()) {
-      SQLite::Statement updateTaskQuery(
-          db, "UPDATE tasks (status) SET VALUES (?) WHERE id = ?");
-
-      updateTaskQuery.bind(1, dto.Status);
-      updateTaskQuery.bind(2, taskId);
-
-      updateTaskQuery.exec();
-
-      transaction.commit();
-
-      serviceResponse.Success = true;
-      serviceResponse.Data = "Task updated successfully";
-
-      return serviceResponse;
-    }
-    // If only description is not provided
-    else if (!dto.Description.has_value()) {
-      SQLite::Statement updateTaskQuery(
-          db,
-          "UPDATE tasks (pomodoros, status) SET VALUES (?, ?) WHERE id = ?");
-
-      updateTaskQuery.bind(1, dto.Pomodoros.value_or(0));
-      updateTaskQuery.bind(2, dto.Status);
-      updateTaskQuery.bind(3, taskId);
-
-      updateTaskQuery.exec();
-
-      transaction.commit();
-
-      serviceResponse.Success = true;
-      serviceResponse.Data = "Task updated successfully";
-
-      return serviceResponse;
-    }
-    // If only pomodoros arent provided
-    else if (!dto.Pomodoros.has_value()) {
-      SQLite::Statement updateTaskQuery(
-          db,
-          "UPDATE tasks (description, status) SET VALUES (?, ?) WHERE id = ?");
-
-      updateTaskQuery.bind(1, dto.Description.value_or("Updated Task"));
-      updateTaskQuery.bind(2, dto.Status);
-      updateTaskQuery.bind(3, taskId);
-
-      updateTaskQuery.exec();
-
-      transaction.commit();
-
-      serviceResponse.Success = true;
-      serviceResponse.Data = "Task updated successfully";
-
-      return serviceResponse;
+    if (dto.Description.has_value()) {
+      query.bind(1, dto.Description.value());
+    } else {
+      query.bind(1);
     }
 
-    // If all parameters are provided
-    SQLite::Statement updateTaskQuery(
-        db, "UPDATE tasks (description, pomodoros, status) SET VALUES (?, ?, "
-            "?) WHERE id = ?");
+    if (dto.Pomodoros.has_value()) {
+      query.bind(2, dto.Pomodoros.value());
+    } else {
+      query.bind(2);
+    }
 
-    updateTaskQuery.bind(1, dto.Description.value_or("Updated Task"));
-    updateTaskQuery.bind(2, dto.Pomodoros.value_or(0));
-    updateTaskQuery.bind(3, dto.Status);
-    updateTaskQuery.bind(4, taskId);
+    if (dto.Status.has_value()) {
+      query.bind(3, dto.Status.value());
+    } else {
+      query.bind(3);
+    }
 
-    updateTaskQuery.exec();
+    query.bind(4, taskId);
 
-    transaction.commit();
+    int rowsChanged = query.exec();
+
+    if (rowsChanged == 0) {
+      serviceResponse.Success = false;
+      serviceResponse.ErrorMessage = "Task not found";
+      return serviceResponse;
+    }
 
     serviceResponse.Success = true;
     serviceResponse.Data = "Task updated successfully";
-
     return serviceResponse;
   }
 
   catch (const SQLite::Exception &ex) {
     ResultDto<std::string> resultException;
     resultException.Success = false;
-    std::string sqlErr = std::format("Database error. {}", ex.getErrorStr());
-    resultException.ErrorMessage = sqlErr;
-
+    resultException.ErrorMessage =
+        std::format("Database error. {}", ex.getErrorStr());
     return resultException;
   }
 
@@ -177,7 +136,6 @@ ResultDto<std::string> UpdateTaskDto(UpdateTaskDto &dto, int &taskId) {
     ResultDto<std::string> resultException{};
     resultException.Success = false;
     resultException.ErrorMessage = e.what();
-
     return resultException;
   }
 }
@@ -187,12 +145,12 @@ ResultDto<std::string> removeTaskService(int &taskId) {
   try {
     ResultDto<std::string> serviceResult;
 
-    SQLite::Database db("pomo.db");
+    SQLite::Database db("pomo.db", SQLite::OPEN_READWRITE);
 
     SQLite::Transaction transaction(db);
 
-    SQLite::Statement removeQuery(
-        db, "UPDATE tasks (status) SET VALUES (?) WHERE id = ?");
+    SQLite::Statement removeQuery(db,
+                                  "UPDATE tasks SET status = ? WHERE id = ?");
 
     removeQuery.bind(1, "Removed");
     removeQuery.bind(2, taskId);
@@ -230,7 +188,7 @@ ResultDto<std::string> deleteTaskService(int &taskId) {
   try {
     ResultDto<std::string> serviceResult;
 
-    SQLite::Database db("pomo.db");
+    SQLite::Database db("pomo.db", SQLite::OPEN_READWRITE);
 
     SQLite::Transaction transaction(db);
 
@@ -243,7 +201,7 @@ ResultDto<std::string> deleteTaskService(int &taskId) {
     transaction.commit();
 
     serviceResult.Success = true;
-    serviceResult.Data = "Task removed. Still available in Tasks section";
+    serviceResult.Data = "Task deleted successfully";
 
     return serviceResult;
   }
@@ -267,10 +225,10 @@ ResultDto<std::string> deleteTaskService(int &taskId) {
 }
 
 // Get tasks not yet removed
-ResultDto<std::vector<AllTasks>> getTasks(int &userId) {
+FetchResultDto getTasks(int &userId) {
 
   try {
-    ResultDto<std::vector<AllTasks>> serviceResult;
+    FetchResultDto serviceResult;
 
     SearchResultDto searchResult = findUser(userId);
 
@@ -285,31 +243,32 @@ ResultDto<std::vector<AllTasks>> getTasks(int &userId) {
     SQLite::Database db("pomo.db");
 
     SQLite::Statement getQuery(
-        db, "SELECT * FROM tasks WHERE user_id = ? AND status != removed");
+        db, "SELECT * FROM tasks WHERE user_id = ? AND status != ?");
 
     getQuery.bind(1, userId);
+    getQuery.bind(2, "Removed");
 
     std::vector<AllTasks> taskList;
 
     while (getQuery.executeStep()) {
       AllTasks a;
 
-      a.Id = getQuery.getColumn(0);
-      a.Description = getQuery.getColumn(1).getString();
-      a.Pomodoros = getQuery.getColumn(2).getInt();
-      a.Status = getQuery.getColumn(3).getString();
+      a.Id = getQuery.getColumn("id").getInt();
+      a.Description = getQuery.getColumn("description").getString();
+      a.Pomodoros = getQuery.getColumn("pomodoros").getInt();
+      a.Status = getQuery.getColumn("status").getString();
 
       taskList.push_back(a);
     }
 
     serviceResult.Success = true;
-    serviceResult.Data = taskList;
+    serviceResult.Tasks = taskList;
 
     return serviceResult;
   }
 
   catch (const SQLite::Exception &ex) {
-    ResultDto<std::vector<AllTasks>> resultException;
+    FetchResultDto resultException;
     resultException.Success = false;
     std::string sqlErr = std::format("Database error. {}", ex.getErrorStr());
     resultException.ErrorMessage = sqlErr;
@@ -318,7 +277,7 @@ ResultDto<std::vector<AllTasks>> getTasks(int &userId) {
   }
 
   catch (const std::exception &e) {
-    ResultDto<std::vector<AllTasks>> resultException;
+    FetchResultDto resultException;
     resultException.Success = false;
     resultException.ErrorMessage = e.what();
 
@@ -327,10 +286,10 @@ ResultDto<std::vector<AllTasks>> getTasks(int &userId) {
 }
 
 // Get every single task
-ResultDto<std::vector<AllTasks>> getAllTasks(int &userId) {
+FetchResultDto getAllTasks(int &userId) {
 
   try {
-    ResultDto<std::vector<AllTasks>> serviceResult;
+    FetchResultDto serviceResult;
 
     SearchResultDto searchResult = findUser(userId);
 
@@ -344,31 +303,33 @@ ResultDto<std::vector<AllTasks>> getAllTasks(int &userId) {
 
     SQLite::Database db("pomo.db");
 
-    SQLite::Statement getQuery(db, "SELECT * FROM tasks WHERE user_id = ?");
+    SQLite::Statement getQuery(
+        db, "SELECT * FROM tasks WHERE user_id = ? AND status = ?");
 
     getQuery.bind(1, userId);
+    getQuery.bind(2, "Removed");
 
     std::vector<AllTasks> taskList;
 
     while (getQuery.executeStep()) {
       AllTasks a;
 
-      a.Id = getQuery.getColumn(0);
-      a.Description = getQuery.getColumn(1).getString();
-      a.Pomodoros = getQuery.getColumn(2).getInt();
-      a.Status = getQuery.getColumn(3).getString();
+      a.Id = getQuery.getColumn("id").getInt();
+      a.Description = getQuery.getColumn("description").getString();
+      a.Pomodoros = getQuery.getColumn("pomodoros").getInt();
+      a.Status = getQuery.getColumn("status").getString();
 
       taskList.push_back(a);
     }
 
     serviceResult.Success = true;
-    serviceResult.Data = taskList;
+    serviceResult.Tasks = taskList;
 
     return serviceResult;
   }
 
   catch (const SQLite::Exception &ex) {
-    ResultDto<std::vector<AllTasks>> resultException;
+    FetchResultDto resultException;
     resultException.Success = false;
     std::string sqlErr = std::format("Database error. {}", ex.getErrorStr());
     resultException.ErrorMessage = sqlErr;
@@ -377,7 +338,7 @@ ResultDto<std::vector<AllTasks>> getAllTasks(int &userId) {
   }
 
   catch (const std::exception &e) {
-    ResultDto<std::vector<AllTasks>> resultException{};
+    FetchResultDto resultException{};
     resultException.Success = false;
     resultException.ErrorMessage = e.what();
 
