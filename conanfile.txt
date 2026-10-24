@@ -4,6 +4,9 @@ asio/1.29.0
 sqlitecpp/3.3.3
 jwt-cpp/0.7.2
 
+[options]
+jwt-cpp/*:with_picojson=True
+
 [generators]
 CMakeDeps
 CMakeToolchain

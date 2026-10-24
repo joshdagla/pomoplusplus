@@ -4240,3 +4240,1781 @@ events:
       CMAKE_SYSTEM_LIBRARY_PATH:
         - "/usr/lib/X11"
 ...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/SQLiteCpp-Target-release.cmake:23 (conan_package_library_targets)"
+      - "build/build/Release/generators/SQLiteCppTargets.cmake:24 (include)"
+      - "build/build/Release/generators/SQLiteCppConfig.cmake:16 (include)"
+      - "CMakeLists.txt:13 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "SQLiteCpp"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib/"
+    found: "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib/libSQLiteCpp.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/SQLite3-Target-release.cmake:23 (conan_package_library_targets)"
+      - "build/build/Release/generators/SQLite3Targets.cmake:24 (include)"
+      - "build/build/Release/generators/SQLite3Config.cmake:16 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/SQLiteCppConfig.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:13 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "sqlite3"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib/"
+    found: "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib/libsqlite3.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/SQLite3-Target-release.cmake:60 (conan_package_library_targets)"
+      - "build/build/Release/generators/SQLite3Targets.cmake:24 (include)"
+      - "build/build/Release/generators/SQLite3Config.cmake:16 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/SQLiteCppConfig.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:13 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "sqlite3"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib/"
+    found: "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib/libsqlite3.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/OpenSSL-Target-release.cmake:23 (conan_package_library_targets)"
+      - "build/build/Release/generators/OpenSSLTargets.cmake:24 (include)"
+      - "build/build/Release/generators/OpenSSLConfig.cmake:16 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/jwt-cpp-config.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:14 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ssl"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/"
+    found: "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libssl.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/OpenSSL-Target-release.cmake:23 (conan_package_library_targets)"
+      - "build/build/Release/generators/OpenSSLTargets.cmake:24 (include)"
+      - "build/build/Release/generators/OpenSSLConfig.cmake:16 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/jwt-cpp-config.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:14 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "crypto"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/"
+    found: "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libcrypto.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/OpenSSL-Target-release.cmake:60 (conan_package_library_targets)"
+      - "build/build/Release/generators/OpenSSLTargets.cmake:24 (include)"
+      - "build/build/Release/generators/OpenSSLConfig.cmake:16 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/jwt-cpp-config.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:14 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ssl"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/"
+    found: "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libssl.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/OpenSSL-Target-release.cmake:120 (conan_package_library_targets)"
+      - "build/build/Release/generators/OpenSSLTargets.cmake:24 (include)"
+      - "build/build/Release/generators/OpenSSLConfig.cmake:16 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/jwt-cpp-config.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:14 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "crypto"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/"
+    found: "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libcrypto.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/ZLIB-Target-release.cmake:23 (conan_package_library_targets)"
+      - "build/build/Release/generators/ZLIBTargets.cmake:24 (include)"
+      - "build/build/Release/generators/ZLIBConfig.cmake:16 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/OpenSSLConfig.cmake:24 (find_dependency)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/jwt-cpp-config.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:14 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "z"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib/"
+    found: "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib/libz.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/OpenSSLConfig.cmake:24 (find_dependency)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/jwt-cpp-config.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:14 (find_package)"
+    name: "ZLIB"
+    configs:
+      -
+        filename: "ZLIB.cps"
+        kind: "cps"
+      -
+        filename: "zlib.cps"
+        kind: "cps"
+      -
+        filename: "ZLIBConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "zlib-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "ZLIB"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles/pkgRedirects/ZLIBConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles/pkgRedirects/zlib-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles/pkgRedirects/lib/cps/ZLIB.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles/pkgRedirects/lib/cps/zlib.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles/pkgRedirects/share/cps/ZLIB.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles/pkgRedirects/share/cps/zlib.cps"
+        mode: "cps"
+        reason: "no_exist"
+    found:
+      path: "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators/ZLIBConfig.cmake"
+      mode: "config"
+      version: "1.3.2"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/jwt-cpp-config.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:14 (find_package)"
+    name: "OpenSSL"
+    configs:
+      -
+        filename: "OpenSSL.cps"
+        kind: "cps"
+      -
+        filename: "openssl.cps"
+        kind: "cps"
+      -
+        filename: "OpenSSLConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "openssl-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "OpenSSL"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles/pkgRedirects/OpenSSLConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles/pkgRedirects/openssl-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles/pkgRedirects/lib/cps/OpenSSL.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles/pkgRedirects/lib/cps/openssl.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles/pkgRedirects/share/cps/OpenSSL.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles/pkgRedirects/share/cps/openssl.cps"
+        mode: "cps"
+        reason: "no_exist"
+    found:
+      path: "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators/OpenSSLConfig.cmake"
+      mode: "config"
+      version: "3.6.5"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "CMakeLists.txt:14 (find_package)"
+    name: "jwt-cpp"
+    configs:
+      -
+        filename: "jwt-cpp.cps"
+        kind: "cps"
+      -
+        filename: "jwt-cppConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "jwt-cpp-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "jwt-cpp"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles/pkgRedirects/jwt-cppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles/pkgRedirects/jwt-cpp-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles/pkgRedirects/lib/cps/jwt-cpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles/pkgRedirects/share/cps/jwt-cpp.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators/jwt-cppConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators/jwt-cpp-config.cmake"
+      mode: "config"
+      version: "0.7.2"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_MODULE_PATH:
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/SQLiteCpp-Target-release.cmake:23 (conan_package_library_targets)"
+      - "build/build/Release/generators/SQLiteCppTargets.cmake:24 (include)"
+      - "build/build/Release/generators/SQLiteCppConfig.cmake:16 (include)"
+      - "CMakeLists.txt:13 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "SQLiteCpp"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib/"
+    found: "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib/libSQLiteCpp.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/SQLite3-Target-release.cmake:23 (conan_package_library_targets)"
+      - "build/build/Release/generators/SQLite3Targets.cmake:24 (include)"
+      - "build/build/Release/generators/SQLite3Config.cmake:16 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/SQLiteCppConfig.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:13 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "sqlite3"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib/"
+    found: "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib/libsqlite3.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/SQLite3-Target-release.cmake:60 (conan_package_library_targets)"
+      - "build/build/Release/generators/SQLite3Targets.cmake:24 (include)"
+      - "build/build/Release/generators/SQLite3Config.cmake:16 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/SQLiteCppConfig.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:13 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "sqlite3"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib/"
+    found: "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib/libsqlite3.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/OpenSSL-Target-release.cmake:23 (conan_package_library_targets)"
+      - "build/build/Release/generators/OpenSSLTargets.cmake:24 (include)"
+      - "build/build/Release/generators/OpenSSLConfig.cmake:16 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/jwt-cpp-config.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:14 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ssl"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/"
+    found: "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libssl.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/OpenSSL-Target-release.cmake:23 (conan_package_library_targets)"
+      - "build/build/Release/generators/OpenSSLTargets.cmake:24 (include)"
+      - "build/build/Release/generators/OpenSSLConfig.cmake:16 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/jwt-cpp-config.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:14 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "crypto"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/"
+    found: "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libcrypto.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/OpenSSL-Target-release.cmake:60 (conan_package_library_targets)"
+      - "build/build/Release/generators/OpenSSLTargets.cmake:24 (include)"
+      - "build/build/Release/generators/OpenSSLConfig.cmake:16 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/jwt-cpp-config.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:14 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ssl"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/"
+    found: "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libssl.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/OpenSSL-Target-release.cmake:120 (conan_package_library_targets)"
+      - "build/build/Release/generators/OpenSSLTargets.cmake:24 (include)"
+      - "build/build/Release/generators/OpenSSLConfig.cmake:16 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/jwt-cpp-config.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:14 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "crypto"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/"
+    found: "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libcrypto.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/ZLIB-Target-release.cmake:23 (conan_package_library_targets)"
+      - "build/build/Release/generators/ZLIBTargets.cmake:24 (include)"
+      - "build/build/Release/generators/ZLIBConfig.cmake:16 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/OpenSSLConfig.cmake:24 (find_dependency)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/jwt-cpp-config.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:14 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "z"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib/"
+    found: "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib/libz.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/jwt-cpp-config.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:14 (find_package)"
+    name: "picojson"
+    configs:
+      -
+        filename: "picojson.cps"
+        kind: "cps"
+      -
+        filename: "picojsonConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "picojson-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "picojson"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles/pkgRedirects/picojsonConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles/pkgRedirects/picojson-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles/pkgRedirects/lib/cps/picojson.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles/pkgRedirects/share/cps/picojson.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators/picojsonConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+    found:
+      path: "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators/picojson-config.cmake"
+      mode: "config"
+      version: "1.3.0"
+    search_context:
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+...
+
+---
+events:
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/SQLiteCpp-Target-release.cmake:23 (conan_package_library_targets)"
+      - "build/build/Release/generators/SQLiteCppTargets.cmake:24 (include)"
+      - "build/build/Release/generators/SQLiteCppConfig.cmake:16 (include)"
+      - "CMakeLists.txt:13 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "SQLiteCpp"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib/"
+    found: "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib/libSQLiteCpp.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/SQLite3-Target-release.cmake:23 (conan_package_library_targets)"
+      - "build/build/Release/generators/SQLite3Targets.cmake:24 (include)"
+      - "build/build/Release/generators/SQLite3Config.cmake:16 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/SQLiteCppConfig.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:13 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "sqlite3"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib/"
+    found: "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib/libsqlite3.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/SQLite3-Target-release.cmake:60 (conan_package_library_targets)"
+      - "build/build/Release/generators/SQLite3Targets.cmake:24 (include)"
+      - "build/build/Release/generators/SQLite3Config.cmake:16 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/SQLiteCppConfig.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:13 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "sqlite3"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib/"
+    found: "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib/libsqlite3.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/OpenSSL-Target-release.cmake:23 (conan_package_library_targets)"
+      - "build/build/Release/generators/OpenSSLTargets.cmake:24 (include)"
+      - "build/build/Release/generators/OpenSSLConfig.cmake:16 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/jwt-cpp-config.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:14 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ssl"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/"
+    found: "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libssl.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/OpenSSL-Target-release.cmake:23 (conan_package_library_targets)"
+      - "build/build/Release/generators/OpenSSLTargets.cmake:24 (include)"
+      - "build/build/Release/generators/OpenSSLConfig.cmake:16 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/jwt-cpp-config.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:14 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "crypto"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/"
+    found: "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libcrypto.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/OpenSSL-Target-release.cmake:60 (conan_package_library_targets)"
+      - "build/build/Release/generators/OpenSSLTargets.cmake:24 (include)"
+      - "build/build/Release/generators/OpenSSLConfig.cmake:16 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/jwt-cpp-config.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:14 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "ssl"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/"
+    found: "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libssl.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/OpenSSL-Target-release.cmake:120 (conan_package_library_targets)"
+      - "build/build/Release/generators/OpenSSLTargets.cmake:24 (include)"
+      - "build/build/Release/generators/OpenSSLConfig.cmake:16 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/jwt-cpp-config.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:14 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "crypto"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/"
+    found: "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libcrypto.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+  -
+    kind: "find-v1"
+    backtrace:
+      - "build/build/Release/generators/cmakedeps_macros.cmake:32 (find_library)"
+      - "build/build/Release/generators/ZLIB-Target-release.cmake:23 (conan_package_library_targets)"
+      - "build/build/Release/generators/ZLIBTargets.cmake:24 (include)"
+      - "build/build/Release/generators/ZLIBConfig.cmake:16 (include)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/OpenSSLConfig.cmake:24 (find_dependency)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:93 (find_package)"
+      - "/usr/share/cmake/Modules/CMakeFindDependencyMacro.cmake:125 (__find_dependency_common)"
+      - "build/build/Release/generators/jwt-cpp-config.cmake:24 (find_dependency)"
+      - "CMakeLists.txt:14 (find_package)"
+    mode: "library"
+    variable: "CONAN_FOUND_LIBRARY"
+    description: "Path to a library."
+    settings:
+      SearchFramework: "NEVER"
+      SearchAppBundle: "NEVER"
+      CMAKE_FIND_USE_CMAKE_PATH: true
+      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+      CMAKE_FIND_USE_INSTALL_PREFIX: true
+    names:
+      - "z"
+    candidate_directories:
+      - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib/"
+    found: "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib/libz.a"
+    search_context:
+      CMAKE_LIBRARY_PATH:
+        - "/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib"
+        - "/home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib"
+        - "/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib"
+      CMAKE_PREFIX_PATH:
+        - "/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators"
+        - "/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/cmake"
+      ENV{PATH}:
+        - "/home/joshd/develop/flutter/flutter/bin"
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/var/lib/flatpak/exports/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+      CMAKE_SYSTEM_LIBRARY_PATH:
+        - "/usr/lib/X11"
+...

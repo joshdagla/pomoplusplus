@@ -420,6 +420,77 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/writable_pipe.hpp
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/write.hpp
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/write_at.hpp
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/asn1.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/asn1err.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/async.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/asyncerr.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/bio.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/bioerr.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/bn.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/bnerr.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/buffer.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/buffererr.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/comp.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/comperr.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/conf.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/conferr.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/configuration.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/conftypes.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/core.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/core_dispatch.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/crypto.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/cryptoerr.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/cryptoerr_legacy.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ct.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/cterr.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/dh.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/dherr.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/dsa.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/dsaerr.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/dtls1.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/e_os2.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/e_ostime.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ec.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ecdsa.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ecerr.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/err.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/evp.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/evperr.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/hmac.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/http.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/indicator.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/lhash.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/macros.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/obj_mac.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/objects.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/objectserr.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/opensslconf.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/opensslv.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/param_build.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/params.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/pem.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/pemerr.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/pkcs7.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/pkcs7err.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/prov_ssl.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/quic.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/rsa.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/rsaerr.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/safestack.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/sha.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/srtp.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ssl.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ssl2.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ssl3.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/sslerr.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/sslerr_legacy.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/stack.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/symhacks.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/tls1.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/types.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/x509.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/x509_vfy.h
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/x509err.h
  /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Column.h
  /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Database.h
  /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Exception.h
@@ -441,6 +512,7 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/logging.h
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/middleware.h
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/middleware_context.h
+ /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/middlewares/cookie_parser.h
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/mime_types.h
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/mustache.h
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/parser.h
@@ -454,12 +526,18 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/utility.h
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/version.h
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/websocket.h
+ /home/joshd/.conan2/p/jwt-c6ad968c27631b/p/include/jwt-cpp/base.h
+ /home/joshd/.conan2/p/jwt-c6ad968c27631b/p/include/jwt-cpp/jwt.h
+ /home/joshd/.conan2/p/jwt-c6ad968c27631b/p/include/jwt-cpp/traits/kazuho-picojson/defaults.h
+ /home/joshd/.conan2/p/jwt-c6ad968c27631b/p/include/jwt-cpp/traits/kazuho-picojson/traits.h
+ /home/joshd/.conan2/p/picojde3f96225d840/p/include/picojson.h
  /home/joshd/Projects/PomoPlusPlus/include/pwbcrypt/bcrypt.h
  /home/joshd/Projects/PomoPlusPlus/src/dtos/authDto.hpp
  /home/joshd/Projects/PomoPlusPlus/src/dtos/taskDto.hpp
  /home/joshd/Projects/PomoPlusPlus/src/utils/userSearch.hpp
  /home/joshd/Projects/PomoPlusPlus/src/services/authService.hpp
  /home/joshd/Projects/PomoPlusPlus/src/services/taskService.hpp
+ /home/joshd/Projects/PomoPlusPlus/src/utils/jwtUtil.hpp
  /usr/include/alloca.h
  /usr/include/arpa/inet.h
  /usr/include/asm-generic/bitsperlong.h
@@ -735,10 +813,12 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o
  /usr/include/c++/16/bits/stl_iterator_base_types.h
  /usr/include/c++/16/bits/stl_map.h
  /usr/include/c++/16/bits/stl_multimap.h
+ /usr/include/c++/16/bits/stl_multiset.h
  /usr/include/c++/16/bits/stl_numeric.h
  /usr/include/c++/16/bits/stl_pair.h
  /usr/include/c++/16/bits/stl_raw_storage_iter.h
  /usr/include/c++/16/bits/stl_relops.h
+ /usr/include/c++/16/bits/stl_set.h
  /usr/include/c++/16/bits/stl_tempbuf.h
  /usr/include/c++/16/bits/stl_tree.h
  /usr/include/c++/16/bits/stl_uninitialized.h
@@ -786,6 +866,8 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o
  /usr/include/c++/16/debug/assertions.h
  /usr/include/c++/16/debug/debug.h
  /usr/include/c++/16/exception
+ /usr/include/c++/16/experimental/bits/lfts_config.h
+ /usr/include/c++/16/experimental/type_traits
  /usr/include/c++/16/ext/aligned_buffer.h
  /usr/include/c++/16/ext/alloc_traits.h
  /usr/include/c++/16/ext/atomicity.h
@@ -823,9 +905,11 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o
  /usr/include/c++/16/random
  /usr/include/c++/16/ratio
  /usr/include/c++/16/semaphore
+ /usr/include/c++/16/set
  /usr/include/c++/16/span
  /usr/include/c++/16/sstream
  /usr/include/c++/16/stdexcept
+ /usr/include/c++/16/stdlib.h
  /usr/include/c++/16/stop_token
  /usr/include/c++/16/streambuf
  /usr/include/c++/16/string
@@ -875,6 +959,7 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o
  /usr/include/features.h
  /usr/include/gnu/stubs-64.h
  /usr/include/gnu/stubs.h
+ /usr/include/inttypes.h
  /usr/include/libintl.h
  /usr/include/limits.h
  /usr/include/linux/close_range.h
@@ -3094,8 +3179,11 @@ CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.o
  /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stdint.h
 
 PomoPlusPlus
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libcrypto.a
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libssl.a
  /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib/libSQLiteCpp.a
  /home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib/libsqlite3.a
+ /home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib/libz.a
  /home/joshd/Projects/PomoPlusPlus/lib/libbcrypt.a
  /usr/lib/Scrt1.o
  /usr/lib/crti.o
@@ -3105,6 +3193,7 @@ PomoPlusPlus
  /usr/lib/libgcc_s.so.1
  /usr/lib/libm.so
  /usr/lib/libpthread.a
+ /usr/lib/librt.a
  /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o
  /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o
  /usr/lib/gcc/x86_64-pc-linux-gnu/16/libatomic.so

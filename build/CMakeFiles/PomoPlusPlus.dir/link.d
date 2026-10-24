@@ -9,8 +9,12 @@ PomoPlusPlus: \
   /home/joshd/Projects/PomoPlusPlus/lib/libbcrypt.a \
   /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib/libSQLiteCpp.a \
   /home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib/libsqlite3.a \
-  /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libpthread.a \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libssl.a \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libcrypto.a \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libdl.a \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/librt.a \
+  /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libpthread.a \
+  /home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib/libz.a \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/libstdc++.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libm.so \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libm.so \
@@ -63,9 +67,17 @@ CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.o:
 
 /home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib/libsqlite3.a:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libpthread.a:
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libssl.a:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libcrypto.a:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libdl.a:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/librt.a:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16/../../../../lib/libpthread.a:
+
+/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib/libz.a:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/16/libstdc++.so:
 
