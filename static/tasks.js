@@ -1,20 +1,57 @@
 $(function () {
-  const tasks = []; // { id, description, pomodoros, status }
-  let nextId = 1;
+  const API = {
+    list: { method: "GET", url: "/api/get" }, // tasks that aren't removed
+    create: { method: "POST", url: "/api/create" },
+    update: { method: "PUT", url: "/api/update" },
+    remove: { method: "PUT", url: "/api/remove" },
+  };
+
+  let tasks = []; // { id, description, pomodoros, status }
   let editingId = null;
 
   const modalEl = document.getElementById("task-modal");
   const modal = new bootstrap.Modal(modalEl);
   const $list = $("#task-list");
-  const $empty = $("#task-empty");
+  const $empty = $("#task-empty").hide(); // shown after the first load
   const $desc = $("#task-description");
   const $poms = $("#task-pomodoros");
   const $error = $("#task-error");
+  const $save = $("#task-save");
 
   const ICON_EDIT =
     '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg>';
   const ICON_DELETE =
     '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M6 6l1 14h10l1-14M10 11v6M14 11v6"/></svg>';
+
+  // ---------- helpers ----------
+  function request(api, payload) {
+    return $.ajax({
+      url: api.url,
+      method: api.method,
+      contentType: "application/json",
+      data: payload ? JSON.stringify(payload) : undefined,
+      dataType: "json",
+    });
+  }
+
+  function errMsg(xhr) {
+    return (
+      xhr.responseJSON?.message || xhr.responseText || "Something went wrong"
+    );
+  }
+
+  function showError(msg) {
+    alert(msg); // swap for your own UI whenever you like
+  }
+
+  function normalize(t) {
+    return {
+      id: Number(t.id),
+      description: t.description,
+      pomodoros: Number(t.pomodoros),
+      status: String(t.status).toLowerCase(), // dropdown values are lowercase
+    };
+  }
 
   function updateEmpty() {
     $empty.toggle(tasks.length === 0);
@@ -24,7 +61,7 @@ $(function () {
     return tasks.find((t) => t.id === id);
   }
 
-  // Builds (or rebuilds) the contents of a task row
+  // ---------- rendering ----------
   function fillRow($li, task) {
     $li.toggleClass("done", task.status === "completed").empty();
 
@@ -65,6 +102,28 @@ $(function () {
     $li.append($main, $actions);
   }
 
+  function addRow(task) {
+    const $li = $('<li class="task-item task-enter"></li>').attr(
+      "data-id",
+      task.id,
+    );
+    fillRow($li, task);
+    $list.append($li);
+  }
+
+  // ---------- load ----------
+  function loadTasks() {
+    request(API.list)
+      .done((res) => {
+        tasks = (res.tasks || []).map(normalize);
+        $list.empty();
+        tasks.forEach(addRow);
+        updateEmpty();
+      })
+      .fail((xhr) => showError(errMsg(xhr)));
+  }
+
+  // ---------- add / edit ----------
   function openModal(task) {
     editingId = task ? task.id : null;
     $("#task-modal-title").text(task ? "Edit task" : "Add task");
@@ -87,39 +146,60 @@ $(function () {
       return;
     }
 
-    if (editingId !== null) {
-      const task = findTask(editingId);
-      task.description = description;
-      task.pomodoros = pomodoros;
-      fillRow($list.children(`[data-id="${task.id}"]`), task);
-    } else {
-      const task = { id: nextId++, description, pomodoros, status: "pending" };
-      tasks.push(task);
-      const $li = $('<li class="task-item task-enter"></li>').attr(
-        "data-id",
-        task.id,
-      );
-      fillRow($li, task);
-      $list.append($li);
-    }
+    const isEdit = editingId !== null;
+    const req = isEdit
+      ? request(API.update, { taskId: editingId, description, pomodoros })
+      : request(API.create, { description, pomodoros });
 
-    updateEmpty();
-    modal.hide();
+    $save.prop("disabled", true); // stops double-clicks creating duplicates
+
+    req
+      .done((res) => {
+        if (isEdit) {
+          const task = findTask(editingId);
+          task.description = description;
+          task.pomodoros = pomodoros;
+          fillRow($list.children(`[data-id="${task.id}"]`), task);
+        } else {
+          const task = {
+            id: Number(res.id),
+            description,
+            pomodoros,
+            status: "pending",
+          };
+          tasks.push(task);
+          addRow(task);
+        }
+        updateEmpty();
+        modal.hide();
+      })
+      .fail((xhr) => $error.text(errMsg(xhr)))
+      .always(() => $save.prop("disabled", false));
   }
 
-  // Events
+  // ---------- events ----------
   $("#add-task-btn").on("click", () => openModal(null));
-  $("#task-save").on("click", saveTask);
+  $save.on("click", saveTask);
   $desc.add($poms).on("keydown", (e) => {
     if (e.key === "Enter") saveTask();
   });
   modalEl.addEventListener("shown.bs.modal", () => $desc.trigger("focus"));
 
   $list.on("change", ".task-status", function () {
-    const $li = $(this).closest(".task-item");
+    const $select = $(this);
+    const $li = $select.closest(".task-item");
     const task = findTask(Number($li.attr("data-id")));
-    task.status = $(this).val();
-    $li.toggleClass("done", task.status === "completed");
+    const newStatus = $select.val();
+
+    request(API.update, { taskId: task.id, status: newStatus })
+      .done(() => {
+        task.status = newStatus;
+        $li.toggleClass("done", newStatus === "completed");
+      })
+      .fail((xhr) => {
+        $select.val(task.status); // put the dropdown back
+        showError(errMsg(xhr));
+      });
   });
 
   $list.on("click", ".task-edit", function () {
@@ -127,19 +207,28 @@ $(function () {
     openModal(findTask(id));
   });
 
+  // "Delete" only marks the task as removed on the server
   $list.on("click", ".task-delete", function () {
-    const $li = $(this).closest(".task-item");
+    const $btn = $(this);
+    const $li = $btn.closest(".task-item");
     const id = Number($li.attr("data-id"));
-    $li.addClass("task-leave");
-    setTimeout(() => {
-      tasks.splice(
-        tasks.findIndex((t) => t.id === id),
-        1,
-      );
-      $li.remove();
-      updateEmpty();
-    }, 200);
+
+    $btn.prop("disabled", true);
+
+    request(API.remove, { taskId: id })
+      .done(() => {
+        $li.addClass("task-leave");
+        setTimeout(() => {
+          tasks = tasks.filter((t) => t.id !== id);
+          $li.remove();
+          updateEmpty();
+        }, 200);
+      })
+      .fail((xhr) => {
+        $btn.prop("disabled", false);
+        showError(errMsg(xhr));
+      });
   });
 
-  updateEmpty();
+  loadTasks();
 });

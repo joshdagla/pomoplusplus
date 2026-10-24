@@ -30,6 +30,7 @@ CMakePresets.json
 *.db-shm
 *.sqlite
 *.sqlite3
+pomo.db
 
 # Compiled objects and binaries
 *.o

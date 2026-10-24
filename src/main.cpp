@@ -210,7 +210,7 @@ int main() {
           return crow::response(401, "Not authenticated");
         }
 
-        ResultDto<std::string> result{};
+        ResultDto<int> result{};
 
         auto body = crow::json::load(req.body);
 
@@ -232,7 +232,7 @@ int main() {
           }
 
           crow::json::wvalue res;
-          res["message"] = result.Data.value_or("Task created!");
+          res["id"] = result.Data.value();
           res["Success"] = result.Success;
 
           return crow::response(200, res);
@@ -254,15 +254,14 @@ int main() {
           return crow::response(401, res);
         }
 
-        res["message"] = result.Data.value_or("Task created!");
+        res["message"] = result.Data.value();
         res["Success"] = result.Success;
 
         return crow::response(200, res);
       });
 
-  CROW_ROUTE(app, "/api/update/<int>")
-      .methods(
-          crow::HTTPMethod::PUT)([&app](const crow::request &req, int taskId) {
+  CROW_ROUTE(app, "/api/update")
+      .methods(crow::HTTPMethod::PUT)([&app](const crow::request &req) {
         auto &ctx = app.get_context<crow::CookieParser>(req);
         auto userid = verifyToken(ctx.get_cookie("token"));
 
@@ -275,6 +274,13 @@ int main() {
         if (!body) {
           return crow::response(400, "Missing Parameters");
         }
+
+        if (!body.has("taskId") ||
+            body["taskId"].t() != crow::json::type::Number) {
+          return crow::response(400, "Missing taskId");
+        }
+
+        int taskId = static_cast<int>(body["taskId"].i());
 
         UpdateTaskDto updatedTask;
 
@@ -318,60 +324,77 @@ int main() {
       });
 
   // Route to remove a task (not delete)
-  CROW_ROUTE(app, "/api/remove/<int>")
-      .methods(
-          crow::HTTPMethod::PUT)([&app](const crow::request &req, int taskId) {
+  CROW_ROUTE(app, "/api/remove")
+      .methods(crow::HTTPMethod::PUT)([&app](const crow::request &req) {
         auto &ctx = app.get_context<crow::CookieParser>(req);
         auto id = verifyToken(ctx.get_cookie("token"));
 
         if (!id) {
           return crow::response(401, "Not authenticated");
         }
+
+        auto body = crow::json::load(req.body);
+
+        if (!body || !body.has("taskId") ||
+            body["taskId"].t() != crow::json::type::Number) {
+          return crow::response(400, "Missing taskId");
+        }
+
+        int taskId = static_cast<int>(body["taskId"].i());
 
         ResultDto<std::string> result = removeTaskService(taskId);
 
         crow::json::wvalue res;
 
         if (!result.Success) {
-          res["success"] = result.Success;
+          res["success"] = false;
           res["message"] =
-              result.ErrorMessage.value_or("An unexpected error has occured "
+              result.ErrorMessage.value_or("An unexpected error has occurred "
                                            "while trying to remove the task");
 
           return crow::response(401, res);
         }
 
-        res["success"] = result.Success;
-        res["message"] = result.Data.value_or("Task removed Successfully");
+        res["success"] = true;
+        res["message"] = result.Data.value_or("Task removed successfully");
 
         return crow::response(200, res);
       });
 
   // Route to delete the task permanently
-  CROW_ROUTE(app, "/api/delete/<int>")
-      .methods(crow::HTTPMethod::DELETE)([&app](const crow::request &req,
-                                                int taskId) {
+  CROW_ROUTE(app, "/api/delete")
+      .methods(crow::HTTPMethod::DELETE)([&app](const crow::request &req) {
         auto &ctx = app.get_context<crow::CookieParser>(req);
         auto id = verifyToken(ctx.get_cookie("token"));
 
         if (!id) {
           return crow::response(401, "Not authenticated");
         }
+
+        auto body = crow::json::load(req.body);
+
+        if (!body || !body.has("taskId") ||
+            body["taskId"].t() != crow::json::type::Number) {
+          return crow::response(400, "Missing taskId");
+        }
+
+        int taskId = static_cast<int>(body["taskId"].i());
+
         ResultDto<std::string> result = deleteTaskService(taskId);
 
         crow::json::wvalue res;
 
         if (!result.Success) {
-          res["success"] = result.Success;
+          res["success"] = false;
           res["message"] =
-              result.ErrorMessage.value_or("An unexpected error has occured "
-                                           "while trying to remove the task");
+              result.ErrorMessage.value_or("An unexpected error has occurred "
+                                           "while trying to delete the task");
 
           return crow::response(401, res);
         }
 
-        res["success"] = result.Success;
-        res["message"] = result.Data.value_or("Task removed Successfully");
+        res["success"] = true;
+        res["message"] = result.Data.value_or("Task deleted successfully");
 
         return crow::response(200, res);
       });
