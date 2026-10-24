@@ -419,6 +419,77 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o: /home/joshd/Projects/PomoPlusPlus/sr
   /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/writable_pipe.hpp \
   /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/write.hpp \
   /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/write_at.hpp \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/asn1.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/asn1err.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/async.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/asyncerr.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/bio.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/bioerr.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/bn.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/bnerr.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/buffer.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/buffererr.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/comp.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/comperr.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/conf.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/conferr.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/configuration.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/conftypes.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/core.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/core_dispatch.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/crypto.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/cryptoerr.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/cryptoerr_legacy.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ct.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/cterr.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/dh.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/dherr.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/dsa.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/dsaerr.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/dtls1.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/e_os2.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/e_ostime.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ec.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ecdsa.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ecerr.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/err.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/evp.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/evperr.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/hmac.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/http.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/indicator.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/lhash.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/macros.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/obj_mac.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/objects.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/objectserr.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/opensslconf.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/opensslv.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/param_build.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/params.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/pem.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/pemerr.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/pkcs7.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/pkcs7err.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/prov_ssl.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/quic.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/rsa.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/rsaerr.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/safestack.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/sha.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/srtp.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ssl.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ssl2.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ssl3.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/sslerr.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/sslerr_legacy.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/stack.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/symhacks.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/tls1.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/types.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/x509.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/x509_vfy.h \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/x509err.h \
   /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Column.h \
   /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Database.h \
   /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Exception.h \
@@ -440,6 +511,7 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o: /home/joshd/Projects/PomoPlusPlus/sr
   /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/logging.h \
   /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/middleware.h \
   /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/middleware_context.h \
+  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/middlewares/cookie_parser.h \
   /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/mime_types.h \
   /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/mustache.h \
   /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/parser.h \
@@ -453,12 +525,18 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o: /home/joshd/Projects/PomoPlusPlus/sr
   /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/utility.h \
   /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/version.h \
   /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/websocket.h \
+  /home/joshd/.conan2/p/jwt-c6ad968c27631b/p/include/jwt-cpp/base.h \
+  /home/joshd/.conan2/p/jwt-c6ad968c27631b/p/include/jwt-cpp/jwt.h \
+  /home/joshd/.conan2/p/jwt-c6ad968c27631b/p/include/jwt-cpp/traits/kazuho-picojson/defaults.h \
+  /home/joshd/.conan2/p/jwt-c6ad968c27631b/p/include/jwt-cpp/traits/kazuho-picojson/traits.h \
+  /home/joshd/.conan2/p/picojde3f96225d840/p/include/picojson.h \
   /home/joshd/Projects/PomoPlusPlus/include/pwbcrypt/bcrypt.h \
   /home/joshd/Projects/PomoPlusPlus/src/dtos/authDto.hpp \
   /home/joshd/Projects/PomoPlusPlus/src/dtos/taskDto.hpp \
   /home/joshd/Projects/PomoPlusPlus/src/utils/userSearch.hpp \
   /home/joshd/Projects/PomoPlusPlus/src/services/authService.hpp \
   /home/joshd/Projects/PomoPlusPlus/src/services/taskService.hpp \
+  /home/joshd/Projects/PomoPlusPlus/src/utils/jwtUtil.hpp \
   /usr/include/alloca.h \
   /usr/include/arpa/inet.h \
   /usr/include/asm-generic/bitsperlong.h \
@@ -734,10 +812,12 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o: /home/joshd/Projects/PomoPlusPlus/sr
   /usr/include/c++/16/bits/stl_iterator_base_types.h \
   /usr/include/c++/16/bits/stl_map.h \
   /usr/include/c++/16/bits/stl_multimap.h \
+  /usr/include/c++/16/bits/stl_multiset.h \
   /usr/include/c++/16/bits/stl_numeric.h \
   /usr/include/c++/16/bits/stl_pair.h \
   /usr/include/c++/16/bits/stl_raw_storage_iter.h \
   /usr/include/c++/16/bits/stl_relops.h \
+  /usr/include/c++/16/bits/stl_set.h \
   /usr/include/c++/16/bits/stl_tempbuf.h \
   /usr/include/c++/16/bits/stl_tree.h \
   /usr/include/c++/16/bits/stl_uninitialized.h \
@@ -785,6 +865,8 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o: /home/joshd/Projects/PomoPlusPlus/sr
   /usr/include/c++/16/debug/assertions.h \
   /usr/include/c++/16/debug/debug.h \
   /usr/include/c++/16/exception \
+  /usr/include/c++/16/experimental/bits/lfts_config.h \
+  /usr/include/c++/16/experimental/type_traits \
   /usr/include/c++/16/ext/aligned_buffer.h \
   /usr/include/c++/16/ext/alloc_traits.h \
   /usr/include/c++/16/ext/atomicity.h \
@@ -822,9 +904,11 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o: /home/joshd/Projects/PomoPlusPlus/sr
   /usr/include/c++/16/random \
   /usr/include/c++/16/ratio \
   /usr/include/c++/16/semaphore \
+  /usr/include/c++/16/set \
   /usr/include/c++/16/span \
   /usr/include/c++/16/sstream \
   /usr/include/c++/16/stdexcept \
+  /usr/include/c++/16/stdlib.h \
   /usr/include/c++/16/stop_token \
   /usr/include/c++/16/streambuf \
   /usr/include/c++/16/string \
@@ -874,6 +958,7 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o: /home/joshd/Projects/PomoPlusPlus/sr
   /usr/include/features.h \
   /usr/include/gnu/stubs-64.h \
   /usr/include/gnu/stubs.h \
+  /usr/include/inttypes.h \
   /usr/include/libintl.h \
   /usr/include/limits.h \
   /usr/include/linux/close_range.h \
@@ -3089,8 +3174,11 @@ CMakeFiles/PomoPlusPlus.dir/src/utils/userSearch.cpp.o: /home/joshd/Projects/Pom
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stddef.h \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stdint.h
 
-PomoPlusPlus: /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib/libSQLiteCpp.a \
+PomoPlusPlus: /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libcrypto.a \
+  /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libssl.a \
+  /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib/libSQLiteCpp.a \
   /home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib/libsqlite3.a \
+  /home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib/libz.a \
   /home/joshd/Projects/PomoPlusPlus/lib/libbcrypt.a \
   /usr/lib/Scrt1.o \
   /usr/lib/crti.o \
@@ -3100,6 +3188,7 @@ PomoPlusPlus: /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib/libSQLiteCpp.a \
   /usr/lib/libgcc_s.so.1 \
   /usr/lib/libm.so \
   /usr/lib/libpthread.a \
+  /usr/lib/librt.a \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtendS.o \
   /usr/lib/gcc/x86_64-pc-linux-gnu/16/libatomic.so \
@@ -3126,8 +3215,6 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /usr/lib/ld-linux-x86-64.so.2:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/16/libgcc_s.so:
-
 /usr/lib/gcc/x86_64-pc-linux-gnu/16/libgcc.a:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/16/libatomic.so:
@@ -3136,6 +3223,10 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /usr/lib/gcc/x86_64-pc-linux-gnu/16/crtbeginS.o:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/16/libgcc_s.so:
+
+/usr/lib/librt.a:
+
 /usr/lib/libpthread.a:
 
 /usr/lib/libgcc_s.so.1:
@@ -3143,6 +3234,10 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 /usr/lib/libdl.a:
 
 /home/joshd/Projects/PomoPlusPlus/lib/libbcrypt.a:
+
+/home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib/libz.a:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libssl.a:
 
 /home/joshd/Projects/PomoPlusPlus/src/utils/userSearch.cpp:
 
@@ -3220,8 +3315,6 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /usr/include/c++/16/x86_64-pc-linux-gnu/bits/opt_random.h:
 
-/usr/include/c++/16/x86_64-pc-linux-gnu/bits/gthr.h:
-
 /usr/include/c++/16/x86_64-pc-linux-gnu/bits/ctype_inline.h:
 
 /usr/include/c++/16/x86_64-pc-linux-gnu/bits/cpu_defines.h:
@@ -3264,6 +3357,8 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /usr/include/c++/16/string_view:
 
+/usr/include/c++/16/stdlib.h:
+
 /usr/include/c++/16/semaphore:
 
 /usr/include/c++/16/random:
@@ -3301,8 +3396,6 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 /usr/include/c++/16/iomanip:
 
 /usr/include/c++/16/future:
-
-/usr/include/c++/16/ext/concurrence.h:
 
 /usr/include/c++/16/ext/alloc_traits.h:
 
@@ -3370,12 +3463,6 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /usr/include/c++/16/bits/stl_vector.h:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stdarg.h:
-
-/usr/include/c++/16/cstring:
-
-/usr/include/c++/16/bits/stl_uninitialized.h:
-
 /usr/include/c++/16/bits/stl_tree.h:
 
 /usr/include/c++/16/bits/stl_tempbuf.h:
@@ -3394,6 +3481,8 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /usr/include/c++/16/bits/stl_construct.h:
 
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libcrypto.a:
+
 /usr/include/c++/16/bits/stl_algo.h:
 
 /usr/include/c++/16/sstream:
@@ -3401,8 +3490,6 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 /usr/include/c++/16/bits/stdexcept_throwfwd.h:
 
 /usr/include/c++/16/bits/stdexcept_except.h:
-
-/usr/include/c++/16/bits/std_function.h:
 
 /usr/include/c++/16/bits/specfun.h:
 
@@ -3438,8 +3525,6 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /usr/include/c++/16/bits/node_handle.h:
 
-/usr/include/c++/16/bits/new_allocator.h:
-
 /usr/include/c++/16/bits/nested_exception.h:
 
 /usr/include/c++/16/bits/move.h:
@@ -3462,8 +3547,6 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /usr/include/c++/16/bits/locale_classes.tcc:
 
-/usr/include/c++/16/bits/locale_classes.h:
-
 /usr/include/c++/16/bits/regex.tcc:
 
 /usr/include/c++/16/bits/max_size_type.h:
@@ -3483,6 +3566,8 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 /usr/include/time.h:
 
 /usr/include/c++/16/bits/fs_ops.h:
+
+/usr/include/c++/16/set:
 
 /usr/include/c++/16/bits/fs_fwd.h:
 
@@ -3508,15 +3593,9 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /usr/include/c++/16/bits/codecvt.h:
 
-/usr/include/c++/16/bits/exception.h:
-
-/usr/include/c++/16/bits/chrono_io.h:
-
 /usr/include/c++/16/bits/charconv.h:
 
 /usr/include/c++/16/bits/char_traits.h:
-
-/usr/include/c++/16/bits/binders.h:
 
 /usr/include/c++/16/x86_64-pc-linux-gnu/bits/os_defines.h:
 
@@ -3554,8 +3633,6 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /usr/include/c++/16/backward/auto_ptr.h:
 
-/usr/include/c++/16/any:
-
 /usr/include/c++/16/algorithm:
 
 /usr/include/bits/xopen_lim.h:
@@ -3570,8 +3647,6 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /usr/include/bits/waitflags.h:
 
-/usr/include/bits/unistd_ext.h:
-
 /usr/include/bits/uio-ext.h:
 
 /usr/include/bits/uintn-identity.h:
@@ -3583,12 +3658,6 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 /usr/include/bits/types/struct_tm.h:
 
 /usr/include/bits/types/struct_timeval.h:
-
-/usr/include/bits/types/struct_timespec.h:
-
-/usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++io.h:
-
-/usr/include/bits/types/struct_statx_timestamp.h:
 
 /usr/include/bits/types/struct_statx.h:
 
@@ -3678,6 +3747,126 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /usr/include/bits/stat.h:
 
+/usr/include/bits/socket_type.h:
+
+/usr/include/bits/sigthread.h:
+
+/usr/lib/crti.o:
+
+/usr/include/bits/signum-arch.h:
+
+/usr/include/bits/signal_ext.h:
+
+/usr/include/bits/siginfo-consts.h:
+
+/usr/include/bits/siginfo-consts-arch.h:
+
+/usr/include/bits/siginfo-arch.h:
+
+/usr/include/bits/sigcontext.h:
+
+/usr/include/bits/sigaction.h:
+
+/usr/include/bits/pthread_stack_min-dynamic.h:
+
+/usr/include/bits/posix_opt.h:
+
+/usr/include/bits/poll.h:
+
+/usr/include/bits/openat2.h:
+
+/usr/include/bits/mathcalls.h:
+
+/usr/include/bits/mathcalls-macros.h:
+
+/usr/include/bits/math-vector.h:
+
+/usr/include/bits/libc-header-start.h:
+
+/usr/include/bits/iscanonical.h:
+
+/usr/include/bits/ioctls.h:
+
+/usr/include/bits/ioctl-types.h:
+
+/usr/include/c++/16/type_traits:
+
+/usr/include/c++/16/bits/shared_ptr.h:
+
+/usr/include/bits/socket.h:
+
+/usr/include/bits/in.h:
+
+/usr/include/bits/getopt_core.h:
+
+/usr/lib/libmvec.so.1:
+
+/usr/include/linux/stddef.h:
+
+/usr/include/c++/16/vector:
+
+/usr/include/bits/fp-logb.h:
+
+/usr/lib/libc.so.6:
+
+/usr/include/c++/16/bits/stl_raw_storage_iter.h:
+
+/usr/include/bits/fp-fast.h:
+
+/usr/include/bits/flt-eval-method.h:
+
+/usr/include/bits/floatn.h:
+
+/usr/include/c++/16/bits/invoke.h:
+
+/usr/include/bits/floatn-common.h:
+
+/usr/include/c++/16/bits/predefined_ops.h:
+
+/usr/include/bits/fcntl-linux.h:
+
+/usr/include/bits/confname.h:
+
+/usr/include/bits/cloexec.h:
+
+/usr/include/bits/byteswap.h:
+
+/usr/include/signal.h:
+
+/usr/include/bits/atomic_wide_counter.h:
+
+/usr/include/assert.h:
+
+/usr/include/asm/types.h:
+
+/usr/include/asm/sockios.h:
+
+/usr/include/asm/posix_types.h:
+
+/usr/include/c++/16/condition_variable:
+
+/usr/include/c++/16/bits/stl_bvector.h:
+
+/usr/include/c++/16/bits/functional_hash.h:
+
+/usr/include/asm/ioctls.h:
+
+/usr/include/asm/ioctl.h:
+
+/usr/include/asm/bitsperlong.h:
+
+/usr/include/asm-generic/sockios.h:
+
+/usr/include/asm-generic/socket.h:
+
+/usr/include/asm-generic/posix_types.h:
+
+/usr/include/c++/16/bits/exception.h:
+
+/usr/include/c++/16/bits/chrono_io.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/e_ostime.h:
+
 /usr/include/sys/cdefs.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/handler_continuation_hook.hpp:
@@ -3688,6 +3877,8 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/generic/detail/endpoint.hpp:
 
+/usr/include/inttypes.h:
+
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/traits/static_require.hpp:
 
 /usr/include/c++/16/bits/atomic_lockfree_defines.h:
@@ -3696,17 +3887,15 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/file_base.hpp:
 
-/usr/include/c++/16/bits/uses_allocator_args.h:
+/usr/include/bits/netdb.h:
 
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/execution/mapping.hpp:
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/basic_resolver_iterator.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/execution/impl/bad_executor.ipp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/timer_queue_ptime.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/udp.hpp:
-
-/usr/include/asm/types.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/execution/context_as.hpp:
 
@@ -3724,9 +3913,13 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/execution/bad_executor.hpp:
 
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/execution/invocable_archetype.hpp:
+/usr/include/bits/endianness.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/execution/allocator.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/system_executor.hpp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/objects.h:
 
 /home/joshd/Projects/PomoPlusPlus/src/dtos/taskDto.hpp:
 
@@ -3736,13 +3929,11 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/generic/datagram_protocol.hpp:
 
+/usr/include/c++/16/experimental/bits/lfts_config.h:
+
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/traits/execute_member.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/dispatch.hpp:
-
-/usr/include/bits/types/__locale_t.h:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/work_dispatcher.hpp:
 
 /usr/include/pthread.h:
 
@@ -3774,6 +3965,8 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/execution/relationship.hpp:
 
+/usr/include/c++/16/experimental/type_traits:
+
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/signal_set_base.hpp:
 
 /usr/include/c++/16/bits/iterator_concepts.h:
@@ -3786,7 +3979,7 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/scheduler_task.hpp:
 
-/usr/include/asm-generic/sockios.h:
+/home/joshd/.conan2/p/jwt-c6ad968c27631b/p/include/jwt-cpp/traits/kazuho-picojson/traits.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/resolve_query_op.hpp:
 
@@ -3802,31 +3995,31 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/posix/descriptor.hpp:
 
-/usr/include/bits/poll.h:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/reactive_socket_service_base.hpp:
-
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/coroutine.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/local/detail/endpoint.hpp:
 
-/usr/include/bits/termios-c_cflag.h:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/any_completion_executor.ipp:
-
-/usr/lib/libc.so.6:
-
-/usr/include/c++/16/bits/stl_raw_storage_iter.h:
-
-/usr/include/bits/fp-fast.h:
-
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/require_concept.hpp:
+
+/usr/include/bits/local_lim.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/reactive_socket_send_op.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/reactive_socket_recvfrom_op.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/std_fenced_block.hpp:
 
+/usr/lib/libc.so:
+
+/usr/include/asm-generic/types.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/utility.hpp:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/reactive_socket_recv_op.hpp:
+
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/packaged_task.hpp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/quic.h:
 
 /usr/include/c++/16/bits/locale_facets_nonio.tcc:
 
@@ -3834,17 +4027,31 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/any_completion_handler.hpp:
 
+/usr/include/bits/unistd_ext.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/lhash.h:
+
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/throw_exception.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/reactive_socket_accept_op.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/timer_scheduler.hpp:
 
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/evp.h:
+
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/type_traits.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/consign.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/version.hpp:
+
+/usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stdarg.h:
+
+/usr/include/c++/16/cstring:
+
+/usr/include/c++/16/bits/stl_uninitialized.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/objectserr.h:
 
 /usr/lib/libm.so:
 
@@ -3865,6 +4072,10 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/wait_handler.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/pop_options.hpp:
+
+/usr/include/bits/cpu-set.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/traits/prefer_free.hpp:
 
 /usr/include/c++/16/memory:
 
@@ -3888,15 +4099,15 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/redirect_error.hpp:
 
-/usr/include/bits/mathcalls.h:
+/usr/lib/gcc/x86_64-pc-linux-gnu/16/include/float.h:
 
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/null_event.hpp:
+/usr/include/bits/fcntl.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/posix_global.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/event.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/icmp.hpp:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/posix/descriptor_base.hpp:
 
 /usr/include/c++/16/bits/std_mutex.h:
 
@@ -3928,10 +4139,6 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/impl/posix_mutex.ipp:
 
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/reactive_null_buffers_op.hpp:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/traits/require_member.hpp:
-
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/scoped_ptr.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/local/stream_protocol.hpp:
@@ -3960,6 +4167,10 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/http_connection.h:
 
+/usr/include/bits/getopt_posix.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/buffered_stream_storage.hpp:
+
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/buffers_iterator.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/basic_file.hpp:
@@ -3972,21 +4183,25 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/impl/scheduler.ipp:
 
+/usr/include/bits/select.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/completion_condition.hpp:
+
 /usr/include/bits/types/clock_t.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/any_completion_executor.hpp:
 
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/posix_static_mutex.hpp:
-
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/io_context.hpp:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/handler_alloc_helpers.hpp:
 
 /usr/include/c++/16/tr1/riemann_zeta.tcc:
 
 /usr/include/bits/types/timer_t.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/impl/strand_service.hpp:
+
+/usr/include/c++/16/ext/concurrence.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/symhacks.h:
 
 /usr/include/linux/errno.h:
 
@@ -3996,17 +4211,17 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/basic_waitable_timer.hpp:
 
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/windows/object_handle.hpp:
-
 /usr/include/c++/16/ext/atomicity.h:
 
 /usr/include/c++/16/bits/string_view.tcc:
 
 /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/logging.h:
 
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/traits/prefer_free.hpp:
+/usr/include/bits/struct_rwlock.h:
 
-/usr/include/bits/cpu-set.h:
+/usr/include/bits/sched.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/reactive_socket_service.hpp:
 
 /usr/include/bits/epoll.h:
 
@@ -4021,6 +4236,8 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 /usr/include/c++/16/bits/streambuf.tcc:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/write_at.hpp:
+
+/home/joshd/Projects/PomoPlusPlus/src/utils/jwtUtil.hpp:
 
 /usr/include/c++/16/cstdint:
 
@@ -4038,6 +4255,10 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/basic_socket_streambuf.hpp:
 
+/usr/include/c++/16/any:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/conferr.h:
+
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/defer.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/serial_port_base.ipp:
@@ -4050,25 +4271,19 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/is_buffer_sequence.hpp:
 
-/usr/include/asm-generic/ioctls.h:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/basic_streambuf_fwd.hpp:
-
-/home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/http_request.h:
-
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/socket_types.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/bind_allocator.hpp:
-
-/usr/include/c++/16/filesystem:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/signal_set.hpp:
 
 /home/joshd/Projects/PomoPlusPlus/src/services/taskService.cpp:
 
 /usr/include/bits/termios-c_lflag.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/impl/posix_serial_port_service.ipp:
+
+/usr/include/bits/signum-generic.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/impl/signal_set_service.ipp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/system_timer.hpp:
 
@@ -4082,11 +4297,9 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/associator.hpp:
 
-/usr/include/asm/bitsperlong.h:
+/usr/include/bits/sigstksz.h:
 
 /usr/include/alloca.h:
-
-/usr/include/bits/sigstksz.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/basic_socket_acceptor.hpp:
 
@@ -4104,11 +4317,13 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/descriptor_write_op.hpp:
 
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/reactive_socket_send_op.hpp:
+/usr/include/bits/sigstack.h:
 
-/usr/include/bits/local_lim.h:
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/deadline_timer.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/handler_tracking.hpp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ecdsa.h:
 
 /usr/include/sys/eventfd.h:
 
@@ -4122,13 +4337,17 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/execution/any_executor.hpp:
 
-/usr/include/bits/sigcontext.h:
+/usr/include/c++/16/cctype:
+
+/usr/include/bits/posix1_lim.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/v6_only.hpp:
+
+/usr/include/bits/errno.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/pem.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/basic_streambuf.hpp:
-
-/home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/socket_adaptors.h:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/execution/outstanding_work.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/wrapped_handler.hpp:
 
@@ -4138,8 +4357,6 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/connect.hpp:
 
-/usr/include/asm/posix_types.h:
-
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/initiate_post.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/impl/resolver_service_base.ipp:
@@ -4148,19 +4365,23 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/basic_resolver_entry.hpp:
 
-/usr/include/bits/libc-header-start.h:
-
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/connect_pipe.ipp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/execution/executor.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/blocking_executor_op.hpp:
 
+/usr/include/c++/16/bits/deque.tcc:
+
+/usr/include/bits/eventfd.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/limits.hpp:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/buffered_write_stream_fwd.hpp:
+
 /usr/include/c++/16/numeric:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/buffered_stream_fwd.hpp:
-
-/usr/include/bits/flt-eval-method.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio.hpp:
 
@@ -4184,17 +4405,23 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/basic_serial_port.hpp:
 
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/impl/descriptor_ops.ipp:
-
-/usr/include/asm-generic/socket.h:
-
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/global.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/local/basic_endpoint.hpp:
 
+/usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++io.h:
+
+/usr/include/bits/types/struct_statx_timestamp.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/cterr.h:
+
 /home/joshd/Projects/PomoPlusPlus/src/main.cpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/buffered_stream.hpp:
+
+/usr/include/bits/long-double.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/atomic_count.hpp:
 
 /usr/include/c++/16/bits/allocated_ptr.h:
 
@@ -4206,11 +4433,17 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/mutex.hpp:
 
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ssl3.h:
+
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/execution_context.hpp:
 
 /usr/include/c++/16/bits/istream.tcc:
 
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/pemerr.h:
+
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/buffer.hpp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/asn1.h:
 
 /usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++allocator.h:
 
@@ -4230,21 +4463,31 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/array_fwd.hpp:
 
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/atomic_count.hpp:
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/reactive_socket_service_base.hpp:
 
-/usr/include/bits/long-double.h:
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/buffererr.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/resolve_op.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/assert.hpp:
 
+/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/SQLiteCpp.h:
+
+/usr/include/bits/mathcalls-helper-functions.h:
+
+/usr/include/asm/socket.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/any_io_executor.ipp:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/basic_signal_set.hpp:
+
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/throw_error.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/detail/socket_option.hpp:
 
-/usr/include/c++/16/bits/regex_constants.h:
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/posix/descriptor_base.hpp:
 
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/impl/address_v4.ipp:
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/asyncerr.h:
 
 /usr/include/c++/16/bits/shared_ptr_atomic.h:
 
@@ -4264,15 +4507,23 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/cancellation_signal.ipp:
 
+/usr/include/c++/16/bits/locale_classes.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/sslerr_legacy.h:
+
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/impl/epoll_reactor.hpp:
+
+/usr/include/bits/types/__locale_t.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/work_dispatcher.hpp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/opensslconf.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/generic/stream_protocol.hpp:
 
 /usr/include/poll.h:
 
 /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/http_parser_merged.h:
-
-/usr/include/bits/errno.h:
 
 /usr/include/bits/stdio.h:
 
@@ -4310,11 +4561,21 @@ CMakeFiles/PomoPlusPlus.dir/src/services/authService.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/impl/timer_queue_set.ipp:
 
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/impl/signal_set_service.ipp:
+/usr/include/bits/sigevent-consts.h:
 
-/usr/include/bits/signum-generic.h:
+/home/joshd/.conan2/p/picojde3f96225d840/p/include/picojson.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/detached.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/conditionally_enabled_event.hpp:
+
+/usr/include/bits/pthreadtypes-arch.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/impl/posix_thread.ipp:
+
+/usr/include/c++/16/x86_64-pc-linux-gnu/bits/gthr.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/bio.h:
 
 CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
@@ -4340,8 +4601,6 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/prepend.hpp:
 
-/usr/include/bits/getopt_core.h:
-
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/impl/strand_executor_service.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/buffered_read_stream.hpp:
@@ -4358,13 +4617,13 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/cstdint.hpp:
 
-/usr/lib/crti.o:
-
-/usr/include/bits/signum-arch.h:
-
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/thread.hpp:
 
 /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/TinySHA1.hpp:
+
+/usr/include/bits/setjmp.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/descriptor_ops.hpp:
 
 /usr/include/asm/errno.h:
 
@@ -4376,13 +4635,19 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/traits/static_require_concept.hpp:
 
-/usr/include/c++/16/bits/deque.tcc:
+/usr/include/c++/16/filesystem:
 
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/limits.hpp:
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/signal_set.hpp:
 
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/buffered_write_stream_fwd.hpp:
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/bnerr.h:
 
-/usr/include/bits/eventfd.h:
+/usr/include/sys/uio.h:
+
+/usr/include/c++/16/bits/cxxabi_forced.h:
+
+/usr/include/asm-generic/ioctl.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/epoll_reactor.hpp:
 
 /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/settings.h:
 
@@ -4396,6 +4661,8 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/executor_op.hpp:
 
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ct.h:
+
 /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/mime_types.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/basic_random_access_file.hpp:
@@ -4408,19 +4675,25 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/buffer_sequence_adapter.hpp:
 
-/usr/include/bits/siginfo-arch.h:
-
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/socket_ops.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/reactive_socket_recvmsg_op.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/impl/epoll_reactor.ipp:
 
+/usr/include/bits/locale.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/pkcs7.h:
+
 /usr/include/c++/16/locale:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/fenced_block.hpp:
 
-/usr/include/assert.h:
+/usr/include/c++/16/bits/binders.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/core.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/sslerr.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/functional.hpp:
 
@@ -4436,13 +4709,11 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/io_context.hpp:
 
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/completion_condition.hpp:
-
-/usr/include/bits/select.h:
-
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/resolver_service.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/basic_stream_socket.hpp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/asn1err.h:
 
 /usr/include/c++/16/bits/ios_base.h:
 
@@ -4452,11 +4723,11 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /usr/include/arpa/inet.h:
 
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/impl/service_registry.ipp:
-
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/thread_context.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/reactive_descriptor_service.hpp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/err.h:
 
 /usr/include/c++/16/cwctype:
 
@@ -4490,6 +4761,12 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/buffered_write_stream.hpp:
 
+/usr/include/c++/16/bits/uses_allocator_args.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/execution/mapping.hpp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/opensslv.h:
+
 /usr/include/c++/16/bits/std_thread.h:
 
 /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/SQLiteCppExport.h:
@@ -4499,6 +4776,8 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 /usr/include/math.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/wait_op.hpp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/dtls1.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/connect.hpp:
 
@@ -4532,8 +4811,6 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/executor.hpp:
 
-/usr/include/bits/floatn.h:
-
 /usr/include/bits/mathcalls-narrow.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/io_context.ipp:
@@ -4545,10 +4822,6 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/prepend.hpp:
 
 /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/json.h:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/detached.hpp:
-
-/usr/include/bits/sigevent-consts.h:
 
 /usr/include/c++/16/bits/regex_scanner.tcc:
 
@@ -4566,12 +4839,6 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/thread_pool.ipp:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/16/include/float.h:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/posix_global.hpp:
-
-/usr/include/bits/fcntl.h:
-
 /usr/include/c++/16/bits/stream_iterator.h:
 
 /usr/include/bits/types/__mbstate_t.h:
@@ -4580,13 +4847,13 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/use_awaitable.hpp:
 
-/usr/include/c++/16/bits/unicode.h:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/io_context_strand.hpp:
-
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/traits/require_concept_free.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/io_service.hpp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/conftypes.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/sha.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detached.hpp:
 
@@ -4622,13 +4889,17 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/basic_resolver_query.hpp:
 
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/param_build.h:
+
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/basic_resolver_results.hpp:
 
-/usr/include/c++/16/bits/fs_path.h:
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/cryptoerr_legacy.h:
 
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/bind_cancellation_slot.hpp:
+/usr/include/c++/16/bits/regex_constants.h:
 
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/detail/endpoint.hpp:
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/impl/address_v4.ipp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/indicator.h:
 
 /usr/include/c++/16/pstl/execution_defs.h:
 
@@ -4636,35 +4907,29 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/local/datagram_protocol.hpp:
 
-/usr/include/bits/openat2.h:
+/home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/middlewares/cookie_parser.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/use_future.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/host_name.hpp:
 
+/usr/lib/gcc/x86_64-pc-linux-gnu/16/libstdc++.so:
+
+/usr/include/bits/posix2_lim.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/impl/address.hpp:
+
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/impl/address_v6.hpp:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/error.hpp:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/array.hpp:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/chrono.hpp:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/impl/address_v6.ipp:
 
 /usr/include/bits/libm-simd-decl-stubs.h:
 
 /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/query_string.h:
-
-/usr/include/bits/siginfo-consts.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/buffer_registration.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/impl/host_name.ipp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/impl/network_v4.hpp:
-
-/usr/include/asm/sockios.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/impl/network_v4.ipp:
 
@@ -4728,10 +4993,6 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/read.hpp:
 
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/is_applicable_property.hpp:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/posix/basic_stream_descriptor.hpp:
-
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/posix/stream_descriptor.hpp:
 
 /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Column.h:
@@ -4748,23 +5009,23 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/use_awaitable.hpp:
 
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/dsa.h:
+
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/random_access_file.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/read_at.hpp:
-
-/usr/include/bits/cloexec.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/connect_pipe.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/read_until.hpp:
 
-/usr/include/c++/16/cctype:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/v6_only.hpp:
-
-/usr/include/bits/posix1_lim.h:
-
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/readable_pipe.hpp:
+
+/usr/include/c++/16/tr1/hypergeometric.tcc:
+
+/usr/include/asm-generic/int-ll64.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/recycling_allocator.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/impl/buffer_sequence_adapter.ipp:
 
@@ -4777,6 +5038,8 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/impl/reactive_descriptor_service.ipp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/require.hpp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/rsaerr.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/serial_port.hpp:
 
@@ -4792,15 +5055,11 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/socket_base.hpp:
 
-/usr/include/bits/math-vector.h:
-
 /usr/include/c++/16/bits/chrono.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/impl/basic_endpoint.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/steady_timer.hpp:
-
-/usr/include/bits/socket_type.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/stream_file.hpp:
 
@@ -4820,12 +5079,6 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /home/joshd/Projects/PomoPlusPlus/src/dtos/authDto.hpp:
 
-/usr/lib/gcc/x86_64-pc-linux-gnu/16/libstdc++.so:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/impl/address.hpp:
-
-/usr/include/bits/posix2_lim.h:
-
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/thread_pool.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/time_traits.hpp:
@@ -4840,6 +5093,10 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/traits/equality_comparable.hpp:
 
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/execution/invocable_archetype.hpp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/dsaerr.h:
+
 /usr/include/c++/16/bits/regex_scanner.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/traits/prefer_member.hpp:
@@ -4852,9 +5109,13 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/traits/require_concept_member.hpp:
 
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/traits/require_free.hpp:
+/usr/include/asm-generic/ioctls.h:
 
-/usr/include/bits/ioctls.h:
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/basic_streambuf_fwd.hpp:
+
+/home/joshd/.conan2/p/jwt-c6ad968c27631b/p/include/jwt-cpp/traits/kazuho-picojson/defaults.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/traits/require_free.hpp:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/traits/static_query.hpp:
 
@@ -4869,6 +5130,8 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/use_future.hpp:
 
 /usr/include/c++/16/ext/string_conversions.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ssl.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/wait_traits.hpp:
 
@@ -4888,6 +5151,10 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/windows/random_access_handle.hpp:
 
+/usr/include/bits/types/struct_timespec.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/evperr.h:
+
 /usr/include/c++/16/cstdlib:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/impl/socket_ops.ipp:
@@ -4904,19 +5171,149 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/write.hpp:
 
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/async.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/bioerr.h:
+
+/home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/http_request.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/bn.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/impl/descriptor_ops.ipp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/buffer.h:
+
+/usr/include/c++/16/bits/std_function.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/comp.h:
+
+/usr/include/c++/16/array:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/reactor_op.hpp:
+
+/home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/utility.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/comperr.h:
+
+/usr/include/c++/16/bits/unicode.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/io_context_strand.hpp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/conf.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/reactive_null_buffers_op.hpp:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/traits/require_member.hpp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/configuration.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/core_dispatch.h:
+
+/usr/include/c++/16/bits/stl_multiset.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/crypto.h:
+
+/home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/socket_adaptors.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/execution/outstanding_work.hpp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/cryptoerr.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/windows/object_handle.hpp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/dh.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/impl/service_registry.ipp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/e_os2.h:
+
+/usr/include/c++/16/bits/stl_deque.h:
+
+/home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/exceptions.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ec.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/error.hpp:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/array.hpp:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/chrono.hpp:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/impl/address_v6.ipp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ecerr.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/posix_static_mutex.hpp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/hmac.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/http.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/macros.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/obj_mac.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/params.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/pkcs7err.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/rsa.h:
+
+/usr/include/c++/16/bits/new_allocator.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/prov_ssl.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/srtp.h:
+
+/usr/include/c++/16/bits/fs_path.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/bind_cancellation_slot.hpp:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/detail/endpoint.hpp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ssl2.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/is_applicable_property.hpp:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/posix/basic_stream_descriptor.hpp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/stack.h:
+
+/usr/include/bits/termios-c_cflag.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/any_completion_executor.ipp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/tls1.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/types.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/x509.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/x509_vfy.h:
+
+/home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/parser.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/null_event.hpp:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/dherr.h:
+
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/x509err.h:
+
 /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Exception.h:
 
-/usr/include/c++/16/tr1/hypergeometric.tcc:
+/usr/include/bits/endian.h:
 
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/recycling_allocator.hpp:
+/home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/safestack.h:
 
-/usr/include/asm-generic/int-ll64.h:
+/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Statement.h:
 
 /usr/include/bits/types/sigval_t.h:
 
 /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Utils.h:
 
 /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/ci_map.h:
+
+/usr/include/c++/16/bits/stl_set.h:
 
 /usr/include/asm/posix_types_64.h:
 
@@ -4930,27 +5327,23 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 
 /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/compression.h:
 
-/usr/include/bits/iscanonical.h:
-
-/usr/include/c++/16/bits/stl_deque.h:
-
-/home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/exceptions.h:
+/home/joshd/.conan2/p/jwt-c6ad968c27631b/p/include/jwt-cpp/base.h:
 
 /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/middleware_context.h:
-
-/home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/parser.h:
-
-/usr/include/c++/16/array:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/reactor_op.hpp:
-
-/home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/utility.h:
 
 /usr/include/c++/16/bits/std_abs.h:
 
 /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/basic_stream_file.hpp:
 
 /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/version.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/handler_alloc_helpers.hpp:
+
+/home/joshd/.conan2/p/jwt-c6ad968c27631b/p/include/jwt-cpp/jwt.h:
+
+/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/any_io_executor.hpp:
+
+/usr/include/asm-generic/errno-base.h:
 
 /home/joshd/Projects/PomoPlusPlus/include/pwbcrypt/bcrypt.h:
 
@@ -4959,129 +5352,3 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o:
 /home/joshd/Projects/PomoPlusPlus/src/services/taskService.hpp:
 
 /usr/include/asm-generic/bitsperlong.h:
-
-/usr/lib/libc.so:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/utility.hpp:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/reactive_socket_recv_op.hpp:
-
-/usr/include/asm-generic/types.h:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/any_io_executor.hpp:
-
-/usr/include/asm-generic/errno-base.h:
-
-/usr/include/sys/uio.h:
-
-/usr/include/c++/16/bits/cxxabi_forced.h:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/epoll_reactor.hpp:
-
-/usr/include/asm-generic/ioctl.h:
-
-/usr/include/asm-generic/posix_types.h:
-
-/usr/include/asm/ioctl.h:
-
-/usr/include/c++/16/condition_variable:
-
-/usr/include/c++/16/bits/stl_bvector.h:
-
-/usr/include/c++/16/bits/functional_hash.h:
-
-/usr/include/asm/ioctls.h:
-
-/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/SQLiteCpp.h:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/any_io_executor.ipp:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/basic_signal_set.hpp:
-
-/usr/include/bits/mathcalls-helper-functions.h:
-
-/usr/include/asm/socket.h:
-
-/usr/include/signal.h:
-
-/usr/include/bits/atomic_wide_counter.h:
-
-/usr/include/bits/byteswap.h:
-
-/usr/include/bits/confname.h:
-
-/home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Statement.h:
-
-/usr/include/bits/endian.h:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/execution/allocator.hpp:
-
-/usr/include/bits/endianness.h:
-
-/usr/include/c++/16/bits/predefined_ops.h:
-
-/usr/include/bits/fcntl-linux.h:
-
-/usr/include/c++/16/bits/invoke.h:
-
-/usr/include/bits/floatn-common.h:
-
-/usr/lib/libmvec.so.1:
-
-/usr/include/linux/stddef.h:
-
-/usr/include/c++/16/vector:
-
-/usr/include/bits/fp-logb.h:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/buffered_stream_storage.hpp:
-
-/usr/include/bits/getopt_posix.h:
-
-/usr/include/bits/ioctl-types.h:
-
-/usr/include/bits/locale.h:
-
-/usr/include/bits/mathcalls-macros.h:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/ip/basic_resolver_iterator.hpp:
-
-/usr/include/bits/netdb.h:
-
-/usr/include/bits/posix_opt.h:
-
-/usr/include/bits/pthread_stack_min-dynamic.h:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/impl/posix_thread.ipp:
-
-/usr/include/bits/pthreadtypes-arch.h:
-
-/usr/include/bits/struct_rwlock.h:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/reactive_socket_service.hpp:
-
-/usr/include/bits/sched.h:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/descriptor_ops.hpp:
-
-/usr/include/bits/setjmp.h:
-
-/usr/include/bits/sigaction.h:
-
-/usr/include/bits/siginfo-consts-arch.h:
-
-/usr/include/bits/signal_ext.h:
-
-/home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/deadline_timer.hpp:
-
-/usr/include/bits/sigstack.h:
-
-/usr/include/bits/sigthread.h:
-
-/usr/include/c++/16/type_traits:
-
-/usr/include/c++/16/bits/shared_ptr.h:
-
-/usr/include/bits/in.h:
-
-/usr/include/bits/socket.h:

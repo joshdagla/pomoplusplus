@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pomo++</title>
+    <link rel="icon" type="image/x-icon" href="/static/assets/favicon.ico" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link href="/static/style.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <nav class="navbar navbar-expand-lg fixed-top app-navbar">
+      <div class="container-fluid px-3 px-lg-4">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="/">
+          <img
+            src="/static/assets/tomato_icon.png"
+            alt="Pomo++ Icon"
+            width="36"
+            height="36"
+          />
+          <span class="brand-text">Pomo++</span>
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-1">
+            <li class="nav-item">
+              <!-- TODO: Add routing to About Page -->
+              <a class="nav-link" href="/home">Home</a>
+            </li>
+            <!-- TODO: Add route to a tasks page which will show all tasks of the user -->
+            <li class="nav-item">
+              <a class="nav-link" href="#">Tasks</a>
+            </li>
+            <!-- TODO: Clear session token before logging user out -->
+            <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
+              <a class="btn nav-btn" href="/">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container py-4">
+      <h1>About Page</h1>
+    </main>
+
+    <footer class="site-footer">
+      <img
+        src="/static/assets/tomato_art.png"
+        alt="Pomodoro art"
+        class="footer-art"
+      />
+
+      <div class="footer-center">
+        <ul class="footer-links">
+          <li><a href="#">About</a></li>
+          <li><a href="https://github.com/joshdagla">Github</a></li>
+        </ul>
+        <small class="footer-copy">© 2026 Pomo++. All rights reserved.</small>
+      </div>
+
+      <img
+        src="/static/assets/tomato_art_invert.png"
+        alt="Pomodoro art"
+        class="footer-art"
+      />
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/index.js"></script>
+    <script src="/static/tasks.js"></script>
+  </body>
+</html>

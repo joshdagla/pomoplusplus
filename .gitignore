@@ -48,3 +48,6 @@ PomoPlusPlus
 *.swp
 .DS_Store
 Thumbs.db
+
+#config file
+config.json

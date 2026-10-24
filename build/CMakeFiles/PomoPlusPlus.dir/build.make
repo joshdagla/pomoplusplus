@@ -146,6 +146,9 @@ PomoPlusPlus: CMakeFiles/PomoPlusPlus.dir/build.make
 PomoPlusPlus: CMakeFiles/PomoPlusPlus.dir/compiler_depend.ts
 PomoPlusPlus: /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/lib/libSQLiteCpp.a
 PomoPlusPlus: /home/joshd/.conan2/p/b/sqlitfc6d8bf57e1f1/p/lib/libsqlite3.a
+PomoPlusPlus: /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libssl.a
+PomoPlusPlus: /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/lib/libcrypto.a
+PomoPlusPlus: /home/joshd/.conan2/p/b/zlib5ef1f4a6423c2/p/lib/libz.a
 PomoPlusPlus: CMakeFiles/PomoPlusPlus.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/joshd/Projects/PomoPlusPlus/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable PomoPlusPlus"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/PomoPlusPlus.dir/link.txt --verbose=$(VERBOSE)

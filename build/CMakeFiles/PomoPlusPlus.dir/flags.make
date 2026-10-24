@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DASIO_STANDALONE
 
-CXX_INCLUDES = -I/home/joshd/Projects/PomoPlusPlus/include -isystem /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include -isystem /home/joshd/.conan2/p/asio8b50208abaabe/p/include -isystem /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include
+CXX_INCLUDES = -I/home/joshd/Projects/PomoPlusPlus/include -isystem /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include -isystem /home/joshd/.conan2/p/asio8b50208abaabe/p/include -isystem /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include -isystem /home/joshd/.conan2/p/jwt-c6ad968c27631b/p/include -isystem /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include -isystem /home/joshd/.conan2/p/picojde3f96225d840/p/include
 
 CXX_FLAGS = -m64 -O3 -DNDEBUG -std=gnu++20
 

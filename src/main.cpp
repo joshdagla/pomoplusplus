@@ -1,7 +1,9 @@
+#include "crow/middlewares/cookie_parser.h"
 #include "dtos/authDto.hpp"
 #include "dtos/taskDto.hpp"
 #include "services/authService.hpp"
 #include "services/taskService.hpp"
+#include "utils/jwtUtil.hpp"
 #include <SQLiteCpp/Database.h>
 #include <SQLiteCpp/Statement.h>
 #include <bits/types/error_t.h>
@@ -15,14 +17,16 @@
 #include <crow/mustache.h>
 #include <crow/returnable.h>
 #include <crow/routing.h>
-#include <iostream>
+#include <jwt-cpp/jwt.h>
 #include <optional>
 #include <pwbcrypt/bcrypt.h>
 #include <string>
 #include <vector>
 
 int main() {
-  crow::SimpleApp app;
+  crow::App<crow::CookieParser> app;
+
+  const std::string JWT_SECRET = jwtSecret();
 
   // TODO: Create blueprints for task CRUD routes.
 
@@ -35,98 +39,12 @@ int main() {
     return page.render();
   });
 
-  // User sign up endpoint
-  CROW_ROUTE(app, "/auth/signup")
-      .methods(crow::HTTPMethod::POST)([](const crow::request &req) {
-        auto body = crow::json::load(req.body);
+  CROW_ROUTE(app, "/home")([&app](const crow::request &req) {
+    auto &ctx = app.get_context<crow::CookieParser>(req);
+    auto userid = verifyToken(ctx.get_cookie("token"));
 
-        if (!body) {
-          std::cout << '\n' << "Missing username";
-          return crow::response(400, "Missing parameters");
-        }
-
-        if (!body.has("email") || !body.has("password") ||
-            !body.has("username")) {
-          std::cout << '\n' << "Missing params";
-          return crow::response(400, "Missing input field");
-        }
-
-        RegisterDto dto;
-        dto.username = body["username"].s();
-        dto.email = body["email"].s();
-        dto.password = body["password"].s();
-
-        if (dto.username.empty()) {
-          std::cout << '\n' << "Missing params";
-          return crow::response(400, "Missing username");
-        }
-
-        if (dto.email.empty() || dto.password.empty()) {
-          std::cout << '\n' << "Missing params";
-          return crow::response(400, "Missing email or password");
-        }
-
-        ResultDto signUpResult = userSignup(dto);
-
-        crow::json::wvalue res;
-
-        if (!signUpResult.Success) {
-          res["success"] = signUpResult.Success;
-          res["message"] = signUpResult.ErrorMessage.value_or(
-              "An unexpected error has occured while trying to register");
-
-          return crow::response(401, res);
-        }
-
-        crow::json::wvalue jsonResult;
-        jsonResult["message"] = "Login Successful";
-        jsonResult["success"] = signUpResult.Success;
-        jsonResult["userId"] = signUpResult.Data.value_or(0);
-
-        return crow::response(200, jsonResult);
-      });
-
-  CROW_ROUTE(app, "/auth/login")
-      .methods(crow::HTTPMethod::POST)([](const crow::request &req) {
-        auto userParams = crow::json::load(req.body);
-
-        if (!userParams) {
-          return crow::response(400, "Missing parameters");
-        }
-
-        if (!userParams.has("email") || !userParams.has("password")) {
-          return crow::response(400, "Missing parameters");
-        }
-
-        LoginDto dto;
-        dto.email = userParams["email"].s();
-        dto.password = userParams["password"].s();
-
-        ResultDto loginResult = validateLogin(dto);
-
-        crow::json::wvalue res;
-
-        if (!loginResult.Success) {
-          res["success"] = loginResult.Success;
-          res["message"] = loginResult.ErrorMessage.value_or(
-              "An unexpected error has occured while trying to login");
-
-          return crow::response(401, res);
-        }
-
-        crow::json::wvalue jsonResult;
-        jsonResult["message"] = "Login Successful";
-        jsonResult["success"] = loginResult.Success;
-        jsonResult["userId"] = loginResult.Data.value_or(0);
-
-        return crow::response(200, jsonResult);
-      });
-
-  CROW_ROUTE(app, "/home/<int>")([](int userId) {
-    if (userId == 0) {
-      crow::response res;
-      res.redirect("/error");
-      return res;
+    if (!userid) {
+      return crow::response(401, "Not authenticated");
     }
 
     SQLite::Database db("pomo.db", SQLite::OPEN_READONLY);
@@ -134,7 +52,7 @@ int main() {
     SQLite::Statement usernameFetch(db,
                                     "SELECT username from users WHERE id = ?");
 
-    usernameFetch.bind(1, userId);
+    usernameFetch.bind(1, userid.value());
 
     std::string userString;
 
@@ -146,17 +64,152 @@ int main() {
       return res;
     }
 
-    crow::mustache::context ctx;
-    ctx["name"] = userString;
+    crow::mustache::context context;
+    context["name"] = userString;
 
     auto page = crow::mustache::load("index.html");
 
-    return crow::response(page.render(ctx));
+    return crow::response(page.render(context));
   });
 
-  CROW_ROUTE(app, "/api/create/<int>")
-      .methods(
-          crow::HTTPMethod::POST)([](const crow::request &req, int userId) {
+  CROW_ROUTE(app, "/about")([]() {
+    auto page = crow::mustache::load("about.html");
+
+    return page.render();
+  });
+
+  CROW_ROUTE(app, "/tasks")([]() {
+    auto page = crow::mustache::load("tasks.html");
+
+    return page.render();
+  });
+
+  // User sign up endpoint
+  CROW_ROUTE(app, "/auth/signup")
+      .methods(crow::HTTPMethod::POST)([&app](const crow::request &req) {
+        auto body = crow::json::load(req.body);
+
+        if (!body) {
+          return crow::response(400, "Missing parameters");
+        }
+
+        if (!body.has("email") || !body.has("password") ||
+            !body.has("username")) {
+          return crow::response(400, "Missing input field");
+        }
+
+        RegisterDto dto;
+        dto.username = body["username"].s();
+        dto.email = body["email"].s();
+        dto.password = body["password"].s();
+
+        if (dto.username.empty()) {
+          return crow::response(400, "Missing username");
+        }
+
+        if (dto.email.empty() || dto.password.empty()) {
+          return crow::response(400, "Missing email or password");
+        }
+
+        ResultDto signUpResult = userSignup(dto);
+
+        crow::json::wvalue res;
+
+        if (!signUpResult.Success) {
+          res["success"] = false;
+          res["message"] = signUpResult.ErrorMessage.value_or(
+              "An unexpected error has occurred while trying to register");
+
+          return crow::response(401, res);
+        }
+
+        // Never issue a token without a real user id
+        if (!signUpResult.Data.has_value()) {
+          res["success"] = false;
+          res["message"] = "Account created, but the user id was not returned";
+
+          return crow::response(500, res);
+        }
+
+        int userId = signUpResult.Data.value();
+
+        auto &ctx = app.get_context<crow::CookieParser>(req);
+        ctx.set_cookie("token", createToken(userId))
+            .path("/")
+            .max_age(60 * 60 * 24)
+            .httponly()
+            .same_site(crow::CookieParser::Cookie::SameSitePolicy::Lax);
+
+        res["success"] = true;
+        res["message"] = "Account created successfully";
+        res["userid"] = userId;
+
+        return crow::response(200, res);
+      });
+
+  CROW_ROUTE(app, "/auth/login")
+      .methods(crow::HTTPMethod::POST)([&app](const crow::request &req) {
+        auto body = crow::json::load(req.body);
+
+        if (!body || !body.has("email") || !body.has("password")) {
+          return crow::response(400, "Missing parameters");
+        }
+
+        LoginDto dto;
+        dto.email = body["email"].s();
+        dto.password = body["password"].s();
+
+        ResultDto loginResult = validateLogin(dto);
+
+        crow::json::wvalue res;
+
+        if (!loginResult.Success) {
+          res["success"] = false;
+          res["message"] = loginResult.ErrorMessage.value_or(
+              "An unexpected error has occurred while trying to log in");
+
+          return crow::response(401, res);
+        }
+
+        if (!loginResult.Data.has_value()) {
+          res["success"] = false;
+          res["message"] = "Login succeeded, but the user id was not returned";
+
+          return crow::response(500, res);
+        }
+
+        int userId = loginResult.Data.value();
+
+        auto &ctx = app.get_context<crow::CookieParser>(req);
+        ctx.set_cookie("token", createToken(userId))
+            .path("/")
+            .max_age(60 * 60 * 24)
+            .httponly()
+            .same_site(crow::CookieParser::Cookie::SameSitePolicy::Lax);
+
+        res["success"] = true;
+        res["message"] = "Login successful";
+        res["userid"] = userId;
+
+        return crow::response(200, res);
+      });
+
+  CROW_ROUTE(app, "/auth/logout")
+      .methods(crow::HTTPMethod::POST)([&app](const crow::request &req) {
+        auto &ctx = app.get_context<crow::CookieParser>(req);
+        ctx.set_cookie("token", "").path("/").max_age(0);
+        return crow::response(200, "Logged out");
+      });
+
+  CROW_ROUTE(app, "/api/create")
+      .methods(crow::HTTPMethod::POST)([&app](const crow::request &req) {
+        auto &ctx = app.get_context<crow::CookieParser>(req);
+        auto userId = verifyToken(ctx.get_cookie("token"));
+
+        if (!userId) {
+          return crow::response(401, "Not authenticated");
+        }
+
         ResultDto<std::string> result{};
 
         auto body = crow::json::load(req.body);
@@ -166,7 +219,7 @@ int main() {
         // Checks if request body and its values have been receieved or not
         if (!body || !body.has("description") || !body.has("pomodoros")) {
 
-          result = createTaskService(newTask, userId);
+          result = createTaskService(newTask, userId.value());
 
           if (!result.Success) {
             if (result.ErrorMessage->empty()) {
@@ -188,7 +241,7 @@ int main() {
         newTask.Pomodoros = body["pomodoros"].i();
         newTask.Description = body["description"].s();
 
-        result = createTaskService(newTask, userId);
+        result = createTaskService(newTask, userId.value());
 
         crow::json::wvalue res;
 
@@ -208,7 +261,15 @@ int main() {
       });
 
   CROW_ROUTE(app, "/api/update/<int>")
-      .methods(crow::HTTPMethod::PUT)([](const crow::request &req, int taskId) {
+      .methods(
+          crow::HTTPMethod::PUT)([&app](const crow::request &req, int taskId) {
+        auto &ctx = app.get_context<crow::CookieParser>(req);
+        auto userid = verifyToken(ctx.get_cookie("token"));
+
+        if (!userid) {
+          return crow::response(401, "Not authenticated");
+        }
+
         auto body = crow::json::load(req.body);
 
         if (!body) {
@@ -258,7 +319,15 @@ int main() {
 
   // Route to remove a task (not delete)
   CROW_ROUTE(app, "/api/remove/<int>")
-      .methods(crow::HTTPMethod::PUT)([](int taskId) {
+      .methods(
+          crow::HTTPMethod::PUT)([&app](const crow::request &req, int taskId) {
+        auto &ctx = app.get_context<crow::CookieParser>(req);
+        auto id = verifyToken(ctx.get_cookie("token"));
+
+        if (!id) {
+          return crow::response(401, "Not authenticated");
+        }
+
         ResultDto<std::string> result = removeTaskService(taskId);
 
         crow::json::wvalue res;
@@ -280,7 +349,14 @@ int main() {
 
   // Route to delete the task permanently
   CROW_ROUTE(app, "/api/delete/<int>")
-      .methods(crow::HTTPMethod::DELETE)([](int taskId) {
+      .methods(crow::HTTPMethod::DELETE)([&app](const crow::request &req,
+                                                int taskId) {
+        auto &ctx = app.get_context<crow::CookieParser>(req);
+        auto id = verifyToken(ctx.get_cookie("token"));
+
+        if (!id) {
+          return crow::response(401, "Not authenticated");
+        }
         ResultDto<std::string> result = deleteTaskService(taskId);
 
         crow::json::wvalue res;
@@ -301,9 +377,16 @@ int main() {
       });
 
   // Route to fetch all available tasks
-  CROW_ROUTE(app, "/api/get/<int>")
-      .methods(crow::HTTPMethod::GET)([](int userId) {
-        FetchResultDto result = getTasks(userId);
+  CROW_ROUTE(app, "/api/get")
+      .methods(crow::HTTPMethod::GET)([&app](const crow::request &req) {
+        auto &ctx = app.get_context<crow::CookieParser>(req);
+        auto userId = verifyToken(ctx.get_cookie("token"));
+
+        if (!userId) {
+          return crow::response(401, "Not authenticated");
+        }
+
+        FetchResultDto result = getTasks(userId.value());
 
         crow::json::wvalue res;
 
@@ -334,9 +417,16 @@ int main() {
       });
 
   // Route to fetch all tasks
-  CROW_ROUTE(app, "/api/getAll/<int>")
-      .methods(crow::HTTPMethod::GET)([](int userId) {
-        FetchResultDto result = getAllTasks(userId);
+  CROW_ROUTE(app, "/api/getAll")
+      .methods(crow::HTTPMethod::GET)([&app](const crow::request &req) {
+        auto &ctx = app.get_context<crow::CookieParser>(req);
+        auto userId = verifyToken(ctx.get_cookie("token"));
+
+        if (!userId) {
+          return crow::response(401, "Not authenticated");
+        }
+
+        FetchResultDto result = getAllTasks(userId.value());
 
         crow::json::wvalue res;
 

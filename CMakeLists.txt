@@ -12,6 +12,7 @@ find_package(Crow REQUIRED)
 find_package(asio REQUIRED)
 find_package(SQLiteCpp REQUIRED)
 find_package(jwt-cpp REQUIRED)
+find_package(OpenSSL REQUIRED)
 
 add_executable(${PROJECT_NAME}
   src/main.cpp
@@ -20,6 +21,7 @@ add_executable(${PROJECT_NAME}
   src/services/taskService.cpp
   src/services/authService.cpp
   src/utils/userSearch.cpp
+  src/utils/jwtUtil.hpp
 )
 
 target_include_directories(${PROJECT_NAME} PRIVATE
@@ -31,7 +33,8 @@ target_link_directories(${PROJECT_NAME} PRIVATE
 )
 # Keep Conan-managed dependencies
 target_link_libraries(${PROJECT_NAME} PRIVATE Crow::Crow asio::asio SQLiteCpp
-                      bcrypt jwt-cpp::jwt-cpp)
+                      bcrypt jwt-cpp::jwt-cpp OpenSSL::SSL OpenSSL::Crypto
+                      picojson::picojson)
 
 add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD COMMAND ${CMAKE_COMMAND}
                    -E create_symlink ${CMAKE_SOURCE_DIR}/templates

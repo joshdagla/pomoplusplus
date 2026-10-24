@@ -229,6 +229,9 @@ CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 //The directory containing a CMake configuration file for Crow.
 Crow_DIR:PATH=/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators
 
+//The directory containing a CMake configuration file for OpenSSL.
+OpenSSL_DIR:PATH=/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators
+
 //Value Computed by CMake
 PomoPlusPlus_BINARY_DIR:STATIC=/home/joshd/Projects/PomoPlusPlus/build
 
@@ -244,8 +247,17 @@ SQLite3_DIR:PATH=/home/joshd/Projects/PomoPlusPlus/build/build/Release/generator
 //The directory containing a CMake configuration file for SQLiteCpp.
 SQLiteCpp_DIR:PATH=/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators
 
+//The directory containing a CMake configuration file for ZLIB.
+ZLIB_DIR:PATH=/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators
+
 //The directory containing a CMake configuration file for asio.
 asio_DIR:PATH=/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators
+
+//The directory containing a CMake configuration file for jwt-cpp.
+jwt-cpp_DIR:PATH=/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators
+
+//The directory containing a CMake configuration file for picojson.
+picojson_DIR:PATH=/home/joshd/Projects/PomoPlusPlus/build/build/Release/generators
 
 
 ########################

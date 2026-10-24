@@ -1,8 +1,8 @@
 CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o: \
  /home/joshd/Projects/PomoPlusPlus/src/main.cpp \
  /usr/include/stdc-predef.h \
- /home/joshd/Projects/PomoPlusPlus/src/dtos/authDto.hpp \
- /usr/include/c++/16/optional /usr/include/c++/16/bits/version.h \
+ /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/middlewares/cookie_parser.h \
+ /usr/include/c++/16/iomanip /usr/include/c++/16/bits/requires_hosted.h \
  /usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++config.h \
  /usr/include/c++/16/x86_64-pc-linux-gnu/bits/os_defines.h \
  /usr/include/features.h /usr/include/features-time64.h \
@@ -10,55 +10,72 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o: \
  /usr/include/sys/cdefs.h /usr/include/bits/long-double.h \
  /usr/include/gnu/stubs.h /usr/include/gnu/stubs-64.h \
  /usr/include/c++/16/x86_64-pc-linux-gnu/bits/cpu_defines.h \
- /usr/include/c++/16/pstl/pstl_config.h /usr/include/c++/16/type_traits \
- /usr/include/c++/16/exception /usr/include/c++/16/bits/exception.h \
- /usr/include/c++/16/bits/exception_ptr.h \
- /usr/include/c++/16/bits/exception_defines.h \
- /usr/include/c++/16/bits/cxxabi_init_exception.h \
- /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stddef.h \
- /usr/include/c++/16/typeinfo /usr/include/c++/16/bits/hash_bytes.h \
- /usr/include/c++/16/new /usr/include/c++/16/bits/new_except.h \
- /usr/include/c++/16/bits/move.h \
- /usr/include/c++/16/bits/nested_exception.h \
- /usr/include/c++/16/initializer_list \
- /usr/include/c++/16/bits/enable_special_members.h \
- /usr/include/c++/16/bits/functional_hash.h \
- /usr/include/c++/16/bits/stl_construct.h \
- /usr/include/c++/16/bits/stl_iterator_base_types.h \
- /usr/include/c++/16/bits/iterator_concepts.h \
- /usr/include/c++/16/concepts /usr/include/c++/16/bits/ptr_traits.h \
- /usr/include/c++/16/bits/ranges_cmp.h \
- /usr/include/c++/16/bits/stl_iterator_base_funcs.h \
- /usr/include/c++/16/bits/concept_check.h \
- /usr/include/c++/16/debug/assertions.h \
- /usr/include/c++/16/bits/utility.h /usr/include/c++/16/compare \
- /usr/include/c++/16/bits/invoke.h /usr/include/c++/16/string \
- /usr/include/c++/16/bits/requires_hosted.h \
+ /usr/include/c++/16/pstl/pstl_config.h /usr/include/c++/16/iosfwd \
  /usr/include/c++/16/bits/stringfwd.h \
- /usr/include/c++/16/bits/memoryfwd.h \
- /usr/include/c++/16/bits/char_traits.h \
+ /usr/include/c++/16/bits/memoryfwd.h /usr/include/c++/16/bits/version.h \
  /usr/include/c++/16/bits/postypes.h /usr/include/c++/16/cwchar \
  /usr/include/wchar.h /usr/include/bits/libc-header-start.h \
  /usr/include/bits/floatn.h /usr/include/bits/floatn-common.h \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stddef.h \
  /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stdarg.h \
  /usr/include/bits/wchar.h /usr/include/bits/types/wint_t.h \
  /usr/include/bits/types/mbstate_t.h \
  /usr/include/bits/types/__mbstate_t.h /usr/include/bits/types/__FILE.h \
  /usr/include/bits/types/FILE.h /usr/include/bits/types/locale_t.h \
- /usr/include/bits/types/__locale_t.h \
+ /usr/include/bits/types/__locale_t.h /usr/include/c++/16/bits/ios_base.h \
+ /usr/include/c++/16/ext/atomicity.h \
+ /usr/include/c++/16/x86_64-pc-linux-gnu/bits/gthr.h \
+ /usr/include/c++/16/x86_64-pc-linux-gnu/bits/gthr-default.h \
+ /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/types.h \
+ /usr/include/bits/typesizes.h /usr/include/bits/time64.h \
+ /usr/include/bits/types/time_t.h \
+ /usr/include/bits/types/struct_timespec.h /usr/include/bits/endian.h \
+ /usr/include/bits/endianness.h /usr/include/bits/sched.h \
+ /usr/include/linux/sched/types.h /usr/include/linux/types.h \
+ /usr/include/asm/types.h /usr/include/asm-generic/types.h \
+ /usr/include/asm-generic/int-ll64.h /usr/include/asm/bitsperlong.h \
+ /usr/include/asm-generic/bitsperlong.h /usr/include/linux/posix_types.h \
+ /usr/include/linux/stddef.h /usr/include/asm/posix_types.h \
+ /usr/include/asm/posix_types_64.h /usr/include/asm-generic/posix_types.h \
+ /usr/include/bits/types/struct_sched_param.h /usr/include/bits/cpu-set.h \
+ /usr/include/time.h /usr/include/bits/time.h /usr/include/bits/timex.h \
+ /usr/include/bits/types/struct_timeval.h \
+ /usr/include/bits/types/clock_t.h /usr/include/bits/types/struct_tm.h \
+ /usr/include/bits/types/clockid_t.h /usr/include/bits/types/timer_t.h \
+ /usr/include/bits/types/struct_itimerspec.h \
+ /usr/include/bits/pthreadtypes.h /usr/include/bits/thread-shared-types.h \
+ /usr/include/bits/pthreadtypes-arch.h \
+ /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
+ /usr/include/bits/struct_rwlock.h /usr/include/bits/setjmp.h \
+ /usr/include/bits/types/__sigset_t.h \
+ /usr/include/bits/types/struct___jmp_buf_tag.h \
+ /usr/include/bits/pthread_stack_min-dynamic.h \
+ /usr/include/c++/16/x86_64-pc-linux-gnu/bits/atomic_word.h \
+ /usr/include/sys/single_threaded.h /usr/include/c++/16/type_traits \
+ /usr/include/c++/16/bits/localefwd.h \
+ /usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++locale.h \
+ /usr/include/c++/16/clocale /usr/include/locale.h \
+ /usr/include/bits/locale.h /usr/include/c++/16/cctype \
+ /usr/include/ctype.h /usr/include/c++/16/bits/locale_classes.h \
+ /usr/include/c++/16/bits/functexcept.h \
+ /usr/include/c++/16/bits/exception_defines.h /usr/include/c++/16/string \
+ /usr/include/c++/16/bits/char_traits.h /usr/include/c++/16/compare \
+ /usr/include/c++/16/concepts /usr/include/c++/16/bits/stl_construct.h \
+ /usr/include/c++/16/new /usr/include/c++/16/bits/exception.h \
+ /usr/include/c++/16/bits/new_except.h /usr/include/c++/16/bits/move.h \
+ /usr/include/c++/16/bits/stl_iterator_base_types.h \
+ /usr/include/c++/16/bits/iterator_concepts.h \
+ /usr/include/c++/16/bits/ptr_traits.h \
+ /usr/include/c++/16/bits/ranges_cmp.h \
+ /usr/include/c++/16/bits/stl_iterator_base_funcs.h \
+ /usr/include/c++/16/bits/concept_check.h \
+ /usr/include/c++/16/debug/assertions.h \
  /usr/include/c++/16/bits/allocator.h \
  /usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++allocator.h \
  /usr/include/c++/16/bits/new_allocator.h \
  /usr/include/c++/16/bits/new_throw.h \
  /usr/include/c++/16/bits/cpp_type_traits.h \
- /usr/include/c++/16/bits/localefwd.h \
- /usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++locale.h \
- /usr/include/c++/16/clocale /usr/include/locale.h \
- /usr/include/bits/locale.h /usr/include/c++/16/iosfwd \
- /usr/include/c++/16/cctype /usr/include/ctype.h \
- /usr/include/bits/types.h /usr/include/bits/typesizes.h \
- /usr/include/bits/time64.h /usr/include/bits/endian.h \
- /usr/include/bits/endianness.h /usr/include/c++/16/bits/ostream_insert.h \
+ /usr/include/c++/16/bits/ostream_insert.h \
  /usr/include/c++/16/bits/cxxabi_forced.h \
  /usr/include/c++/16/bits/stl_iterator.h \
  /usr/include/c++/16/ext/type_traits.h \
@@ -68,31 +85,26 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o: \
  /usr/include/c++/16/bits/stdexcept_throw.h \
  /usr/include/c++/16/bits/stdexcept_throwfwd.h \
  /usr/include/c++/16/bits/stl_algobase.h \
- /usr/include/c++/16/bits/stl_pair.h /usr/include/c++/16/debug/debug.h \
+ /usr/include/c++/16/bits/stl_pair.h /usr/include/c++/16/bits/utility.h \
+ /usr/include/c++/16/debug/debug.h \
  /usr/include/c++/16/bits/predefined_ops.h /usr/include/c++/16/bit \
  /usr/include/c++/16/bits/range_access.h \
- /usr/include/c++/16/bits/erase_if.h \
+ /usr/include/c++/16/initializer_list /usr/include/c++/16/bits/erase_if.h \
  /usr/include/c++/16/bits/basic_string.h \
  /usr/include/c++/16/ext/alloc_traits.h \
  /usr/include/c++/16/bits/alloc_traits.h /usr/include/c++/16/string_view \
+ /usr/include/c++/16/bits/functional_hash.h \
+ /usr/include/c++/16/bits/hash_bytes.h \
  /usr/include/c++/16/bits/ranges_base.h \
  /usr/include/c++/16/bits/max_size_type.h /usr/include/c++/16/numbers \
  /usr/include/c++/16/limits /usr/include/c++/16/bits/string_view.tcc \
  /usr/include/c++/16/ext/string_conversions.h /usr/include/c++/16/cstdlib \
  /usr/include/stdlib.h /usr/include/bits/waitflags.h \
  /usr/include/bits/waitstatus.h /usr/include/sys/types.h \
- /usr/include/bits/types/clock_t.h /usr/include/bits/types/clockid_t.h \
- /usr/include/bits/types/time_t.h /usr/include/bits/types/timer_t.h \
  /usr/include/bits/stdint-intn.h /usr/include/endian.h \
  /usr/include/bits/byteswap.h /usr/include/bits/uintn-identity.h \
  /usr/include/sys/select.h /usr/include/bits/select.h \
- /usr/include/bits/types/sigset_t.h /usr/include/bits/types/__sigset_t.h \
- /usr/include/bits/types/struct_timeval.h \
- /usr/include/bits/types/struct_timespec.h \
- /usr/include/bits/pthreadtypes.h /usr/include/bits/thread-shared-types.h \
- /usr/include/bits/pthreadtypes-arch.h \
- /usr/include/bits/atomic_wide_counter.h /usr/include/bits/struct_mutex.h \
- /usr/include/bits/struct_rwlock.h /usr/include/alloca.h \
+ /usr/include/bits/types/sigset_t.h /usr/include/alloca.h \
  /usr/include/bits/stdlib-bsearch.h /usr/include/bits/stdlib-float.h \
  /usr/include/c++/16/bits/std_abs.h /usr/include/c++/16/cstdio \
  /usr/include/stdio.h /usr/include/bits/types/__fpos_t.h \
@@ -109,69 +121,47 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o: \
  /usr/include/c++/16/bits/memory_resource.h /usr/include/c++/16/cstddef \
  /usr/include/c++/16/bits/uses_allocator.h \
  /usr/include/c++/16/bits/uses_allocator_args.h /usr/include/c++/16/tuple \
- /usr/include/c++/16/bits/ranges_util.h \
- /home/joshd/Projects/PomoPlusPlus/src/dtos/taskDto.hpp \
- /home/joshd/Projects/PomoPlusPlus/src/services/authService.hpp \
- /home/joshd/Projects/PomoPlusPlus/src/services/taskService.hpp \
- /home/joshd/Projects/PomoPlusPlus/src/services/../utils/userSearch.hpp \
- /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Database.h \
- /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/SQLiteCppExport.h \
- /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Column.h \
- /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Statement.h \
- /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Exception.h \
- /usr/include/c++/16/stdexcept \
- /usr/include/c++/16/bits/stdexcept_except.h \
- /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Utils.h \
- /usr/include/c++/16/cstdint \
- /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stdint.h \
- /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
- /usr/include/bits/stdint-least.h /usr/include/c++/16/map \
- /usr/include/c++/16/bits/stl_tree.h \
- /usr/include/c++/16/ext/aligned_buffer.h \
- /usr/include/c++/16/bits/node_handle.h \
- /usr/include/c++/16/bits/stl_map.h \
- /usr/include/c++/16/bits/stl_multimap.h /usr/include/c++/16/memory \
+ /usr/include/c++/16/bits/invoke.h /usr/include/c++/16/bits/ranges_util.h \
+ /usr/include/c++/16/bits/locale_classes.tcc \
+ /usr/include/c++/16/system_error \
+ /usr/include/c++/16/x86_64-pc-linux-gnu/bits/error_constants.h \
+ /usr/include/c++/16/stdexcept /usr/include/c++/16/exception \
+ /usr/include/c++/16/bits/exception_ptr.h \
+ /usr/include/c++/16/bits/cxxabi_init_exception.h \
+ /usr/include/c++/16/typeinfo /usr/include/c++/16/bits/nested_exception.h \
+ /usr/include/c++/16/bits/stdexcept_except.h /usr/include/c++/16/locale \
+ /usr/include/c++/16/bits/locale_facets.h /usr/include/c++/16/cwctype \
+ /usr/include/wctype.h /usr/include/bits/wctype-wchar.h \
+ /usr/include/c++/16/x86_64-pc-linux-gnu/bits/ctype_base.h \
+ /usr/include/c++/16/streambuf /usr/include/c++/16/bits/streambuf.tcc \
+ /usr/include/c++/16/bits/streambuf_iterator.h \
+ /usr/include/c++/16/x86_64-pc-linux-gnu/bits/ctype_inline.h \
+ /usr/include/c++/16/bits/locale_facets.tcc \
+ /usr/include/c++/16/bits/locale_facets_nonio.h /usr/include/c++/16/ctime \
+ /usr/include/c++/16/x86_64-pc-linux-gnu/bits/time_members.h \
+ /usr/include/c++/16/x86_64-pc-linux-gnu/bits/messages_members.h \
+ /usr/include/libintl.h /usr/include/c++/16/bits/codecvt.h \
+ /usr/include/c++/16/bits/locale_facets_nonio.tcc \
+ /usr/include/c++/16/bits/locale_conv.h \
+ /usr/include/c++/16/bits/quoted_string.h /usr/include/c++/16/sstream \
+ /usr/include/c++/16/istream /usr/include/c++/16/ios \
+ /usr/include/c++/16/bits/basic_ios.h \
+ /usr/include/c++/16/bits/basic_ios.tcc /usr/include/c++/16/ostream \
+ /usr/include/c++/16/bits/ostream.h \
+ /usr/include/c++/16/bits/ostream_print.h \
+ /usr/include/c++/16/bits/ostream.tcc \
+ /usr/include/c++/16/bits/istream.tcc \
+ /usr/include/c++/16/bits/sstream.tcc /usr/include/c++/16/memory \
  /usr/include/c++/16/bits/stl_tempbuf.h \
  /usr/include/c++/16/bits/stl_uninitialized.h \
  /usr/include/c++/16/bits/stl_raw_storage_iter.h \
  /usr/include/c++/16/bits/align.h /usr/include/c++/16/bits/unique_ptr.h \
- /usr/include/c++/16/bits/ostream.h /usr/include/c++/16/ios \
- /usr/include/c++/16/bits/ios_base.h /usr/include/c++/16/ext/atomicity.h \
- /usr/include/c++/16/x86_64-pc-linux-gnu/bits/gthr.h \
- /usr/include/c++/16/x86_64-pc-linux-gnu/bits/gthr-default.h \
- /usr/include/pthread.h /usr/include/sched.h /usr/include/bits/sched.h \
- /usr/include/linux/sched/types.h /usr/include/linux/types.h \
- /usr/include/asm/types.h /usr/include/asm-generic/types.h \
- /usr/include/asm-generic/int-ll64.h /usr/include/asm/bitsperlong.h \
- /usr/include/asm-generic/bitsperlong.h /usr/include/linux/posix_types.h \
- /usr/include/linux/stddef.h /usr/include/asm/posix_types.h \
- /usr/include/asm/posix_types_64.h /usr/include/asm-generic/posix_types.h \
- /usr/include/bits/types/struct_sched_param.h /usr/include/bits/cpu-set.h \
- /usr/include/time.h /usr/include/bits/time.h /usr/include/bits/timex.h \
- /usr/include/bits/types/struct_tm.h \
- /usr/include/bits/types/struct_itimerspec.h /usr/include/bits/setjmp.h \
- /usr/include/bits/types/struct___jmp_buf_tag.h \
- /usr/include/bits/pthread_stack_min-dynamic.h \
- /usr/include/c++/16/x86_64-pc-linux-gnu/bits/atomic_word.h \
- /usr/include/sys/single_threaded.h \
- /usr/include/c++/16/bits/locale_classes.h \
- /usr/include/c++/16/bits/functexcept.h \
- /usr/include/c++/16/bits/locale_classes.tcc \
- /usr/include/c++/16/system_error \
- /usr/include/c++/16/x86_64-pc-linux-gnu/bits/error_constants.h \
- /usr/include/c++/16/streambuf /usr/include/c++/16/bits/streambuf.tcc \
- /usr/include/c++/16/bits/basic_ios.h \
- /usr/include/c++/16/bits/locale_facets.h /usr/include/c++/16/cwctype \
- /usr/include/wctype.h /usr/include/bits/wctype-wchar.h \
- /usr/include/c++/16/x86_64-pc-linux-gnu/bits/ctype_base.h \
- /usr/include/c++/16/bits/streambuf_iterator.h \
- /usr/include/c++/16/x86_64-pc-linux-gnu/bits/ctype_inline.h \
- /usr/include/c++/16/bits/locale_facets.tcc \
- /usr/include/c++/16/bits/basic_ios.tcc \
  /usr/include/c++/16/bits/shared_ptr.h \
  /usr/include/c++/16/bits/shared_ptr_base.h \
  /usr/include/c++/16/bits/allocated_ptr.h \
- /usr/include/c++/16/bits/refwrap.h /usr/include/c++/16/ext/concurrence.h \
+ /usr/include/c++/16/bits/refwrap.h \
+ /usr/include/c++/16/ext/aligned_buffer.h \
+ /usr/include/c++/16/ext/concurrence.h \
  /usr/include/c++/16/bits/shared_ptr_atomic.h \
  /usr/include/c++/16/bits/atomic_base.h \
  /usr/include/c++/16/bits/atomic_lockfree_defines.h \
@@ -180,58 +170,24 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o: \
  /usr/include/c++/16/bits/ranges_uninitialized.h \
  /usr/include/c++/16/bits/ranges_algobase.h \
  /usr/include/c++/16/pstl/glue_memory_defs.h \
- /usr/include/c++/16/pstl/execution_defs.h /usr/include/c++/16/filesystem \
- /usr/include/c++/16/bits/fs_fwd.h /usr/include/c++/16/bits/chrono.h \
- /usr/include/c++/16/ratio /usr/include/c++/16/ctime \
- /usr/include/c++/16/bits/parse_numbers.h \
- /usr/include/c++/16/bits/fs_path.h /usr/include/c++/16/locale \
- /usr/include/c++/16/bits/locale_facets_nonio.h \
- /usr/include/c++/16/x86_64-pc-linux-gnu/bits/time_members.h \
- /usr/include/c++/16/x86_64-pc-linux-gnu/bits/messages_members.h \
- /usr/include/libintl.h /usr/include/c++/16/bits/codecvt.h \
- /usr/include/c++/16/bits/locale_facets_nonio.tcc \
- /usr/include/c++/16/bits/locale_conv.h /usr/include/c++/16/iomanip \
- /usr/include/c++/16/bits/quoted_string.h /usr/include/c++/16/sstream \
- /usr/include/c++/16/istream /usr/include/c++/16/ostream \
- /usr/include/c++/16/bits/ostream_print.h \
- /usr/include/c++/16/bits/ostream.tcc \
- /usr/include/c++/16/bits/istream.tcc \
- /usr/include/c++/16/bits/sstream.tcc /usr/include/c++/16/codecvt \
- /usr/include/c++/16/bits/fs_dir.h /usr/include/c++/16/bits/fs_ops.h \
- /usr/include/string.h /usr/include/strings.h /usr/include/c++/16/vector \
- /usr/include/c++/16/bits/stl_vector.h \
- /usr/include/c++/16/bits/stl_bvector.h \
- /usr/include/c++/16/bits/vector.tcc \
- /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/app.h \
- /usr/include/c++/16/chrono /usr/include/c++/16/bits/stl_algo.h \
- /usr/include/c++/16/bits/algorithmfwd.h \
- /usr/include/c++/16/bits/stl_heap.h \
- /usr/include/c++/16/bits/uniform_int_dist.h \
- /usr/include/c++/16/bits/chrono_io.h /usr/include/c++/16/format \
- /usr/include/c++/16/array /usr/include/c++/16/charconv \
- /usr/include/c++/16/span /usr/include/c++/16/bits/monostate.h \
- /usr/include/c++/16/bits/formatfwd.h /usr/include/c++/16/bits/unicode.h \
- /usr/include/c++/16/bits/unicode-data.h /usr/include/c++/16/functional \
- /usr/include/c++/16/bits/std_function.h \
+ /usr/include/c++/16/pstl/execution_defs.h \
+ /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/utility.h \
+ /usr/include/c++/16/cstdint \
+ /usr/lib/gcc/x86_64-pc-linux-gnu/16/include/stdint.h \
+ /usr/include/stdint.h /usr/include/bits/stdint-uintn.h \
+ /usr/include/bits/stdint-least.h /usr/include/c++/16/cstring \
+ /usr/include/string.h /usr/include/strings.h \
+ /usr/include/c++/16/functional /usr/include/c++/16/bits/std_function.h \
  /usr/include/c++/16/unordered_map \
  /usr/include/c++/16/bits/unordered_map.h \
  /usr/include/c++/16/bits/hashtable.h \
  /usr/include/c++/16/bits/hashtable_policy.h \
- /usr/include/c++/16/bits/binders.h /usr/include/c++/16/future \
- /usr/include/c++/16/mutex /usr/include/c++/16/bits/std_mutex.h \
- /usr/include/c++/16/bits/unique_lock.h \
- /usr/include/c++/16/condition_variable /usr/include/c++/16/stop_token \
- /usr/include/c++/16/atomic /usr/include/c++/16/bits/std_thread.h \
- /usr/include/c++/16/semaphore /usr/include/c++/16/bits/semaphore_base.h \
- /usr/include/c++/16/bits/atomic_timed_wait.h \
- /usr/include/c++/16/bits/this_thread_sleep.h /usr/include/sys/time.h \
- /usr/include/c++/16/bits/atomic_futex.h /usr/include/c++/16/thread \
- /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/version.h \
- /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/settings.h \
- /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/logging.h \
- /usr/include/c++/16/iostream \
- /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/utility.h \
- /usr/include/c++/16/cstring /usr/include/c++/16/random \
+ /usr/include/c++/16/bits/enable_special_members.h \
+ /usr/include/c++/16/bits/node_handle.h /usr/include/c++/16/vector \
+ /usr/include/c++/16/bits/stl_vector.h \
+ /usr/include/c++/16/bits/stl_bvector.h \
+ /usr/include/c++/16/bits/vector.tcc /usr/include/c++/16/array \
+ /usr/include/c++/16/bits/binders.h /usr/include/c++/16/random \
  /usr/include/c++/16/cmath /usr/include/math.h \
  /usr/include/bits/math-vector.h /usr/include/bits/libm-simd-decl-stubs.h \
  /usr/include/bits/flt-eval-method.h /usr/include/bits/fp-logb.h \
@@ -252,26 +208,22 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o: \
  /usr/include/c++/16/tr1/poly_laguerre.tcc \
  /usr/include/c++/16/tr1/riemann_zeta.tcc \
  /usr/include/c++/16/bits/random.h \
+ /usr/include/c++/16/bits/uniform_int_dist.h \
  /usr/include/c++/16/x86_64-pc-linux-gnu/bits/opt_random.h \
  /usr/include/c++/16/bits/random.tcc /usr/include/c++/16/numeric \
  /usr/include/c++/16/bits/stl_numeric.h \
  /usr/include/c++/16/pstl/glue_numeric_defs.h \
- /usr/include/c++/16/algorithm /usr/include/c++/16/bits/ranges_algo.h \
+ /usr/include/c++/16/algorithm /usr/include/c++/16/bits/stl_algo.h \
+ /usr/include/c++/16/bits/algorithmfwd.h \
+ /usr/include/c++/16/bits/stl_heap.h \
+ /usr/include/c++/16/bits/ranges_algo.h \
  /usr/include/c++/16/pstl/glue_algorithm_defs.h \
- /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/routing.h \
- /usr/include/c++/16/utility /usr/include/c++/16/bits/stl_relops.h \
- /usr/include/c++/16/bits/intcmp.h \
- /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/common.h \
- /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/http_response.h \
- /usr/include/c++/16/fstream \
- /usr/include/c++/16/x86_64-pc-linux-gnu/bits/basic_file.h \
- /usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++io.h \
- /usr/include/c++/16/bits/fstream.tcc /usr/include/sys/stat.h \
- /usr/include/bits/stat.h /usr/include/bits/struct_stat.h \
- /usr/include/bits/statx.h /usr/include/linux/stat.h \
- /usr/include/bits/statx-generic.h \
- /usr/include/bits/types/struct_statx_timestamp.h \
- /usr/include/bits/types/struct_statx.h \
+ /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/settings.h \
+ /usr/include/c++/16/filesystem /usr/include/c++/16/bits/fs_fwd.h \
+ /usr/include/c++/16/bits/chrono.h /usr/include/c++/16/ratio \
+ /usr/include/c++/16/bits/parse_numbers.h \
+ /usr/include/c++/16/bits/fs_path.h /usr/include/c++/16/codecvt \
+ /usr/include/c++/16/bits/fs_dir.h /usr/include/c++/16/bits/fs_ops.h \
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/http_request.h \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio.hpp \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/any_completion_executor.hpp \
@@ -297,6 +249,7 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o: \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/assert.hpp \
  /usr/include/c++/16/cassert /usr/include/assert.h \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/atomic_count.hpp \
+ /usr/include/c++/16/atomic \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/cstddef.hpp \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/executor_function.hpp \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/handler_alloc_helpers.hpp \
@@ -354,13 +307,18 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o: \
  /usr/include/asm/sockios.h /usr/include/asm-generic/sockios.h \
  /usr/include/bits/ioctl-types.h /usr/include/sys/ttydefaults.h \
  /usr/include/poll.h /usr/include/sys/poll.h /usr/include/bits/poll.h \
- /usr/include/fcntl.h /usr/include/bits/fcntl.h \
- /usr/include/bits/fcntl-linux.h /usr/include/bits/types/struct_iovec.h \
- /usr/include/bits/cloexec.h /usr/include/linux/falloc.h \
- /usr/include/linux/openat2.h /usr/include/bits/openat2.h \
- /usr/include/sys/socket.h /usr/include/bits/socket.h \
- /usr/include/bits/socket_type.h /usr/include/bits/sockaddr.h \
- /usr/include/asm/socket.h /usr/include/asm-generic/socket.h \
+ /usr/include/sys/stat.h /usr/include/bits/stat.h \
+ /usr/include/bits/struct_stat.h /usr/include/bits/statx.h \
+ /usr/include/linux/stat.h /usr/include/bits/statx-generic.h \
+ /usr/include/bits/types/struct_statx_timestamp.h \
+ /usr/include/bits/types/struct_statx.h /usr/include/fcntl.h \
+ /usr/include/bits/fcntl.h /usr/include/bits/fcntl-linux.h \
+ /usr/include/bits/types/struct_iovec.h /usr/include/bits/cloexec.h \
+ /usr/include/linux/falloc.h /usr/include/linux/openat2.h \
+ /usr/include/bits/openat2.h /usr/include/sys/socket.h \
+ /usr/include/bits/socket.h /usr/include/bits/socket_type.h \
+ /usr/include/bits/sockaddr.h /usr/include/asm/socket.h \
+ /usr/include/asm-generic/socket.h \
  /usr/include/bits/types/struct_osockaddr.h /usr/include/sys/uio.h \
  /usr/include/bits/uio-ext.h /usr/include/sys/un.h \
  /usr/include/netinet/in.h /usr/include/bits/in.h \
@@ -398,6 +356,8 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o: \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/any_completion_executor.ipp \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/any_completion_executor.hpp \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/any_completion_handler.hpp \
+ /usr/include/c++/16/utility /usr/include/c++/16/bits/stl_relops.h \
+ /usr/include/c++/16/bits/intcmp.h \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/any_io_executor.hpp \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/execution_context.hpp \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/execution_context.hpp \
@@ -494,6 +454,12 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o: \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/io_object_impl.hpp \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/io_context.hpp \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/chrono.hpp \
+ /usr/include/c++/16/chrono /usr/include/c++/16/bits/chrono_io.h \
+ /usr/include/c++/16/format /usr/include/c++/16/charconv \
+ /usr/include/c++/16/optional /usr/include/c++/16/span \
+ /usr/include/c++/16/bits/monostate.h \
+ /usr/include/c++/16/bits/formatfwd.h /usr/include/c++/16/bits/unicode.h \
+ /usr/include/c++/16/bits/unicode-data.h \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/wrapped_handler.hpp \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/io_context.hpp \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/completion_handler.hpp \
@@ -772,6 +738,15 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o: \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/multiple_exceptions.hpp \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/packaged_task.hpp \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/detail/future.hpp \
+ /usr/include/c++/16/future /usr/include/c++/16/mutex \
+ /usr/include/c++/16/bits/std_mutex.h \
+ /usr/include/c++/16/bits/unique_lock.h \
+ /usr/include/c++/16/condition_variable /usr/include/c++/16/stop_token \
+ /usr/include/c++/16/bits/std_thread.h /usr/include/c++/16/semaphore \
+ /usr/include/c++/16/bits/semaphore_base.h \
+ /usr/include/c++/16/bits/atomic_timed_wait.h \
+ /usr/include/c++/16/bits/this_thread_sleep.h /usr/include/sys/time.h \
+ /usr/include/c++/16/bits/atomic_futex.h \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/placeholders.hpp \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/posix/basic_descriptor.hpp \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/posix/basic_stream_descriptor.hpp \
@@ -854,12 +829,39 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o: \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/write.hpp \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/write_at.hpp \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/impl/write_at.hpp \
+ /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/common.h \
+ /usr/include/c++/16/iostream \
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/ci_map.h \
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/query_string.h \
+ /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/http_response.h \
+ /usr/include/c++/16/fstream \
+ /usr/include/c++/16/x86_64-pc-linux-gnu/bits/basic_file.h \
+ /usr/include/c++/16/x86_64-pc-linux-gnu/bits/c++io.h \
+ /usr/include/c++/16/bits/fstream.tcc \
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/socket_adaptors.h \
  /home/joshd/.conan2/p/asio8b50208abaabe/p/include/asio/version.hpp \
+ /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/logging.h \
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/mime_types.h \
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/returnable.h \
+ /home/joshd/Projects/PomoPlusPlus/src/dtos/authDto.hpp \
+ /home/joshd/Projects/PomoPlusPlus/src/dtos/taskDto.hpp \
+ /home/joshd/Projects/PomoPlusPlus/src/services/authService.hpp \
+ /home/joshd/Projects/PomoPlusPlus/src/services/taskService.hpp \
+ /home/joshd/Projects/PomoPlusPlus/src/services/../utils/userSearch.hpp \
+ /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Database.h \
+ /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/SQLiteCppExport.h \
+ /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Column.h \
+ /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Statement.h \
+ /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Exception.h \
+ /home/joshd/.conan2/p/b/sqlit53919f9fd28bf/p/include/SQLiteCpp/Utils.h \
+ /usr/include/c++/16/map /usr/include/c++/16/bits/stl_tree.h \
+ /usr/include/c++/16/bits/stl_map.h \
+ /usr/include/c++/16/bits/stl_multimap.h \
+ /home/joshd/Projects/PomoPlusPlus/src/utils/jwtUtil.hpp \
+ /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/app.h \
+ /usr/include/c++/16/thread \
+ /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/version.h \
+ /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/routing.h \
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/exceptions.h \
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/websocket.h \
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/TinySHA1.hpp \
@@ -876,4 +878,86 @@ CMakeFiles/PomoPlusPlus.dir/src/main.cpp.o: \
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/parser.h \
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/task_timer.h \
  /home/joshd/.conan2/p/crowc6f7defedbe6f2/p/include/crow/socket_acceptors.h \
+ /home/joshd/.conan2/p/jwt-c6ad968c27631b/p/include/jwt-cpp/traits/kazuho-picojson/defaults.h \
+ /home/joshd/.conan2/p/jwt-c6ad968c27631b/p/include/jwt-cpp/traits/kazuho-picojson/traits.h \
+ /home/joshd/.conan2/p/picojde3f96225d840/p/include/picojson.h \
+ /usr/include/inttypes.h \
+ /home/joshd/.conan2/p/jwt-c6ad968c27631b/p/include/jwt-cpp/jwt.h \
+ /home/joshd/.conan2/p/jwt-c6ad968c27631b/p/include/jwt-cpp/base.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ec.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/macros.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/opensslconf.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/configuration.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/opensslv.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/types.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/e_os2.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/safestack.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/stack.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/asn1.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/bio.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/crypto.h \
+ /usr/include/c++/16/stdlib.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/cryptoerr.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/symhacks.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/cryptoerr_legacy.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/core.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/bioerr.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/asn1err.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/bn.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/bnerr.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ecerr.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/params.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ecdsa.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/err.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/lhash.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/evp.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/core_dispatch.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/indicator.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/evperr.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/objects.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/obj_mac.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/objectserr.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/hmac.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/pem.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/x509.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/buffer.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/buffererr.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/rsa.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/rsaerr.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/dsa.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/dh.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/dherr.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/dsaerr.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/sha.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/x509err.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/x509_vfy.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/pkcs7.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/pkcs7err.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/http.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/conf.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/conferr.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/conftypes.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/pemerr.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ssl.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/e_ostime.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/comp.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/comperr.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/async.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/asyncerr.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ct.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/cterr.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/sslerr.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/sslerr_legacy.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/prov_ssl.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ssl2.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/ssl3.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/tls1.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/dtls1.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/srtp.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/quic.h \
+ /usr/include/c++/16/set /usr/include/c++/16/bits/stl_set.h \
+ /usr/include/c++/16/bits/stl_multiset.h \
+ /usr/include/c++/16/experimental/type_traits \
+ /usr/include/c++/16/experimental/bits/lfts_config.h \
+ /home/joshd/.conan2/p/b/opens157e24bb35ba8/p/include/openssl/param_build.h \
  /home/joshd/Projects/PomoPlusPlus/include/pwbcrypt/bcrypt.h
