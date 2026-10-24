@@ -22,7 +22,7 @@ struct FetchResultDto {
 
 SearchResultDto findUser(const int &id);
 
-ResultDto<std::string> createTaskService(const CreateTaskDto &dto, int &userId);
+ResultDto<int> createTaskService(const CreateTaskDto &dto, int &userId);
 
 ResultDto<std::string> updateTaskService(const UpdateTaskDto &dto, int taskId);
 

@@ -19,11 +19,10 @@ SearchResultDto findUser(const int &id) {
 }
 
 // service to create a task
-ResultDto<std::string> createTaskService(const CreateTaskDto &dto,
-                                         int &userId) {
+ResultDto<int> createTaskService(const CreateTaskDto &dto, int &userId) {
   try {
 
-    ResultDto<std::string> serviceResponse;
+    ResultDto<int> serviceResponse;
 
     // checks if user exists and returns true if does exists, unless false
     SearchResultDto searchResult = findUser(userId);
@@ -55,14 +54,16 @@ ResultDto<std::string> createTaskService(const CreateTaskDto &dto,
 
     transaction.commit();
 
+    int newId = static_cast<int>(db.getLastInsertRowid());
+
     serviceResponse.Success = true;
-    serviceResponse.Data = "Task created successfully";
+    serviceResponse.Data = newId;
 
     return serviceResponse;
   }
 
   catch (const SQLite::Exception &ex) {
-    ResultDto<std::string> resultException;
+    ResultDto<int> resultException;
     resultException.Success = false;
     std::string sqlErr = std::format("Database error. {}", ex.getErrorStr());
     resultException.ErrorMessage = sqlErr;
@@ -71,7 +72,7 @@ ResultDto<std::string> createTaskService(const CreateTaskDto &dto,
   }
 
   catch (const std::exception &e) {
-    ResultDto<std::string> resultException{};
+    ResultDto<int> resultException{};
     resultException.Success = false;
     resultException.ErrorMessage = e.what();
 

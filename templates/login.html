@@ -192,7 +192,9 @@
         <div>
           <ul class="list-inline mb-1">
             <li class="list-inline-item">
-              <a href="#" class="text-dark text-decoration-none fw-semibold"
+              <a
+                href="/about"
+                class="text-dark text-decoration-none fw-semibold"
                 >About</a
               >
             </li>
@@ -254,7 +256,7 @@
             contentType: "application/json",
             data: JSON.stringify(data),
             success: function (res) {
-              window.location.replace(`/home/${res.userId}`);
+              window.location.replace(`/home`);
             },
             error: function (xhr) {
               const msg = xhr.responseText || "Something went wrong";
