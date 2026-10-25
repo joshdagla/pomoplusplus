@@ -2,9 +2,6 @@
 #include <SQLiteCpp/Database.h>
 #include <SQLiteCpp/Statement.h>
 
-// TODO:: Temporarily implementing querying with user id, need to implement
-// querying user id through jwt token claims
-
 // Class contructor
 UserSearch::UserSearch(int u) : m_userId(u) {};
 
@@ -12,7 +9,7 @@ UserSearch::UserSearch(int u) : m_userId(u) {};
 SearchResultDto UserSearch::UserSearchUtil() {
   SearchResultDto result;
 
-  SQLite::Database db("pomo.db", SQLite::OPEN_READONLY);
+  SQLite::Database db("/data/pomo.db", SQLite::OPEN_READONLY);
 
   SQLite::Statement userSearchQuery(db, "SELECT id FROM users where id = ?");
 

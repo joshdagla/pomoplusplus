@@ -1,0 +1,5 @@
+.git/
+build/
+CMakeUserPresets.json
+compile_commands.json
+pomo.db

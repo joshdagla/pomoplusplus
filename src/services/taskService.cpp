@@ -5,7 +5,6 @@
 #include <SQLiteCpp/Transaction.h>
 #include <crow/json.h>
 #include <crow/routing.h>
-#include <format>
 #include <memory>
 #include <optional>
 #include <string>
@@ -35,7 +34,7 @@ ResultDto<int> createTaskService(const CreateTaskDto &dto, int &userId) {
       return serviceResponse;
     }
 
-    SQLite::Database db("pomo.db",
+    SQLite::Database db("/data/pomo.db",
                         SQLite::OPEN_CREATE | SQLite::OPEN_READWRITE);
 
     SQLite::Transaction transaction(db);
@@ -84,7 +83,7 @@ ResultDto<std::string> updateTaskService(const UpdateTaskDto &dto, int taskId) {
   try {
     ResultDto<std::string> serviceResponse;
 
-    SQLite::Database db("pomo.db", SQLite::OPEN_READWRITE);
+    SQLite::Database db("/data/pomo.db", SQLite::OPEN_READWRITE);
 
     SQLite::Statement query(db, "UPDATE tasks SET "
                                 "description = COALESCE(?, description), "
@@ -146,7 +145,7 @@ ResultDto<std::string> removeTaskService(int &taskId) {
   try {
     ResultDto<std::string> serviceResult;
 
-    SQLite::Database db("pomo.db", SQLite::OPEN_READWRITE);
+    SQLite::Database db("/data/pomo.db", SQLite::OPEN_READWRITE);
 
     SQLite::Transaction transaction(db);
 
@@ -189,7 +188,7 @@ ResultDto<std::string> deleteTaskService(int &taskId) {
   try {
     ResultDto<std::string> serviceResult;
 
-    SQLite::Database db("pomo.db", SQLite::OPEN_READWRITE);
+    SQLite::Database db("/data/pomo.db", SQLite::OPEN_READWRITE);
 
     SQLite::Transaction transaction(db);
 
@@ -241,7 +240,7 @@ FetchResultDto getTasks(int &userId) {
       return serviceResult;
     }
 
-    SQLite::Database db("pomo.db");
+    SQLite::Database db("/data/pomo.db");
 
     SQLite::Statement getQuery(
         db, "SELECT * FROM tasks WHERE user_id = ? AND status != ?");
@@ -302,7 +301,7 @@ FetchResultDto getAllTasks(int &userId) {
       return serviceResult;
     }
 
-    SQLite::Database db("pomo.db");
+    SQLite::Database db("/data/pomo.db");
 
     SQLite::Statement getQuery(
         db, "SELECT * FROM tasks WHERE user_id = ? AND status = ?");

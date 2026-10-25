@@ -28,8 +28,6 @@ int main() {
 
   const std::string JWT_SECRET = jwtSecret();
 
-  // TODO: Create blueprints for task CRUD routes.
-
   // Adjust app debugging level
   // app.loglevel(crow::LogLevel::WARNING);
 
@@ -44,10 +42,12 @@ int main() {
     auto userid = verifyToken(ctx.get_cookie("token"));
 
     if (!userid) {
-      return crow::response(401, "Not authenticated");
+      crow::response res(401, "Not authenticated");
+      res.redirect("/");
+      return res;
     }
 
-    SQLite::Database db("pomo.db", SQLite::OPEN_READONLY);
+    SQLite::Database db("/data/pomo.db", SQLite::OPEN_READONLY);
 
     SQLite::Statement usernameFetch(db,
                                     "SELECT username from users WHERE id = ?");
@@ -60,7 +60,7 @@ int main() {
       userString = usernameFetch.getColumn(0).getText();
     } else {
       crow::response res;
-      res.redirect("/error");
+      res.redirect("/");
       return res;
     }
 
@@ -72,16 +72,34 @@ int main() {
     return crow::response(page.render(context));
   });
 
-  CROW_ROUTE(app, "/about")([]() {
+  CROW_ROUTE(app, "/about")([&app](const crow::request &req) {
+    auto &ctx = app.get_context<crow::CookieParser>(req);
+    auto userid = verifyToken(ctx.get_cookie("token"));
+
+    if (!userid) {
+      crow::response res(401, "Not authenticated");
+      res.redirect("/");
+      return res;
+    }
+
     auto page = crow::mustache::load("about.html");
 
-    return page.render();
+    return crow::response(page.render());
   });
 
-  CROW_ROUTE(app, "/tasks")([]() {
+  CROW_ROUTE(app, "/tasks")([&app](const crow::request &req) {
+    auto &ctx = app.get_context<crow::CookieParser>(req);
+    auto userid = verifyToken(ctx.get_cookie("token"));
+
+    if (!userid) {
+      crow::response res(401, "Not authenticated");
+      res.redirect("/");
+      return res;
+    }
+
     auto page = crow::mustache::load("tasks.html");
 
-    return page.render();
+    return crow::response(page.render());
   });
 
   // User sign up endpoint
@@ -485,5 +503,5 @@ int main() {
     return page.render();
   });
 
-  app.port(1808).multithreaded().run();
+  app.bindaddr("0.0.0.0").port(1808).run();
 }

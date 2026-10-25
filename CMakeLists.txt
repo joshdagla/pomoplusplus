@@ -40,5 +40,5 @@ add_custom_command(TARGET ${PROJECT_NAME} POST_BUILD COMMAND ${CMAKE_COMMAND}
                    -E create_symlink ${CMAKE_SOURCE_DIR}/templates
                    $<TARGET_FILE_DIR:${PROJECT_NAME}>/templates COMMAND
                    ${CMAKE_COMMAND} -E create_symlink
-                   ${CMAKE_SOURCE_DIR}/public
+                   ${CMAKE_SOURCE_DIR}/static
                    $<TARGET_FILE_DIR:${PROJECT_NAME}>/static)

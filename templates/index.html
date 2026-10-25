@@ -29,8 +29,8 @@
           <img
             src="/static/assets/tomato_icon.png"
             alt="Pomo++ Icon"
-            width="36"
-            height="36"
+            width="45"
+            height="45"
           />
           <span class="brand-text">Pomo++</span>
         </a>
@@ -56,7 +56,7 @@
               <a class="nav-link" href="/tasks">Tasks</a>
             </li>
             <li class="nav-item ms-lg-2 mt-2 mt-lg-0">
-              <a class="btn nav-btn" href="/">Logout</a>
+              <a class="btn nav-btn" id="logout-btn" href="/">Logout</a>
             </li>
           </ul>
         </div>
@@ -93,8 +93,8 @@
           aria-label="Add task"
         >
           <svg
-            width="18"
-            height="18"
+            width="22"
+            height="22"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
@@ -195,5 +195,23 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/static/index.js"></script>
     <script src="/static/tasks.js"></script>
+    <script>
+      $(function () {
+        $("#logout-btn").on("click", function (e) {
+          e.preventDefault();
+
+          $.ajax({
+            url: "/auth/logout",
+            method: "POST",
+          })
+            .done(function () {
+              window.location.replace("/");
+            })
+            .fail(function () {
+              alert("Could not log out. Please try again.");
+            });
+        });
+      });
+    </script>
   </body>
 </html>

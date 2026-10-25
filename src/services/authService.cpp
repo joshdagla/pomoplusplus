@@ -26,7 +26,7 @@ ResultDto<int> userSignup(const RegisterDto &dto) {
 
   try {
 
-    SQLite::Database db("pomo.db",
+    SQLite::Database db("/data/pomo.db",
                         SQLite::OPEN_READWRITE | SQLite::OPEN_CREATE);
 
     ResultDto<int> response;
@@ -136,7 +136,7 @@ ResultDto<int> userSignup(const RegisterDto &dto) {
 // Handler for user login
 ResultDto<int> validateLogin(const LoginDto &dto) {
   try {
-    SQLite::Database db("pomo.db", SQLite::OPEN_READONLY);
+    SQLite::Database db("/data/pomo.db", SQLite::OPEN_READONLY);
 
     ResultDto<int> response;
 
