@@ -6,6 +6,7 @@
 #include "utils/jwtUtil.hpp"
 #include <SQLiteCpp/Database.h>
 #include <SQLiteCpp/Statement.h>
+#include <SQLiteCpp/Transaction.h>
 #include <bits/types/error_t.h>
 #include <crow/app.h>
 #include <crow/common.h>
@@ -23,13 +24,43 @@
 #include <string>
 #include <vector>
 
+void initDb() {
+  SQLite::Database db("/data/pomo.db",
+                      SQLite::OPEN_READWRITE | SQLite::OPEN_CREATE);
+
+  SQLite::Transaction transaction(db);
+
+  db.exec(R"(
+    CREATE TABLE IF NOT EXISTS users (
+      password TEXT NOT NULL,
+      email TEXT NOT NULL,
+      username TEXT NOT NULL,
+      id INTEGER NOT NULL,
+      CONSTRAINT users_pk PRIMARY KEY (id)
+    );
+
+    CREATE TABLE IF NOT EXISTS tasks (
+      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      user_id INTEGER NOT NULL,
+      description TEXT DEFAULT ('New Task') NOT NULL,
+      pomodoros INTEGER DEFAULT (0) NOT NULL,
+      status TEXT NOT NULL DEFAULT 'Pending',
+      CONSTRAINT fk_tasks_user FOREIGN KEY (user_id)
+        REFERENCES users(id) ON DELETE CASCADE
+    );
+  )");
+
+  transaction.commit();
+}
+
 int main() {
+  initDb();
+
   crow::App<crow::CookieParser> app;
 
   const std::string JWT_SECRET = jwtSecret();
 
-  // Adjust app debugging level
-  // app.loglevel(crow::LogLevel::WARNING);
+  app.loglevel(crow::LogLevel::DEBUG);
 
   CROW_ROUTE(app, "/")([]() {
     auto page = crow::mustache::load("login.html");
@@ -141,7 +172,6 @@ int main() {
           return crow::response(401, res);
         }
 
-        // Never issue a token without a real user id
         if (!signUpResult.Data.has_value()) {
           res["success"] = false;
           res["message"] = "Account created, but the user id was not returned";

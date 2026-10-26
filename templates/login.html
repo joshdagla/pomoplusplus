@@ -264,11 +264,12 @@
               window.location.replace(`/home`);
             },
             error: function (xhr) {
-              const msg = xhr.responseText || "Something went wrong";
+              const msg =
+                JSON.parse(xhr.responseText) || "Something went wrong";
               if (isLogin) {
-                $("#login-error").text(msg);
+                $("#login-error").text(msg.message);
               } else {
-                $("#register-error").text(msg);
+                $("#register-error").text(msg.message);
               }
             },
           });

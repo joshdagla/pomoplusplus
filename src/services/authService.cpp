@@ -115,8 +115,7 @@ ResultDto<int> userSignup(const RegisterDto &dto) {
   catch (const SQLite::Exception &ex) {
     ResultDto<int> resultException;
     resultException.Success = false;
-    std::string sqlErr = std::format("Database error. {}", ex.getErrorStr());
-    resultException.ErrorMessage = sqlErr;
+    resultException.ErrorMessage = "An unexpected error has occured";
     resultException.Data = std::nullopt;
 
     return resultException;
@@ -126,7 +125,7 @@ ResultDto<int> userSignup(const RegisterDto &dto) {
 
     ResultDto<int> resultException{};
     resultException.Success = false;
-    resultException.ErrorMessage = e.what();
+    resultException.ErrorMessage = "An unexpected error has occured";
     resultException.Data = std::nullopt;
 
     return resultException;
@@ -193,8 +192,7 @@ ResultDto<int> validateLogin(const LoginDto &dto) {
   catch (const SQLite::Exception &ex) {
     ResultDto<int> resultException;
     resultException.Success = false;
-    std::string sqlErr = std::format("Database error. {}", ex.getErrorStr());
-    resultException.ErrorMessage = sqlErr;
+    resultException.ErrorMessage = "An unexpected error has occured";
     resultException.Data = std::nullopt;
 
     return resultException;
@@ -203,7 +201,7 @@ ResultDto<int> validateLogin(const LoginDto &dto) {
   catch (const std::exception &e) {
     ResultDto<int> resultException{};
     resultException.Success = false;
-    resultException.ErrorMessage = e.what();
+    resultException.ErrorMessage = "An unexpected error has occured";
     resultException.Data = std::nullopt;
 
     return resultException;
