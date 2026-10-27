@@ -4,18 +4,15 @@
 
 PomoPlusPlus is a productivity application designed to bring focused work sessions and task management together. Built using modern C++, the Crow web framework, and SQLite, this project explores building and deploying a complete web application with a compiled backend.
 
-## Screenshots
+## Login
+![Login](images/login.png)
 
-<!-- Replace these paths with your actual screenshot locations -->
+### Pomodoro
+![Pomodoro](images/pomodoro.png)
 
-### Dashboard
-<!-- ![PomoPlusPlus Dashboard](docs/images/dashboard.png) -->
+### About
+![About](images/about.png)
 
-### Task Management
-<!-- ![Task Management](docs/images/tasks.png) -->
-
-### Authentication
-<!-- ![Login and Registration](docs/images/authentication.png) -->
 
 ## Features
 
