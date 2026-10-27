@@ -45,6 +45,7 @@ Building PomoPlusPlus gave me hands-on experience with several areas of software
 - **HTTP and API development** — Handling routes, requests, responses, and server-side application workflows using Crow.
 - **Authentication and security** — Implementing JWT-based authentication and learning how to handle user credentials and protected operations.
 - **Database management** — Integrating SQLite, managing database connections, and handling schema initialization and persistence.
+- **Memory management** — Using smart pointers and RAII to handle dynamic memory allocation for performant application.
 - **Dependency management** — Using Conan 2 to manage external C++ libraries and integrating them with CMake.
 - **Build systems and debugging** — Configuring native dependencies, resolving compiler and linker issues, and troubleshooting runtime failures.
 - **Containerization** — Creating multi-stage container builds, managing runtime dependencies, and deploying container images.
@@ -72,19 +73,8 @@ The application uses a service-oriented structure to keep request handling, busi
 
 ## What I'd Improve Next
 
-- Add automated tests for authentication and task workflows.
 - Introduce database migrations and stronger schema management.
 - Improve production database persistence and deployment reliability.
-- Add productivity statistics and session history.
-- Set up continuous integration for automated builds and image publishing.
-
-## Author
-
-**Josh Dagla**
-
-Computer Science student interested in modern C++, backend engineering, and full-stack development.
-
-- GitHub: [@joshdagla](https://github.com/joshdagla)
 
 ---
 
